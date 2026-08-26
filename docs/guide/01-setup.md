@@ -2,9 +2,9 @@
 
 This tutorial installs the plugin, checks skill discovery, and runs one representative skill.
 
-## Install the private marketplace
+## Install the public marketplace
 
-Make sure that Git can authenticate to `Aqua-123/pstack-for-codex`. Then run:
+Install the marketplace directly from the public GitHub repository:
 
 ```bash
 codex plugin marketplace add Aqua-123/pstack-for-codex

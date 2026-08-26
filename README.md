@@ -6,7 +6,7 @@ Use `$poteto-mode` for a substantial engineering task. It selects a playbook, re
 
 ## Install
 
-The repository is a Codex marketplace. For the private GitHub repository, make sure that Git can authenticate first, then run:
+This public repository is a Codex marketplace. Install it directly from GitHub:
 
 ```bash
 codex plugin marketplace add Aqua-123/pstack-for-codex
