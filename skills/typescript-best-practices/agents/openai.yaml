@@ -1,0 +1,8 @@
+interface:
+  display_name: "TypeScript Best Practices"
+  short_description: "TypeScript best practices. Use when reading or editing any .ts or .tsx file."
+  default_prompt: "Use $typescript-best-practices for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

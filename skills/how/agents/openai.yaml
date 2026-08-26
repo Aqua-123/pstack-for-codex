@@ -1,0 +1,8 @@
+interface:
+  display_name: "How"
+  short_description: "Use for \"how does X work\", code walkthroughs before changing something, and placement /..."
+  default_prompt: "Use $how for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Foundational Thinking"
+  short_description: "Apply before writing logic: choosing core types and data structures, sequencing..."
+  default_prompt: "Use $principle-foundational-thinking for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

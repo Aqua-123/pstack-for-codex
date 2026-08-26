@@ -1,0 +1,8 @@
+interface:
+  display_name: "Blast Radius"
+  short_description: "Find what a change could break somewhere else before it ships, beyond the diff, and prove the..."
+  default_prompt: "Use $blast-radius for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

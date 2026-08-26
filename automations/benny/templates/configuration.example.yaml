@@ -1,0 +1,60 @@
+schema_version: 1
+workspace_id: "WORKSPACE_OR_TEAM_ID"
+source_channel_id: "SOURCE_CHANNEL_ID"
+operations_channel_id: ""
+trusted_triage_identity: "TRIAGE_IDENTITY_ID"
+repository: "https://github.com/example/example"
+default_branch: "main"
+state_root: "/absolute/user-owned/.codex/benny/state/example"
+approved_config_hash: "REPLACE_WITH_SHA256"
+feature_map_path: ".codex/benny/feature-map.md"
+routing_map_path: ".codex/benny/routing.md"
+
+polling:
+  interval_minutes: 5
+  overlap_seconds: 120
+  page_size: 100
+  batch_limit: 50
+  max_pages: 20
+  max_clock_skew_seconds: 60
+  retry_limit: 3
+  max_backoff_seconds: 60
+
+retention:
+  state_days: 30
+  dead_letter_days: 14
+  artifact_hours: 24
+  preserve_on_upgrade: true
+  preserve_on_uninstall: true
+
+attachments:
+  allowed_schemes: ["https"]
+  allowed_domains: ["files.example.invalid"]
+  allowed_mime: ["image/png", "image/jpeg", "video/mp4", "text/plain"]
+  max_bytes: 10485760
+  max_redirects: 3
+  max_archive_entries: 100
+  max_archive_expanded_bytes: 52428800
+
+sandbox:
+  credentials_present: false
+  network_default: "deny"
+  allowed_hosts: []
+
+credential_refs:
+  slack: "env:BENNY_SLACK_TOKEN"
+  tracker: "keychain:benny-tracker"
+  draft_pr: "secret-manager:benny/draft-pr"
+
+automations:
+  triage_name: "pstack-benny-triage"
+  reproduce_name: "pstack-benny-reproduce"
+  required_status: "PAUSED"
+
+canaries:
+  read_only: "not-run"
+  test_channel_triage: "not-run"
+  repro_only: "not-run"
+  bounded_fix: "not-run"
+  concurrent_race: "not-run"
+  ambiguous_write: "not-run"

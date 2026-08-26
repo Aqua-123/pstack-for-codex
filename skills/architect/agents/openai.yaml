@@ -1,0 +1,8 @@
+interface:
+  display_name: "Architect"
+  short_description: "Sketch types, signatures, and module structure before code, then stay in the loop while..."
+  default_prompt: "Use $architect for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

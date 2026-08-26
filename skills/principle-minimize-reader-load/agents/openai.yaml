@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Minimize Reader Load"
+  short_description: "Apply when reviewing or shaping code that's hard to trace. Count layers between question and..."
+  default_prompt: "Use $principle-minimize-reader-load for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

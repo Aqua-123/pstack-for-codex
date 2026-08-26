@@ -1,0 +1,21 @@
+schema: pstack-skill-behavior/v1
+authority: parent task only
+cases:
+  - id: read-heavy
+    expected: bounded explorer roles aggregate into one parent-owned answer
+    proof: child reports are treated as evidence, not completion
+  - id: write-heavy
+    expected: writers receive exclusive files or isolated worktrees before start
+    proof: parent inspects the actual diff and runs authoritative verification
+  - id: panel
+    expected: independent readers use the same evidence and one synthesizer resolves disagreement
+    proof: dissent and unavailable lanes remain visible
+  - id: race
+    expected: candidates write to isolated outputs and the parent selects and verifies a winner
+    proof: no candidate writes another candidate's output
+  - id: nested
+    expected: each coordinator owns a bounded subtree and returns an aggregate
+    proof: nesting depth and child capacity are checked before dispatch
+  - id: unsafe-fanout
+    expected: writable fanout is refused without exclusive ownership or isolation
+    proof: no child starts

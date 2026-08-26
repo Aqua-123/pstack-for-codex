@@ -1,0 +1,12 @@
+schema: pstack-skill-behavior/v1
+authority: read only within the current project and user-requested task scope
+cases:
+  - id: task-api
+    expected: use supported task listing and task history APIs
+    proof: cited task titles and live git state agree
+  - id: no-task-api
+    expected: use git history, issue or PR state, and a user-supplied digest
+    proof: no private transcript store is scraped
+  - id: stale-history
+    expected: reconcile recalled claims against live files, branches, and external records
+    proof: stale claims are labeled instead of acted on

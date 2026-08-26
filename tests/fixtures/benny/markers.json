@@ -1,0 +1,4 @@
+[
+  {"schemaVersion":1,"kind":"benny-verdict","reportId":"REPORT_ID","workspaceId":"W1","channelId":"C1","rootTs":"200.1","authorId":"U-TRIAGE","verdict":"bug"},
+  {"schemaVersion":1,"kind":"benny-verdict","reportId":"REPORT_ID","workspaceId":"W1","channelId":"C1","rootTs":"200.1","authorId":"U-WRONG","verdict":"bug"}
+]

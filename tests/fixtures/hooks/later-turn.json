@@ -1,0 +1,7 @@
+{
+  "session_id": "thr_fixture_active",
+  "turn_id": "turn_2",
+  "cwd": "/workspace/project-a",
+  "hook_event_name": "UserPromptSubmit",
+  "prompt": "continue with the tests"
+}

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Reflect"
+  short_description: "Spawn three parallel review subagents over the active transcript, surface learnings, and route..."
+  default_prompt: "Use $reflect for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

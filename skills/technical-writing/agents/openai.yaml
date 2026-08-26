@@ -1,0 +1,8 @@
+interface:
+  display_name: "Technical Writing"
+  short_description: "Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE..."
+  default_prompt: "Use $technical-writing for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Outcome Oriented Execution"
+  short_description: "Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the..."
+  default_prompt: "Use $principle-outcome-oriented-execution for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

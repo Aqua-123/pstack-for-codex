@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Laziness Protocol"
+  short_description: "Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers, or signal..."
+  default_prompt: "Use $principle-laziness-protocol for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

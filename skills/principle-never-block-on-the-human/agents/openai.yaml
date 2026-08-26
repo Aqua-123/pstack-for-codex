@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Never Block On The Human"
+  short_description: "Apply when tempted to ask 'should I do X?' on reversible work. Proceed, present the result, let..."
+  default_prompt: "Use $principle-never-block-on-the-human for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

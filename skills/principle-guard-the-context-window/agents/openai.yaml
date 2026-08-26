@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Guard The Context Window"
+  short_description: "Apply when context is filling up: large outputs, long files, repeated reads, fan-out planning...."
+  default_prompt: "Use $principle-guard-the-context-window for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

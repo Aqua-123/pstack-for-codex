@@ -1,0 +1,8 @@
+interface:
+  display_name: "Unslop"
+  short_description: "Cut AI tells from any writing. Must always apply."
+  default_prompt: "Use $unslop for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

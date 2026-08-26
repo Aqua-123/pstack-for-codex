@@ -1,0 +1,8 @@
+interface:
+  display_name: "Figure It Out"
+  short_description: "Design an auditable playbook when no narrower one fits: a large migration, an ambitious..."
+  default_prompt: "Use $figure-it-out for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Bro"
+  short_description: "Restate the last message in plain human language, with no jargon."
+  default_prompt: "Use $bro for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

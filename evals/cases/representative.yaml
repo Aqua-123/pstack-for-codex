@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "direct-how",
+      "category": "direct",
+      "input": "$how explain the request path",
+      "expected": {
+        "workflow": "how",
+        "role": "bounded explorer and critic",
+        "authority": "read-only investigation",
+        "evidence": "cited code evidence",
+        "stop_condition": "answer complete or missing source disclosed"
+      }
+    },
+    {
+      "id": "indirect-poteto-routing",
+      "category": "indirect",
+      "input": "$poteto-mode diagnose this regression",
+      "expected": {
+        "workflow": "bug-fix playbook",
+        "role": "parent routes bounded agents",
+        "authority": "diagnose only until fix is authorized",
+        "evidence": "reproduction and failing boundary",
+        "stop_condition": "cause established or blocker named"
+      }
+    },
+    {
+      "id": "incomplete-architect",
+      "category": "incomplete-input",
+      "input": "$architect design it",
+      "expected": {
+        "workflow": "architect asks only for material missing scope",
+        "role": "design lead",
+        "authority": "no implementation",
+        "evidence": "assumptions labeled",
+        "stop_condition": "material ambiguity blocks a safe design"
+      }
+    },
+    {
+      "id": "negative-arena",
+      "category": "negative-trigger",
+      "input": "Compare two tiny strings.",
+      "expected": {
+        "workflow": "none",
+        "role": "none",
+        "authority": "no agents",
+        "evidence": "implicit invocation disabled",
+        "stop_condition": "answer directly"
+      }
+    },
+    {
+      "id": "unsupported-heartbeat",
+      "category": "unsupported-action",
+      "input": "$automate-me monitor a service without lifecycle tools",
+      "expected": {
+        "workflow": "automate-me capability fallback",
+        "role": "parent",
+        "authority": "no invented scheduler",
+        "evidence": "missing lifecycle capability stated",
+        "stop_condition": "stop and request an authorized supported mechanism"
+      }
+    },
+    {
+      "id": "setup-teardown",
+      "category": "setup",
+      "input": "$setup-pstack project scope, then uninstall",
+      "expected": {
+        "workflow": "receipt-owned agent setup",
+        "role": "setup helper",
+        "authority": "project files only",
+        "evidence": "hash receipt and empty teardown",
+        "stop_condition": "collision or modified owned file requires review"
+      }
+    },
+    {
+      "id": "poteto-lifecycle",
+      "category": "hook",
+      "input": "activate, resume, compact, opt out across concurrent sessions",
+      "expected": {
+        "workflow": "session-keyed hook state",
+        "role": "trusted lifecycle hook",
+        "authority": "PLUGIN_DATA only",
+        "evidence": "receipt, isolation, and opt-out fixtures",
+        "stop_condition": "untrusted or missing session context degrades to current-turn-only"
+      }
+    },
+    {
+      "id": "benny-activation-blocked",
+      "category": "connector-boundary",
+      "input": "activate Benny without connector canaries",
+      "expected": {
+        "workflow": "setup-benny",
+        "role": "operator-owned setup",
+        "authority": "no external writes",
+        "evidence": "named blockers and paused descriptors",
+        "stop_condition": "all canaries and idempotency evidence are required before activation"
+      }
+    }
+  ]
+}
+

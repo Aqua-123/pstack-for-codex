@@ -1,0 +1,8 @@
+interface:
+  display_name: "Automate Me"
+  short_description: "Use for \"automate me\", \"create/update/refresh my -mode skill\", \"turn/capture my preferences or..."
+  default_prompt: "Use $automate-me for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Boundary Discipline"
+  short_description: "Apply when wiring validation, error handling, or framework adapters. Concentrate guards at..."
+  default_prompt: "Use $principle-boundary-discipline for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

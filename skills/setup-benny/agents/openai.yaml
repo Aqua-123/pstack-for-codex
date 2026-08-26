@@ -1,0 +1,8 @@
+interface:
+  display_name: "Setup Benny for Codex"
+  short_description: "Install and validate dormant Benny polling automations"
+  default_prompt: "Use $setup-benny to configure the dormant Benny pack and report its activation blockers."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

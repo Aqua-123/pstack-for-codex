@@ -1,0 +1,8 @@
+interface:
+  display_name: "Recall"
+  short_description: "Reconstruct your recent working context from your own chat history, live state, and the shared..."
+  default_prompt: "Use $recall for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

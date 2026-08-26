@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Aqua-123/pstack-for-codex/automations/benny/schemas/marker.schema.json",
+  "title": "Benny trusted verdict marker",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "reportId", "workspaceId", "channelId", "rootTs", "authorId", "verdict"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "benny-verdict" },
+    "reportId": { "type": "string", "pattern": "^bny_[a-f0-9]{64}$" },
+    "workspaceId": { "type": "string", "minLength": 1 },
+    "channelId": { "type": "string", "minLength": 1 },
+    "rootTs": { "type": "string", "minLength": 1 },
+    "authorId": { "type": "string", "minLength": 1 },
+    "verdict": { "enum": ["bug", "performance", "other"] },
+    "trackerUrl": { "type": "string", "format": "uri" }
+  }
+}

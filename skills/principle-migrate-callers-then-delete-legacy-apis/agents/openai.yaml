@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Migrate Callers Delete Legacy Apis"
+  short_description: "Apply when introducing a new internal API while old callers still exist. Migrate callers and..."
+  default_prompt: "Use $principle-migrate-callers-delete-legacy-apis for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

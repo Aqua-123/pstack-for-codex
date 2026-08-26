@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Prove It Works"
+  short_description: "Apply after completing a task, before declaring done. Verify against the real artifact (run the..."
+  default_prompt: "Use $principle-prove-it-works for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

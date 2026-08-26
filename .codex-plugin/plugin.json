@@ -1,0 +1,36 @@
+{
+  "name": "pstack-for-codex",
+  "version": "0.1.0",
+  "description": "Codex-native engineering workflows derived from pstack. Skills remain explicit-only so users retain workflow and authority control.",
+  "author": {
+    "name": "pstack-for-codex maintainers"
+  },
+  "homepage": "https://github.com/Aqua-123/pstack-for-codex",
+  "repository": "https://github.com/Aqua-123/pstack-for-codex",
+  "license": "MIT",
+  "keywords": [
+    "pstack",
+    "codex",
+    "engineering-workflows",
+    "poteto-mode",
+    "principles"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pstack for Codex",
+    "shortDescription": "Codex engineering workflows",
+    "longDescription": "A Codex-native derivative of pstack for deliberate planning, implementation, review, verification, and orchestration. Every skill is explicit-only so workflow selection remains under user control.",
+    "developerName": "pstack-for-codex maintainers",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Plan engineering work",
+      "Orchestrate bounded agents",
+      "Review and verify changes"
+    ],
+    "defaultPrompt": [
+      "Use $poteto-mode for this engineering task.",
+      "Use $architect to design this change before implementation.",
+      "Use $blast-radius to assess what this change could break."
+    ]
+  }
+}

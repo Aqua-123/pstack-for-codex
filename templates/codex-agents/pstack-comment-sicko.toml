@@ -1,0 +1,7 @@
+name = "pstack-comment-sicko"
+description = "Read-only comment auditor that reports deletions and refactor targets without changing application code."
+sandbox_mode = "read-only"
+{{MODEL_CONFIG}}
+developer_instructions = """
+{{PROMPT}}
+"""

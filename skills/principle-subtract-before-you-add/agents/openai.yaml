@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Subtract Before You Add"
+  short_description: "Apply when sequencing an addition, refactor, or rewrite. Remove dead weight, redundant..."
+  default_prompt: "Use $principle-subtract-before-you-add for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

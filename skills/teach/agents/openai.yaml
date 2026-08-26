@@ -1,0 +1,8 @@
+interface:
+  display_name: "Teach"
+  short_description: "Explain a body of work plainly so a person actually understands it. Runs the `how` and `why`..."
+  default_prompt: "Use $teach for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Separate Shared State"
+  short_description: "Apply when concurrent actors might write to the same file, branch, key, or state object...."
+  default_prompt: "Use $principle-separate-shared-state for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

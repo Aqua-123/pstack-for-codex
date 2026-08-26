@@ -1,0 +1,6 @@
+name = "pstack-poteto-agent"
+description = "Poteto-mode delegate for deliberate engineering workflows. Use one per parent task and continue it rather than spawning siblings."
+{{MODEL_CONFIG}}
+developer_instructions = """
+{{PROMPT}}
+"""

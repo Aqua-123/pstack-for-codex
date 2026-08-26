@@ -1,0 +1,7 @@
+{
+  "session_id": "thr_fixture_active",
+  "turn_id": "turn_3",
+  "cwd": "/workspace/project-a",
+  "hook_event_name": "UserPromptSubmit",
+  "prompt": "disable $poteto-mode"
+}

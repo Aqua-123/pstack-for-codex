@@ -1,0 +1,8 @@
+interface:
+  display_name: "Maintain Verification Skill"
+  short_description: "Periodic pass that keeps a project's verification skill and feature map honest: parallel source..."
+  default_prompt: "Use $maintain-verification-skill for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

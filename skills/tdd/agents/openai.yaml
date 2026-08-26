@@ -1,0 +1,8 @@
+interface:
+  display_name: "TDD"
+  short_description: "Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when..."
+  default_prompt: "Use $tdd for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Setup Pstack for Codex"
+  short_description: "Install reversible Codex agent profiles and model policies"
+  default_prompt: "Use $setup-pstack to configure optional pstack Codex agents for this project."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

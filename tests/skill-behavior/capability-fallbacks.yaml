@@ -1,0 +1,24 @@
+schema: pstack-skill-behavior/v1
+authority: parent task only
+cases:
+  - id: steer
+    expected: send a bounded correction when steering exists; otherwise let safe work finish or cancel
+    proof: final report records the correction or degraded path
+  - id: cancel
+    expected: request cancellation, inspect partial files, and reconcile before retry
+    proof: partial results are labeled and never reported as complete
+  - id: no-subagents
+    expected: run sequentially in the parent when independence is not required
+    proof: no promised parallelism appears in the result
+  - id: no-custom-profile
+    expected: use a generic agent with the portable persona prompt
+    proof: model identity is inherited or labeled unverified
+  - id: no-capacity
+    expected: queue bounded work or continue sequentially
+    proof: no work item is silently dropped
+  - id: interrupted-child
+    expected: inspect partial output before one bounded retry with a fresh consolidated brief
+    proof: repeated interruption returns a partial result or visible blocker
+  - id: no-steering
+    expected: cancel unsafe work or allow safe bounded work to finish
+    proof: correction is never claimed as delivered

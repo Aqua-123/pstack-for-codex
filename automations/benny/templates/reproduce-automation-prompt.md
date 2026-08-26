@@ -1,0 +1,3 @@
+# pstack-benny-reproduce prompt
+
+Read and follow `.codex/automations/benny/skills/reproduce-and-fix-issues/SKILL.md` and the approved secret-free configuration. Poll only accepted trusted markers at immutable source coordinates. Run repository code in a credential-free, network-denied worktree. Reconcile tracker, verdict, evidence, branch, and draft-PR operation keys. Children return typed proposals and cannot write externally. Never merge, deploy, expose private content, or post at source-channel root. Keep the automation paused when any receipt, adapter, state, identity, hash, scope, sandbox, idempotency, or canary gate is missing.

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Make Operations Idempotent"
+  short_description: "Apply when designing commands, lifecycle steps, or processing loops that run amid crashes,..."
+  default_prompt: "Use $principle-make-operations-idempotent for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

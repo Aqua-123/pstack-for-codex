@@ -1,0 +1,8 @@
+interface:
+  display_name: "Interrogate"
+  short_description: "Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress..."
+  default_prompt: "Use $interrogate for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

@@ -1,0 +1,16 @@
+[
+  {
+    "key": "triage",
+    "name": "pstack-benny-triage",
+    "status": "PAUSED",
+    "schedule": "every 5 minutes",
+    "prompt": ".codex/automations/benny/templates/triage-automation-prompt.md"
+  },
+  {
+    "key": "reproduce",
+    "name": "pstack-benny-reproduce",
+    "status": "PAUSED",
+    "schedule": "every 5 minutes",
+    "prompt": ".codex/automations/benny/templates/reproduce-automation-prompt.md"
+  }
+]

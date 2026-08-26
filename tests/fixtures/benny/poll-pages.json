@@ -1,0 +1,10 @@
+[
+  [
+    {"workspaceId":"W1","channelId":"C1","rootTs":"100.000003","providerTs":"100.000002","providerId":"m-b","text":"second at same timestamp"},
+    {"workspaceId":"W1","channelId":"C1","rootTs":"99.9","providerTs":"99.9","providerId":"m-old","text":"oldest"}
+  ],
+  [
+    {"workspaceId":"W1","channelId":"C1","rootTs":"101","providerTs":"101","providerId":"m-late","text":"after cutoff"},
+    {"workspaceId":"W1","channelId":"C1","rootTs":"100.000002","providerTs":"100.000002","providerId":"m-a","text":"first at same timestamp"}
+  ]
+]

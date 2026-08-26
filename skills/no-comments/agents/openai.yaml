@@ -1,0 +1,8 @@
+interface:
+  display_name: "No Comments"
+  short_description: "Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints."
+  default_prompt: "Use $no-comments for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

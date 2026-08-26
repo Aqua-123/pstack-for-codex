@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Redesign From First Principles"
+  short_description: "Apply when integrating a new requirement into an existing design. Redesign as if the requirement..."
+  default_prompt: "Use $principle-redesign-from-first-principles for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

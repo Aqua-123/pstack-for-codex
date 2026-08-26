@@ -1,0 +1,12 @@
+schema: pstack-skill-behavior/v1
+authority: explicit user request controls lifecycle expansion
+cases:
+  - id: ordinary-feature
+    expected: remain in the current task with no goal, heartbeat, automation, or separate user task
+    proof: completion report lists no lifecycle object
+  - id: overnight-predicate
+    expected: use an authorized goal and thread heartbeat with durable checkpoints
+    proof: work resumes from live state without shell sleeping
+  - id: user-owned-task
+    expected: create a separate task only when the user explicitly requests one
+    proof: returned task identifier is user-visible

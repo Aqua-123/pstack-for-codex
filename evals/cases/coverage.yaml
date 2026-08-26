@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "upstream_skills": [
+    {
+      "id": "skill:architect",
+      "kind": "skill",
+      "source": "skills/architect/SKILL.md",
+      "case": "skill-positive:architect",
+      "positive_outcome": "Explicit $architect invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:arena",
+      "kind": "skill",
+      "source": "skills/arena/SKILL.md",
+      "case": "skill-positive:arena",
+      "positive_outcome": "Explicit $arena invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:automate-me",
+      "kind": "skill",
+      "source": "skills/automate-me/SKILL.md",
+      "case": "skill-positive:automate-me",
+      "positive_outcome": "Explicit $automate-me invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:blast-radius",
+      "kind": "skill",
+      "source": "skills/blast-radius/SKILL.md",
+      "case": "skill-positive:blast-radius",
+      "positive_outcome": "Explicit $blast-radius invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:bro",
+      "kind": "skill",
+      "source": "skills/bro/SKILL.md",
+      "case": "skill-positive:bro",
+      "positive_outcome": "Explicit $bro invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:create-verification-skill",
+      "kind": "skill",
+      "source": "skills/create-verification-skill/SKILL.md",
+      "case": "skill-positive:create-verification-skill",
+      "positive_outcome": "Explicit $create-verification-skill invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:figure-it-out",
+      "kind": "skill",
+      "source": "skills/figure-it-out/SKILL.md",
+      "case": "skill-positive:figure-it-out",
+      "positive_outcome": "Explicit $figure-it-out invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:how",
+      "kind": "skill",
+      "source": "skills/how/SKILL.md",
+      "case": "skill-positive:how",
+      "positive_outcome": "Explicit $how invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:interrogate",
+      "kind": "skill",
+      "source": "skills/interrogate/SKILL.md",
+      "case": "skill-positive:interrogate",
+      "positive_outcome": "Explicit $interrogate invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:maintain-verification-skill",
+      "kind": "skill",
+      "source": "skills/maintain-verification-skill/SKILL.md",
+      "case": "skill-positive:maintain-verification-skill",
+      "positive_outcome": "Explicit $maintain-verification-skill invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:no-comments",
+      "kind": "skill",
+      "source": "skills/no-comments/SKILL.md",
+      "case": "skill-positive:no-comments",
+      "positive_outcome": "Explicit $no-comments invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:poteto-mode",
+      "kind": "skill",
+      "source": "skills/poteto-mode/SKILL.md",
+      "case": "skill-positive:poteto-mode",
+      "positive_outcome": "Explicit $poteto-mode invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-boundary-discipline",
+      "kind": "skill",
+      "source": "skills/principle-boundary-discipline/SKILL.md",
+      "case": "skill-positive:principle-boundary-discipline",
+      "positive_outcome": "Explicit $principle-boundary-discipline invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-build-the-lever",
+      "kind": "skill",
+      "source": "skills/principle-build-the-lever/SKILL.md",
+      "case": "skill-positive:principle-build-the-lever",
+      "positive_outcome": "Explicit $principle-build-the-lever invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-encode-lessons-in-structure",
+      "kind": "skill",
+      "source": "skills/principle-encode-lessons-in-structure/SKILL.md",
+      "case": "skill-positive:principle-encode-lessons-in-structure",
+      "positive_outcome": "Explicit $principle-encode-lessons-in-structure invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-exhaust-the-design-space",
+      "kind": "skill",
+      "source": "skills/principle-exhaust-the-design-space/SKILL.md",
+      "case": "skill-positive:principle-exhaust-the-design-space",
+      "positive_outcome": "Explicit $principle-exhaust-the-design-space invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-experience-first",
+      "kind": "skill",
+      "source": "skills/principle-experience-first/SKILL.md",
+      "case": "skill-positive:principle-experience-first",
+      "positive_outcome": "Explicit $principle-experience-first invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-fix-root-causes",
+      "kind": "skill",
+      "source": "skills/principle-fix-root-causes/SKILL.md",
+      "case": "skill-positive:principle-fix-root-causes",
+      "positive_outcome": "Explicit $principle-fix-root-causes invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-foundational-thinking",
+      "kind": "skill",
+      "source": "skills/principle-foundational-thinking/SKILL.md",
+      "case": "skill-positive:principle-foundational-thinking",
+      "positive_outcome": "Explicit $principle-foundational-thinking invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-guard-the-context-window",
+      "kind": "skill",
+      "source": "skills/principle-guard-the-context-window/SKILL.md",
+      "case": "skill-positive:principle-guard-the-context-window",
+      "positive_outcome": "Explicit $principle-guard-the-context-window invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-laziness-protocol",
+      "kind": "skill",
+      "source": "skills/principle-laziness-protocol/SKILL.md",
+      "case": "skill-positive:principle-laziness-protocol",
+      "positive_outcome": "Explicit $principle-laziness-protocol invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-make-operations-idempotent",
+      "kind": "skill",
+      "source": "skills/principle-make-operations-idempotent/SKILL.md",
+      "case": "skill-positive:principle-make-operations-idempotent",
+      "positive_outcome": "Explicit $principle-make-operations-idempotent invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-migrate-callers-then-delete-legacy-apis",
+      "kind": "skill",
+      "source": "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+      "case": "skill-positive:principle-migrate-callers-then-delete-legacy-apis",
+      "positive_outcome": "Explicit $principle-migrate-callers-then-delete-legacy-apis invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-minimize-reader-load",
+      "kind": "skill",
+      "source": "skills/principle-minimize-reader-load/SKILL.md",
+      "case": "skill-positive:principle-minimize-reader-load",
+      "positive_outcome": "Explicit $principle-minimize-reader-load invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-model-the-domain",
+      "kind": "skill",
+      "source": "skills/principle-model-the-domain/SKILL.md",
+      "case": "skill-positive:principle-model-the-domain",
+      "positive_outcome": "Explicit $principle-model-the-domain invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-never-block-on-the-human",
+      "kind": "skill",
+      "source": "skills/principle-never-block-on-the-human/SKILL.md",
+      "case": "skill-positive:principle-never-block-on-the-human",
+      "positive_outcome": "Explicit $principle-never-block-on-the-human invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-outcome-oriented-execution",
+      "kind": "skill",
+      "source": "skills/principle-outcome-oriented-execution/SKILL.md",
+      "case": "skill-positive:principle-outcome-oriented-execution",
+      "positive_outcome": "Explicit $principle-outcome-oriented-execution invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-prove-it-works",
+      "kind": "skill",
+      "source": "skills/principle-prove-it-works/SKILL.md",
+      "case": "skill-positive:principle-prove-it-works",
+      "positive_outcome": "Explicit $principle-prove-it-works invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-redesign-from-first-principles",
+      "kind": "skill",
+      "source": "skills/principle-redesign-from-first-principles/SKILL.md",
+      "case": "skill-positive:principle-redesign-from-first-principles",
+      "positive_outcome": "Explicit $principle-redesign-from-first-principles invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-separate-before-serializing-shared-state",
+      "kind": "skill",
+      "source": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
+      "case": "skill-positive:principle-separate-before-serializing-shared-state",
+      "positive_outcome": "Explicit $principle-separate-before-serializing-shared-state invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-sequence-verifiable-units",
+      "kind": "skill",
+      "source": "skills/principle-sequence-verifiable-units/SKILL.md",
+      "case": "skill-positive:principle-sequence-verifiable-units",
+      "positive_outcome": "Explicit $principle-sequence-verifiable-units invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-subtract-before-you-add",
+      "kind": "skill",
+      "source": "skills/principle-subtract-before-you-add/SKILL.md",
+      "case": "skill-positive:principle-subtract-before-you-add",
+      "positive_outcome": "Explicit $principle-subtract-before-you-add invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-type-system-discipline",
+      "kind": "skill",
+      "source": "skills/principle-type-system-discipline/SKILL.md",
+      "case": "skill-positive:principle-type-system-discipline",
+      "positive_outcome": "Explicit $principle-type-system-discipline invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:recall",
+      "kind": "skill",
+      "source": "skills/recall/SKILL.md",
+      "case": "skill-positive:recall",
+      "positive_outcome": "Explicit $recall invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:reflect",
+      "kind": "skill",
+      "source": "skills/reflect/SKILL.md",
+      "case": "skill-positive:reflect",
+      "positive_outcome": "Explicit $reflect invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:setup-pstack",
+      "kind": "skill",
+      "source": "skills/setup-pstack/SKILL.md",
+      "case": "skill-positive:setup-pstack",
+      "positive_outcome": "Explicit $setup-pstack invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:show-me-your-work",
+      "kind": "skill",
+      "source": "skills/show-me-your-work/SKILL.md",
+      "case": "skill-positive:show-me-your-work",
+      "positive_outcome": "Explicit $show-me-your-work invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:swarm",
+      "kind": "skill",
+      "source": "skills/swarm/SKILL.md",
+      "case": "skill-positive:swarm",
+      "positive_outcome": "Explicit $swarm invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:tdd",
+      "kind": "skill",
+      "source": "skills/tdd/SKILL.md",
+      "case": "skill-positive:tdd",
+      "positive_outcome": "Explicit $tdd invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:teach",
+      "kind": "skill",
+      "source": "skills/teach/SKILL.md",
+      "case": "skill-positive:teach",
+      "positive_outcome": "Explicit $teach invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:technical-writing",
+      "kind": "skill",
+      "source": "skills/technical-writing/SKILL.md",
+      "case": "skill-positive:technical-writing",
+      "positive_outcome": "Explicit $technical-writing invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:typescript-best-practices",
+      "kind": "skill",
+      "source": "skills/typescript-best-practices/SKILL.md",
+      "case": "skill-positive:typescript-best-practices",
+      "positive_outcome": "Explicit $typescript-best-practices invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:unslop",
+      "kind": "skill",
+      "source": "skills/unslop/SKILL.md",
+      "case": "skill-positive:unslop",
+      "positive_outcome": "Explicit $unslop invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:why",
+      "kind": "skill",
+      "source": "skills/why/SKILL.md",
+      "case": "skill-positive:why",
+      "positive_outcome": "Explicit $why invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    }
+  ],
+  "playbooks": [
+    {
+      "id": "playbook:authoring-a-skill",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/authoring-a-skill.md",
+      "case": "playbook-positive:authoring-a-skill",
+      "positive_outcome": "Poteto routing selects authoring-a-skill only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:autonomous-run",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/autonomous-run.md",
+      "case": "playbook-positive:autonomous-run",
+      "positive_outcome": "Poteto routing selects autonomous-run only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:autopilot-full",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/autopilot-full.md",
+      "case": "playbook-positive:autopilot-full",
+      "positive_outcome": "Poteto routing selects autopilot-full only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:autopilot-stack",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/autopilot-stack.md",
+      "case": "playbook-positive:autopilot-stack",
+      "positive_outcome": "Poteto routing selects autopilot-stack only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:babysit",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/babysit.md",
+      "case": "playbook-positive:babysit",
+      "positive_outcome": "Poteto routing selects babysit only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:bug-fix",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/bug-fix.md",
+      "case": "playbook-positive:bug-fix",
+      "positive_outcome": "Poteto routing selects bug-fix only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:eval",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/eval.md",
+      "case": "playbook-positive:eval",
+      "positive_outcome": "Poteto routing selects eval only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:feature",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/feature.md",
+      "case": "playbook-positive:feature",
+      "positive_outcome": "Poteto routing selects feature only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:hillclimb",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/hillclimb.md",
+      "case": "playbook-positive:hillclimb",
+      "positive_outcome": "Poteto routing selects hillclimb only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:investigation",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/investigation.md",
+      "case": "playbook-positive:investigation",
+      "positive_outcome": "Poteto routing selects investigation only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:multi-phase-plan",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/multi-phase-plan.md",
+      "case": "playbook-positive:multi-phase-plan",
+      "positive_outcome": "Poteto routing selects multi-phase-plan only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:opening-a-pr",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/opening-a-pr.md",
+      "case": "playbook-positive:opening-a-pr",
+      "positive_outcome": "Poteto routing selects opening-a-pr only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:orchestrate",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/orchestrate.md",
+      "case": "playbook-positive:orchestrate",
+      "positive_outcome": "Poteto routing selects orchestrate only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:pause-safely",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/pause-safely.md",
+      "case": "playbook-positive:pause-safely",
+      "positive_outcome": "Poteto routing selects pause-safely only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:perf-issue",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/perf-issue.md",
+      "case": "playbook-positive:perf-issue",
+      "positive_outcome": "Poteto routing selects perf-issue only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:prototype",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/prototype.md",
+      "case": "playbook-positive:prototype",
+      "positive_outcome": "Poteto routing selects prototype only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:refactoring",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/refactoring.md",
+      "case": "playbook-positive:refactoring",
+      "positive_outcome": "Poteto routing selects refactoring only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:runtime-forensics",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/runtime-forensics.md",
+      "case": "playbook-positive:runtime-forensics",
+      "positive_outcome": "Poteto routing selects runtime-forensics only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:session-pickup",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/session-pickup.md",
+      "case": "playbook-positive:session-pickup",
+      "positive_outcome": "Poteto routing selects session-pickup only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:shipping",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/shipping.md",
+      "case": "playbook-positive:shipping",
+      "positive_outcome": "Poteto routing selects shipping only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:trace-forensics",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/trace-forensics.md",
+      "case": "playbook-positive:trace-forensics",
+      "positive_outcome": "Poteto routing selects trace-forensics only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:visual-parity",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/visual-parity.md",
+      "case": "playbook-positive:visual-parity",
+      "positive_outcome": "Poteto routing selects visual-parity only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "playbook:worktree-cleanup",
+      "kind": "playbook",
+      "source": "skills/poteto-mode/playbooks/worktree-cleanup.md",
+      "case": "playbook-positive:worktree-cleanup",
+      "positive_outcome": "Poteto routing selects worktree-cleanup only when its documented signals and prerequisites match.",
+      "boundaries": [
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only-through-poteto-mode",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    }
+  ]
+}
+

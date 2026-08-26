@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Aqua-123/pstack-for-codex/automations/benny/schemas/state.schema.json",
+  "title": "Benny canonical state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "highWater", "reports", "deadLetters", "automationIds", "setupReceipt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "highWater": { "$ref": "#/$defs/tuple" },
+    "reports": { "type": "object", "additionalProperties": { "$ref": "#/$defs/report" } },
+    "deadLetters": { "type": "object", "additionalProperties": { "$ref": "#/$defs/deadLetter" } },
+    "automationIds": { "type": "object", "additionalProperties": { "type": "string", "minLength": 1 } },
+    "setupReceipt": { "type": ["object", "null"] }
+  },
+  "$defs": {
+    "tuple": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerTs", "providerId"],
+      "properties": {
+        "providerTs": { "type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+)?$" },
+        "providerId": { "type": "string" }
+      }
+    },
+    "report": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["pending", "reconciled", "dead-lettered", "quarantined"] },
+        "attempts": { "type": "integer", "minimum": 0 },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "replayRequestedAt": { "type": "string", "format": "date-time" },
+        "effects": { "type": "object" }
+      }
+    },
+    "deadLetter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reportId", "reason", "deadLetteredAt", "attempts"],
+      "properties": {
+        "reportId": { "type": "string", "pattern": "^bny_[a-f0-9]{64}$" },
+        "reason": { "type": "string", "maxLength": 256 },
+        "deadLetteredAt": { "type": "string", "format": "date-time" },
+        "attempts": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

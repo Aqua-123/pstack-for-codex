@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Exhaust The Design Space"
+  short_description: "Apply when facing a novel UI interaction or architectural decision with no precedent in the..."
+  default_prompt: "Use $principle-exhaust-the-design-space for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

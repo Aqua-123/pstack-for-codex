@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Build The Lever"
+  short_description: "Apply to any non-trivial work, not just bulk work: edits, migrations, analyses, checks. Build..."
+  default_prompt: "Use $principle-build-the-lever for this request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

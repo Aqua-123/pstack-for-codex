@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+if ! command -v bun >/dev/null 2>&1; then
+  printf 'Bun is required to run pstack-for-codex tools. Install Bun and retry.\n' >&2
+  exit 127
+fi
+
+script_dir=$(CDPATH= cd -- "${0%/*}" && pwd)
+exec bun "$script_dir/runner.ts" "$@"
