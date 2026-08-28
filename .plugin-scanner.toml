@@ -1,0 +1,17 @@
+# Scanner policy for HOL / plugin-scanner.
+# Intentional process and filesystem tooling is baselined (see scanner-baseline.txt).
+# Test trees keep secret-shaped fixtures for redaction proofs and are path-ignored.
+
+[scanner]
+profile = "public-marketplace"
+baseline_file = "scanner-baseline.txt"
+ignore_paths = [
+  "tests/*",
+  "tests/**",
+  "**/*.test.ts",
+  "**/*.test.mjs",
+  "node_modules/*",
+  "node_modules/**",
+  "**/node_modules/*",
+  "**/node_modules/**",
+]

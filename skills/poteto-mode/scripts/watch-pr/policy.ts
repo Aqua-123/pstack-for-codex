@@ -338,7 +338,7 @@ export function statusQueryVerdict(
 export interface WatchClock {
   now(): number;
   observedAt(): string;
-  sleep(seconds: number): Promise<void>;
+  waitSeconds(seconds: number): Promise<void>;
 }
 export interface RunDependencies {
   readonly reader: T.GitHubReader;
@@ -396,7 +396,7 @@ async function pollUntilTerminal<V>(args: {
           exitCode: 5,
           reason: { kind: "status-unavailable", failure: error.failure },
         });
-      await args.dependencies.clock.sleep(retryInSeconds);
+      await args.dependencies.clock.waitSeconds(retryInSeconds);
       continue;
     }
     if (result.kind === "terminal") return result.verdict;
@@ -406,7 +406,7 @@ async function pollUntilTerminal<V>(args: {
         deadlinePassed(started, args.options, args.dependencies.clock.now())
       )
         return result.onDeadline();
-      await args.dependencies.clock.sleep(result.seconds);
+      await args.dependencies.clock.waitSeconds(result.seconds);
     }
   }
 }

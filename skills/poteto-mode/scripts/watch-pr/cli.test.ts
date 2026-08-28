@@ -22,7 +22,7 @@ function testRuntime(reader: GitHubReader): {
       clock: {
         now: () => 0,
         observedAt: () => "2026-07-26T00:00:00.000Z",
-        async sleep() {
+        async waitSeconds() {
           throw new Error("test unexpectedly slept");
         },
       },

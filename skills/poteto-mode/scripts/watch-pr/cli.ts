@@ -162,7 +162,7 @@ function realRuntime(): CliRuntime {
     clock: {
       now: () => performance.now() / 1_000,
       observedAt: () => new Date().toISOString(),
-      sleep: async (seconds) => {
+      waitSeconds: async (seconds) => {
         await delay(seconds * 1_000);
       },
     },

@@ -282,7 +282,7 @@ describe("queued-stack cadence", () => {
         clock: {
           now: () => now,
           observedAt: () => "2026-07-26T00:00:00.000Z",
-          async sleep(seconds) {
+          async waitSeconds(seconds) {
             timeline.push("sleep");
             now += seconds;
             sleeps += 1;
@@ -365,7 +365,7 @@ describe("queued-stack cadence", () => {
         clock: {
           now: () => now,
           observedAt: () => "2026-07-26T00:00:00.000Z",
-          async sleep(seconds) {
+          async waitSeconds(seconds) {
             timeline.push("sleep");
             now += seconds;
             sleeps += 1;

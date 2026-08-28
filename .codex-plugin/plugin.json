@@ -21,6 +21,7 @@
     "shortDescription": "Codex engineering workflows",
     "longDescription": "A Codex-native derivative of pstack for deliberate planning, implementation, review, verification, and orchestration. Every skill is explicit-only so workflow selection remains under user control.",
     "developerName": "pstack-for-codex maintainers",
+    "websiteURL": "https://github.com/Aqua-123/pstack-for-codex",
     "category": "Developer Tools",
     "capabilities": [
       "Plan engineering work",

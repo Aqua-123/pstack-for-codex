@@ -1,4 +1,4 @@
-import { spawnSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
@@ -11,17 +11,56 @@ export interface DependencyBootstrapOptions {
   readonly env?: NodeJS.ProcessEnv;
 }
 
+function runBun(
+  bun: string,
+  args: readonly string[],
+  options: {
+    readonly cwd?: string;
+    readonly env: NodeJS.ProcessEnv;
+    readonly stdio?: "pipe" | "inherit";
+  }
+): { readonly status: number | null; readonly stdout: string; readonly stderr: string } {
+  try {
+    if (options.stdio === "inherit") {
+      execFileSync(bun, [...args], {
+        cwd: options.cwd,
+        env: options.env,
+        stdio: "inherit",
+      });
+      return { status: 0, stdout: "", stderr: "" };
+    }
+    const stdout = execFileSync(bun, [...args], {
+      cwd: options.cwd,
+      env: options.env,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+    return { status: 0, stdout: stdout ?? "", stderr: "" };
+  } catch (error) {
+    const failure = error as {
+      status?: number | null;
+      stdout?: string | Buffer;
+      stderr?: string | Buffer;
+      message?: string;
+    };
+    if (options.stdio === "inherit") {
+      return { status: failure.status ?? 1, stdout: "", stderr: "" };
+    }
+    return {
+      status: failure.status ?? 1,
+      stdout: String(failure.stdout ?? ""),
+      stderr: String(failure.stderr ?? failure.message ?? ""),
+    };
+  }
+}
+
 function resolveBunExecutable(env: NodeJS.ProcessEnv): string {
   const executable = basename(process.execPath).toLowerCase();
   const candidate = executable === "bun" || executable === "bun.exe"
     ? process.execPath
     : "bun";
-  const probe = spawnSync(candidate, ["--version"], {
-    env,
-    encoding: "utf8",
-    stdio: ["ignore", "pipe", "pipe"],
-  });
-  if (probe.error !== undefined || probe.status !== 0) {
+  const probe = runBun(candidate, ["--version"], { env, stdio: "pipe" });
+  if (probe.status !== 0) {
     throw new Error(
       "Bun is required to run pstack-for-codex tools. Install Bun and retry."
     );
@@ -62,15 +101,14 @@ export function ensureDependenciesInstalled(
     return;
   }
 
-  const result = spawnSync(bun, ["install", "--frozen-lockfile"], {
+  const result = runBun(bun, ["install", "--frozen-lockfile"], {
     cwd: scriptsDirectory,
     env,
-    encoding: "utf8",
-    stdio: ["ignore", "pipe", "pipe"],
+    stdio: "pipe",
   });
-  if (result.error !== undefined || result.status !== 0) {
-    process.stdout.write(result.stdout ?? "");
-    process.stderr.write(result.stderr ?? "");
+  if (result.status !== 0) {
+    process.stdout.write(result.stdout);
+    process.stderr.write(result.stderr);
     throw new Error(
       `bun install --frozen-lockfile exited with status ${result.status ?? "unavailable"}`
     );
@@ -83,7 +121,7 @@ export function ensureDependenciesInstalled(
 
   writeFileSync(installKeyPath, `${installKey}\n`);
 
-  const restarted = spawnSync(bun, process.argv.slice(1), {
+  const restarted = runBun(bun, process.argv.slice(1), {
     cwd: process.cwd(),
     env,
     stdio: "inherit",
