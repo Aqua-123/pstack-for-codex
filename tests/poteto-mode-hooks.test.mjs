@@ -51,6 +51,52 @@ test("only a leading explicit invocation activates and the disable phrase is exa
   assert.equal(classifyPrompt("poteto mode please"), "inactive");
 });
 
+const skillPath = "/Users/baker/.codex/plugins/cache/pstack-for-codex-local/pstack-for-codex/0.1.0/skills/poteto-mode/SKILL.md";
+const linkedInvocation = `[$pstack-for-codex:poteto-mode](${skillPath})`;
+
+test("Codex namespaced and linked skill invocations activate", () => {
+  for (const prompt of [
+    "$pstack-for-codex:poteto-mode",
+    "  $pstack-for-codex:poteto-mode continue",
+    linkedInvocation,
+    `  ${linkedInvocation} fix all and continue with app dev`,
+    `[$poteto-mode](${skillPath}) continue`,
+    "[$pstack-for-codex:poteto-mode](/Users/Baker Example/plugins/pstack/skills/poteto-mode/SKILL.md) continue",
+  ]) assert.equal(classifyPrompt(prompt), "activate", prompt);
+});
+
+test("skill links reject casual, quoted, malformed, and wrong-skill invocations", () => {
+  for (const prompt of [
+    `please ${linkedInvocation}`,
+    `> ${linkedInvocation}`,
+    `\`${linkedInvocation}\``,
+    `$pstack-for-codex:poteto-mode-extra continue`,
+    `[$other:poteto-mode](${skillPath})`,
+    `[$pstack-for-codex:other](${skillPath})`,
+    `[$pstack-for-codex:poteto-mode](https://example.com/skills/poteto-mode/SKILL.md)`,
+    `[$pstack-for-codex:poteto-mode](skills/poteto-mode/SKILL.md)`,
+    `[$pstack-for-codex:poteto-mode](/plugins/skills/other/SKILL.md)`,
+    `[$pstack-for-codex:poteto-mode](/plugins/../skills/poteto-mode/SKILL.md)`,
+    `[$pstack-for-codex:poteto-mode](/plugins/skills/poteto-mode/SKILL.md?x=1)`,
+    `[$pstack-for-codex:poteto-mode](/plugins/\n/skills/poteto-mode/SKILL.md)`,
+    `${linkedInvocation}suffix`,
+    `disable $pstack-for-codex:poteto-mode`,
+    `disable ${linkedInvocation}`,
+  ]) assert.equal(classifyPrompt(prompt), "inactive", prompt);
+});
+
+test("linked activation persists through a later turn and exact opt-out", async (t) => {
+  const { pluginData, load } = await fixture(t);
+  const activation = { ...await load("activate.json"), prompt: `${linkedInvocation} continue` };
+  const receipt = await handleHook(activation, { pluginData, now: 1_000 });
+  assert.match(receipt?.hookSpecificOutput.additionalContext ?? "", /Poteto sticky receipt/);
+  assert.equal((await hookStatus({ pluginData, sessionId: activation.session_id, cwd: activation.cwd, now: 1_500 })).status, "active");
+  const later = await handleHook({ ...activation, prompt: "continue" }, { pluginData, now: 2_000 });
+  assert.match(later?.hookSpecificOutput.additionalContext ?? "", /active for this session/);
+  await handleHook({ ...activation, prompt: "disable $poteto-mode" }, { pluginData, now: 3_000 });
+  assert.equal(await handleHook({ ...activation, prompt: "continue" }, { pluginData, now: 4_000 }), null);
+});
+
 test("activation is session isolated and later turns survive resume and compaction", async (t) => {
   const { pluginData, load } = await fixture(t);
   const activation = await load("activate.json");

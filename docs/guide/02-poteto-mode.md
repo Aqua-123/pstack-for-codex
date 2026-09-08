@@ -22,6 +22,8 @@ The second prompt routes to a read-only investigation because the authority boun
 
 ## Understand session state
 
+Start the prompt with `$poteto-mode`, `$pstack-for-codex:poteto-mode`, or the Codex skill chip. The chip serializes as a Markdown link with either exact label and a normalized absolute local path ending in `/skills/poteto-mode/SKILL.md`. Quoted examples, casual mentions, and links to other skills do not activate the mode.
+
 The explicit invocation always applies to the current turn. Trusted hooks can persist Poteto Mode for later turns in the same session. The hook state is keyed by session and project, expires, and does not authorize new actions.
 
 When hook trust or stable session context is unavailable, the mode reports `current-turn-only`. Invoke `$poteto-mode` again on a later turn. Do not assume that a prior activation survived a resume or compaction without a healthy receipt.

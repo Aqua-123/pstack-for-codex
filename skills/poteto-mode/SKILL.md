@@ -9,7 +9,7 @@ All delegation, lifecycle, isolation, history, connector, and capability behavio
 
 ## Codex session lifecycle
 
-`$poteto-mode` must be the first non-whitespace token in the user prompt. This explicit invocation applies the complete skill on the activation turn. A trusted bundled hook records only session-scoped activation metadata for later turns. Casual mentions, quoted examples, and the words “poteto mode” do not activate it.
+An explicit invocation must appear first after whitespace in the user prompt. Accept `$poteto-mode`, `$pstack-for-codex:poteto-mode`, or a Codex Markdown skill link with either exact label. The link must target a normalized absolute local path ending in `/skills/poteto-mode/SKILL.md`. This explicit invocation applies the complete skill on the activation turn. A trusted bundled hook records only session-scoped activation metadata for later turns. Casual mentions, quoted examples, and the words “poteto mode” do not activate it.
 
 The exact phrase `disable $poteto-mode` opts the current session out. It removes only that session's state. Session end is advisory because Codex can resume the same session. State expires through the bundled versioned TTL collector instead.
 
