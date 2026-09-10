@@ -1,0 +1,8 @@
+interface:
+  display_name: "Make Bot UI"
+  short_description: "Build a local UI that sends authenticated JSON to a user-owned webhook."
+  default_prompt: "Use $make-bot-ui for this local webhook UI request."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

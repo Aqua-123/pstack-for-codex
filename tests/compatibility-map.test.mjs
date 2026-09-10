@@ -19,8 +19,17 @@ test("every locked upstream path has one complete compatibility entry", async ()
   const map = JSON.parse(await fs.readFile(path.join(root, "compatibility/pstack-map.json"), "utf8"));
   const result = validateCompatibility(lock, map);
   assert.deepEqual(result.errors, []);
-  assert.equal(map.entries.length, 156);
-  assert.equal(new Set(map.entries.map((entry) => entry.upstreamPath)).size, 156);
+  assert.equal(map.entries.length, 158);
+  assert.equal(new Set(map.entries.map((entry) => entry.upstreamPath)).size, 158);
+  assert.equal(map.refreshDecisions.length, 100);
+  assert.deepEqual(
+    Object.fromEntries(["added", "changed", "deleted-or-renamed"].map((kind) => [kind, map.refreshDecisions.filter((entry) => entry.kind === kind).length])),
+    { added: 4, changed: 94, "deleted-or-renamed": 2 },
+  );
+  for (const decision of map.refreshDecisions) {
+    assert.ok(decision.disposition.length > 0);
+    assert.ok(decision.rationale.length > 0);
+  }
 });
 
 test("new upstream files block promotion until classified", () => {
@@ -30,6 +39,45 @@ test("new upstream files block promotion until classified", () => {
     { path: "new.md", sha256: sha256("new\n"), bytes: 4 },
   ]);
   assert.match(result.errors.join("\n"), /upstream added requires an explicit compatibility disposition: new.md/);
+});
+
+test("refresh dispositions must be unique and match the candidate inventory", () => {
+  const fixture = fixtureContract();
+  const candidateHash = sha256("upstream v2\n");
+  fixture.lock.files[0] = { path: "alpha.md", sha256: candidateHash, bytes: 12 };
+  fixture.map.entries[0].upstreamSha256 = candidateHash;
+  fixture.map.refresh = {
+    fromFiles: [{ path: "alpha.md", sha256: sha256("upstream v1\n"), bytes: 12 }],
+    deltaCounts: { added: 0, changed: 1, "deleted-or-renamed": 0 },
+  };
+  fixture.map.refreshDecisions = [{
+    path: "alpha.md",
+    kind: "changed",
+    oldSha256: sha256("upstream v1\n"),
+    newSha256: sha256("wrong\n"),
+    disposition: "reviewed",
+    rationale: "reviewed",
+  }, {
+    path: "alpha.md",
+    kind: "changed",
+    oldSha256: sha256("upstream v1\n"),
+    newSha256: candidateHash,
+    disposition: "reviewed",
+    rationale: "reviewed",
+  }];
+  const result = validateCompatibility(fixture.lock, fixture.map, [{ path: "alpha.md", sha256: candidateHash, bytes: 12 }]);
+  assert.match(result.errors.join("\n"), /duplicate refresh decision/);
+
+  fixture.map.refreshDecisions = [{
+    path: "alpha.md",
+    kind: "changed",
+    oldSha256: sha256("wrong old hash\n"),
+    newSha256: sha256("wrong\n"),
+    disposition: "reviewed",
+    rationale: "reviewed",
+  }];
+  const mismatch = validateCompatibility(fixture.lock, fixture.map, [{ path: "alpha.md", sha256: candidateHash, bytes: 12 }]);
+  assert.match(mismatch.errors.join("\n"), /stored refresh decision does not match source history/);
 });
 
 test("deleted or renamed upstream files require a reviewed disposition", () => {

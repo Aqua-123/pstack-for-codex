@@ -1,6 +1,6 @@
 # pstack for Codex
 
-`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 45 explicit-only skills and 23 Poteto Mode playbooks.
+`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 48 explicit-only skills and 23 Poteto Mode playbooks.
 
 Use `$poteto-mode` for a substantial engineering task. It selects a playbook, records the work as verifiable steps, and invokes narrower skills when the steps need them. The parent task keeps authority for integration, external writes, commits, pushes, and the final result.
 
@@ -19,9 +19,9 @@ For a local checkout, replace `Aqua-123/pstack-for-codex` with its absolute path
 codex plugin list --json
 ```
 
-Codex CLI `0.146.0` does not expose an offline runtime skill-index command. The release suite validates the skill catalog from the installed artifact; start a new task to exercise prompt-time skill discovery.
+Codex CLI `0.153.4` does not expose an offline runtime skill-index command. The release suite validates the skill catalog from the installed artifact; start a new task to exercise prompt-time skill discovery.
 
-All 45 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
+All 48 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
 
 ```text
 $poteto-mode add a --json flag to this command. Keep text output byte-identical. Verify both modes.
@@ -64,6 +64,7 @@ The other skills are useful when you want one specific operation:
 | [`$unslop`](./skills/unslop/SKILL.md) | Remove vague or machine-shaped prose. |
 | [`$show-me-your-work`](./skills/show-me-your-work/SKILL.md) | Keep a reviewable `decisions.tsv` trail. |
 | [`$setup-benny`](./skills/setup-benny/SKILL.md) | Inspect or configure the dormant Benny polling pack. |
+| [`$make-bot-ui`](./skills/make-bot-ui/SKILL.md) | Build a local UI for an authenticated user-owned webhook. |
 
 Browse the [complete skill directory](./skills/) or read the [pstack guide](./docs/guide/README.md).
 

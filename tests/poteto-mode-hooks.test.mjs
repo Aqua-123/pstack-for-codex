@@ -51,7 +51,7 @@ test("only a leading explicit invocation activates and the disable phrase is exa
   assert.equal(classifyPrompt("poteto mode please"), "inactive");
 });
 
-const skillPath = "/Users/baker/.codex/plugins/cache/pstack-for-codex-local/pstack-for-codex/0.1.0/skills/poteto-mode/SKILL.md";
+const skillPath = "/Users/baker/.codex/plugins/cache/pstack-for-codex-local/pstack-for-codex/0.2.0/skills/poteto-mode/SKILL.md";
 const linkedInvocation = `[$pstack-for-codex:poteto-mode](${skillPath})`;
 
 test("Codex namespaced and linked skill invocations activate", () => {

@@ -12,7 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 test("skill resources resolve from an installed cache-like copy", async (context) => {
   const temporary = await fs.mkdtemp(path.join(os.tmpdir(), "pstack-installed-cache-"));
   context.after(() => fs.rm(temporary, { recursive: true, force: true }));
-  const installed = path.join(temporary, "pstack-for-codex", "0.1.0");
+  const installed = path.join(temporary, "pstack-for-codex", "0.2.0");
   await fs.cp(root, installed, {
     recursive: true,
     filter: (source) => !source.split(path.sep).includes(".git"),

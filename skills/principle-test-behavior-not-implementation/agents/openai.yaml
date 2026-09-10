@@ -1,0 +1,8 @@
+interface:
+  display_name: "Principle Test Behavior"
+  short_description: "Keep tests focused on user-visible behavior and observable effects."
+  default_prompt: "Use $principle-test-behavior-not-implementation when reviewing this test."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false
