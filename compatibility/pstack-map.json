@@ -3,8 +3,8 @@
   "upstream": {
     "repository": "https://github.com/cursor/plugins",
     "subdirectory": "pstack",
-    "commit": "bdf7aa355337897f167153e05069aca505dae17c",
-    "version": "0.14.3"
+    "commit": "f8abeddd1862dc73704e3d719dd73df0d51b8c71",
+    "version": "0.15.1"
   },
   "classifications": [
     "preserved",
@@ -15,7 +15,7 @@
   "entries": [
     {
       "upstreamPath": ".cursor-plugin/plugin.json",
-      "upstreamSha256": "41b2c5bcb51057303de9373f931eda02e577e3b7a96520fd74c8784495b4e1bd",
+      "upstreamSha256": "5f4311823e4c1d3e611ee1bd30cf7378ded6c413553d070a7ecabaabc82d6dda",
       "classification": "replaced",
       "derivedPath": ".codex-plugin/plugin.json",
       "preservedInvariants": [
@@ -26,7 +26,12 @@
       "validations": [
         "manifest",
         "installed-plugin"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "5f4311823e4c1d3e611ee1bd30cf7378ded6c413553d070a7ecabaabc82d6dda",
+        "disposition": "replaced-by-codex-manifest",
+        "rationale": "The upstream host manifest remains provenance only; the Codex manifest keeps the supported field set and namespace."
+      }
     },
     {
       "upstreamPath": ".gitignore",
@@ -65,6 +70,23 @@
         "agent-template",
         "skill-behavior"
       ]
+    },
+    {
+      "upstreamPath": "assets/logo.png",
+      "upstreamSha256": "672f6791589ef758b0ced2c4c477913fa2758623c438e265639a0d539ce90695",
+      "classification": "preserved",
+      "derivedPath": "assets/logo.png",
+      "preservedInvariants": [
+        "the upstream artifact remains byte-identical"
+      ],
+      "validations": [
+        "upstream-hash"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "672f6791589ef758b0ced2c4c477913fa2758623c438e265639a0d539ce90695",
+        "disposition": "ported-codex-native",
+        "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+      }
     },
     {
       "upstreamPath": "automations/benny/FOR_AGENTS.md",
@@ -212,7 +234,7 @@
     },
     {
       "upstreamPath": "docs/guide/01-setup.md",
-      "upstreamSha256": "e6e501f8f58405dcffab8a71f829bf0985466a28f23f49ef29a301f5e8a62087",
+      "upstreamSha256": "5530cdb0138b1abf9f2bbb3d54b1bb7447cfb4d8aa3db5444410257473607c39",
       "classification": "adapted",
       "derivedPath": "docs/guide/01-setup.md",
       "preservedInvariants": [
@@ -220,11 +242,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "5530cdb0138b1abf9f2bbb3d54b1bb7447cfb4d8aa3db5444410257473607c39",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/02-poteto-mode.md",
-      "upstreamSha256": "528ef62a66ae0ac74cf3eb489b960a80ee4370e0256342cb2b94c6712241c8aa",
+      "upstreamSha256": "379a1b2c9cd2ba54032b2b142563328d0f3d65039f067863d19b1d4c008737f5",
       "classification": "adapted",
       "derivedPath": "docs/guide/02-poteto-mode.md",
       "preservedInvariants": [
@@ -232,11 +259,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "379a1b2c9cd2ba54032b2b142563328d0f3d65039f067863d19b1d4c008737f5",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/03-understand.md",
-      "upstreamSha256": "0a42633faaa03cbc3c8d48cc3987c3a2f5924ff3b4651d045486933cbc5f1b10",
+      "upstreamSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
       "classification": "adapted",
       "derivedPath": "docs/guide/03-understand.md",
       "preservedInvariants": [
@@ -244,7 +276,12 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/04-design.md",
@@ -272,7 +309,7 @@
     },
     {
       "upstreamPath": "docs/guide/06-verify-and-ship.md",
-      "upstreamSha256": "12e0540d20ac06b2b01ff4be7023f1e83d510882cd95f56d8ea52a53ab8ccf8a",
+      "upstreamSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
       "classification": "adapted",
       "derivedPath": "docs/guide/06-verify-and-ship.md",
       "preservedInvariants": [
@@ -280,11 +317,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/07-overnight.md",
-      "upstreamSha256": "d3ff086392beb2a0da27a6ef881cb280a9d0a4214ef9b3d36173ac11d7c6c708",
+      "upstreamSha256": "eefbc665ad411ee22b6430d779674e5e8d8f304d51fafd80a62ab2334d095ebc",
       "classification": "adapted",
       "derivedPath": "docs/guide/07-overnight.md",
       "preservedInvariants": [
@@ -292,11 +334,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "eefbc665ad411ee22b6430d779674e5e8d8f304d51fafd80a62ab2334d095ebc",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/08-principles.md",
-      "upstreamSha256": "34c0b6d6f789738cc05fdfbc2d8f8e6a45f52acc47f78752f4ee28c1525bc576",
+      "upstreamSha256": "3ede7c9cf74d9631142aec016a01843d97c1e20469387144b70c2660d50fa96f",
       "classification": "adapted",
       "derivedPath": "docs/guide/08-principles.md",
       "preservedInvariants": [
@@ -304,7 +351,12 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "3ede7c9cf74d9631142aec016a01843d97c1e20469387144b70c2660d50fa96f",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "docs/guide/09-make-it-yours.md",
@@ -404,7 +456,7 @@
     },
     {
       "upstreamPath": "docs/guide/README.md",
-      "upstreamSha256": "e2921b1ddb06cb8a4aee0d4fa66de340235f47f683bc4919c35eb00121f522d3",
+      "upstreamSha256": "0db8dd72e832c06638ca2f43489e8597d44dc0ea8da3b5088e4382ea26d904c5",
       "classification": "adapted",
       "derivedPath": "docs/guide/README.md",
       "preservedInvariants": [
@@ -412,7 +464,12 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "0db8dd72e832c06638ca2f43489e8597d44dc0ea8da3b5088e4382ea26d904c5",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "LICENSE",
@@ -428,7 +485,7 @@
     },
     {
       "upstreamPath": "README.md",
-      "upstreamSha256": "7b2994ff3caa430bbdd5734e24f7b2f18afeee2dd0893e5dbbce0fca2790ce8d",
+      "upstreamSha256": "fc81cde088c66ee3d0ea904066495e246a07bf8f62ad385780614ada1bef86db",
       "classification": "adapted",
       "derivedPath": "README.md",
       "preservedInvariants": [
@@ -436,7 +493,12 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "fc81cde088c66ee3d0ea904066495e246a07bf8f62ad385780614ada1bef86db",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/architect/references/design-red-flags.md",
@@ -452,7 +514,7 @@
     },
     {
       "upstreamPath": "skills/architect/references/rationale-template.md",
-      "upstreamSha256": "6645a0e5f68c003298ec95b85a23262bdda0c79f998b926060169b54d9f23fbb",
+      "upstreamSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
       "classification": "adapted",
       "derivedPath": "skills/architect/references/rationale-template.md",
       "preservedInvariants": [
@@ -460,11 +522,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/architect/references/runner-prompt.md",
-      "upstreamSha256": "3ef8c1452a0382a15b7601c7c94f2a16a00954170d705b7af8cc49ac78080ec9",
+      "upstreamSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
       "classification": "adapted",
       "derivedPath": "skills/architect/references/runner-prompt.md",
       "preservedInvariants": [
@@ -472,11 +539,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/architect/SKILL.md",
-      "upstreamSha256": "585d7a9e03c0cced84c80d4b60c09c8dc76010bb36c579f92d9e4deafec53df7",
+      "upstreamSha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
       "classification": "adapted",
       "derivedPath": "skills/architect/SKILL.md",
       "preservedInvariants": [
@@ -484,11 +556,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/arena/SKILL.md",
-      "upstreamSha256": "a2241e8500a44d9c16bd3260c8c70e28c4bb8a857c33061d42b267057e6f7093",
+      "upstreamSha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
       "classification": "adapted",
       "derivedPath": "skills/arena/SKILL.md",
       "preservedInvariants": [
@@ -496,11 +573,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/automate-me/SKILL.md",
-      "upstreamSha256": "34e7eab6f495093d474817bc4c13f26bcf5fafa439f2761b8c1ec72b07487764",
+      "upstreamSha256": "1510979b0b71b54284427a19c09918f8b1fdfc168f9b7f9e30098793a5ec88ef",
       "classification": "adapted",
       "derivedPath": "skills/automate-me/SKILL.md",
       "preservedInvariants": [
@@ -508,11 +590,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "1510979b0b71b54284427a19c09918f8b1fdfc168f9b7f9e30098793a5ec88ef",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/blast-radius/SKILL.md",
-      "upstreamSha256": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8",
+      "upstreamSha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
       "classification": "adapted",
       "derivedPath": "skills/blast-radius/SKILL.md",
       "preservedInvariants": [
@@ -520,7 +607,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/bro/SKILL.md",
@@ -584,7 +676,7 @@
     },
     {
       "upstreamPath": "skills/figure-it-out/SKILL.md",
-      "upstreamSha256": "548616d04909de854f36869af2af127ce321fc6aaf95ea5a626997709fd46a2a",
+      "upstreamSha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
       "classification": "adapted",
       "derivedPath": "skills/figure-it-out/SKILL.md",
       "preservedInvariants": [
@@ -592,35 +684,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
-    },
-    {
-      "upstreamPath": "skills/how/references/critic-prompt.md",
-      "upstreamSha256": "aa77a15590814c814bd5cb074842029ab7b790c2e8379050525bdbc20739d1bb",
-      "classification": "adapted",
-      "derivedPath": "skills/how/references/critic-prompt.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
       ],
-      "validations": [
-        "skill-behavior"
-      ]
-    },
-    {
-      "upstreamPath": "skills/how/references/critique-rubric.md",
-      "upstreamSha256": "5774ff2caf51796e54c4a61b63620a165de5801f23c8f47406e527abfbe9addc",
-      "classification": "adapted",
-      "derivedPath": "skills/how/references/critique-rubric.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ]
+      "refreshDisposition": {
+        "upstreamSha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/how/references/explainer-prompt.md",
-      "upstreamSha256": "04336086e7c415394459ca2f461717d920e15339517dbf5a56ca042f8b4fead3",
+      "upstreamSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
       "classification": "adapted",
       "derivedPath": "skills/how/references/explainer-prompt.md",
       "preservedInvariants": [
@@ -628,11 +701,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/how/references/explorer-prompt.md",
-      "upstreamSha256": "fd1218b8cf1f467c644d4ce6fa5e54e6089ede65a28fbbae61f6ee7a2d462f85",
+      "upstreamSha256": "3a6965276d23be7d8da6c305bfd5d7bf29d2aef09e5dae4119463ac72022a02d",
       "classification": "adapted",
       "derivedPath": "skills/how/references/explorer-prompt.md",
       "preservedInvariants": [
@@ -640,11 +718,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "3a6965276d23be7d8da6c305bfd5d7bf29d2aef09e5dae4119463ac72022a02d",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/how/SKILL.md",
-      "upstreamSha256": "fe503e7a9b2a3a7ad2622a2de6124cb06c466922fb44bc61817b49b52042b885",
+      "upstreamSha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
       "classification": "adapted",
       "derivedPath": "skills/how/SKILL.md",
       "preservedInvariants": [
@@ -652,11 +735,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/interrogate/references/code-quality-review.md",
-      "upstreamSha256": "2462f1347b99b412b04fcb0577b96d8744c801f792f2651746f9409fd4465dc9",
+      "upstreamSha256": "623d3d8122d075c303b562783b471a732992e84166b318f85ab6d6c118b13304",
       "classification": "adapted",
       "derivedPath": "skills/interrogate/references/code-quality-review.md",
       "preservedInvariants": [
@@ -664,11 +752,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "623d3d8122d075c303b562783b471a732992e84166b318f85ab6d6c118b13304",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/interrogate/references/lead-judgment.md",
-      "upstreamSha256": "d2cea6cc308758201c6b8b82baf780947645f1ab752707ddf97fab374bf473f9",
+      "upstreamSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
       "classification": "adapted",
       "derivedPath": "skills/interrogate/references/lead-judgment.md",
       "preservedInvariants": [
@@ -676,7 +769,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/interrogate/references/reviewer-prompt.md",
@@ -692,7 +790,7 @@
     },
     {
       "upstreamPath": "skills/interrogate/references/rubric.md",
-      "upstreamSha256": "a67bf02426f88714634ff481d667db821d4b2cea7b335bcd165fe3126e427fb5",
+      "upstreamSha256": "59e9b7cc4556e735e1b859a7dd1f7637b013a2426a84825ac1c51979942c158a",
       "classification": "adapted",
       "derivedPath": "skills/interrogate/references/rubric.md",
       "preservedInvariants": [
@@ -700,11 +798,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "59e9b7cc4556e735e1b859a7dd1f7637b013a2426a84825ac1c51979942c158a",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/interrogate/SKILL.md",
-      "upstreamSha256": "a009220dfe6869c8f7980a94fb1c9c7763a081a0b32fb6d0afb65b8ff1868146",
+      "upstreamSha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
       "classification": "adapted",
       "derivedPath": "skills/interrogate/SKILL.md",
       "preservedInvariants": [
@@ -712,7 +815,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/maintain-verification-skill/SKILL.md",
@@ -727,8 +835,25 @@
       ]
     },
     {
+      "upstreamPath": "skills/make-bot-ui/SKILL.md",
+      "upstreamSha256": "3624c8ef16cf2e48deb2a4049e72c6962a9431c8d6c6af90e7bd7ea0375224ec",
+      "classification": "adapted",
+      "derivedPath": "skills/make-bot-ui/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "3624c8ef16cf2e48deb2a4049e72c6962a9431c8d6c6af90e7bd7ea0375224ec",
+        "disposition": "ported-codex-native",
+        "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+      }
+    },
+    {
       "upstreamPath": "skills/no-comments/SKILL.md",
-      "upstreamSha256": "72d3b153712ab641875f1d7424de0f77375af1cec03707935f08fa7d8f17bbf3",
+      "upstreamSha256": "5c5b0882297d704c3a9720c52b7a793c68b013eaf717989f0945624efdfe2b05",
       "classification": "adapted",
       "derivedPath": "skills/no-comments/SKILL.md",
       "preservedInvariants": [
@@ -736,11 +861,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "5c5b0882297d704c3a9720c52b7a793c68b013eaf717989f0945624efdfe2b05",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/authoring-a-skill.md",
-      "upstreamSha256": "5479e2b3914acccbafd70f8be56520e1774775d9527f79ac255fd31ec554538a",
+      "upstreamSha256": "f6a13a445c360b48d6cd72780ac01955f45b82826476efe0e67c7559329407aa",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/authoring-a-skill.md",
       "preservedInvariants": [
@@ -748,11 +878,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "f6a13a445c360b48d6cd72780ac01955f45b82826476efe0e67c7559329407aa",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/autonomous-run.md",
-      "upstreamSha256": "e4d9e2fc9195dbc521131021c23c6c53d66390048ca3e58be79bdb3d47b9d737",
+      "upstreamSha256": "15e54ad3ac92565613980772d8708de6e19cc4690bfd4bb3fb8836522407377b",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/autonomous-run.md",
       "preservedInvariants": [
@@ -760,11 +895,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "15e54ad3ac92565613980772d8708de6e19cc4690bfd4bb3fb8836522407377b",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/autopilot-full.md",
-      "upstreamSha256": "5ad2358069b95003a08dca297ffc792f3446af8458f16cdbc8e7025902d6c018",
+      "upstreamSha256": "52f69170bd7fa6b436992d90d3ef7fba893201e0b497297b416e9aea0e567d5f",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/autopilot-full.md",
       "preservedInvariants": [
@@ -772,11 +912,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "52f69170bd7fa6b436992d90d3ef7fba893201e0b497297b416e9aea0e567d5f",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/autopilot-stack.md",
-      "upstreamSha256": "9ef6ead011127a4cd641ab6979e42e903d15342eef5a2c2b5ab3da028d514311",
+      "upstreamSha256": "66364cd3a2286cbecfb73d3a7bf7d1fa387ede8525d37ef22b69d4ac03c2c5b2",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/autopilot-stack.md",
       "preservedInvariants": [
@@ -784,11 +929,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "66364cd3a2286cbecfb73d3a7bf7d1fa387ede8525d37ef22b69d4ac03c2c5b2",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/babysit.md",
-      "upstreamSha256": "84eddcd4d1560ca79a81465cf354f08d1267b114c0470e4a87e1266820c92f86",
+      "upstreamSha256": "51be21872152f97612d37258273269b88212b6696432d25d678cac30f02f4157",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/babysit.md",
       "preservedInvariants": [
@@ -796,11 +946,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "51be21872152f97612d37258273269b88212b6696432d25d678cac30f02f4157",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/bug-fix.md",
-      "upstreamSha256": "ffb71024f8af25923e6a937399d6424c07bc09363eb8a81c708c0a68c4afcb9d",
+      "upstreamSha256": "e958c67d5454fc12d76ec645b50dfd85c423082aac13a49e2913ef2815948216",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/bug-fix.md",
       "preservedInvariants": [
@@ -808,11 +963,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "e958c67d5454fc12d76ec645b50dfd85c423082aac13a49e2913ef2815948216",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/eval.md",
-      "upstreamSha256": "4881699e688353f7f5c64ae6f4db20fe96bf7267b2a77ce5a6198d2abf218ed3",
+      "upstreamSha256": "b862bfa2fae2399abf047a8e80d3e3dddb64003af96fb1cebb625216131e36bb",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/eval.md",
       "preservedInvariants": [
@@ -820,11 +980,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "b862bfa2fae2399abf047a8e80d3e3dddb64003af96fb1cebb625216131e36bb",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/feature.md",
-      "upstreamSha256": "a2a04c2e4b273c0c33e4e3a22940049b60b917b064202e39bd34018356aa0926",
+      "upstreamSha256": "430dae0fd736554ff7dffc3ef0644c9f0c845e25742f69e598c35b9b89660301",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/feature.md",
       "preservedInvariants": [
@@ -832,11 +997,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "430dae0fd736554ff7dffc3ef0644c9f0c845e25742f69e598c35b9b89660301",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/hillclimb.md",
-      "upstreamSha256": "0078ed4be36486f257cf0ceeea4aec39e1e4d1900dacbffc58ef242b9037d6b0",
+      "upstreamSha256": "bc1fc4052c1ee918a56115a219cbcbbc4c147fa1a8080e77c7d58068eecac299",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/hillclimb.md",
       "preservedInvariants": [
@@ -844,11 +1014,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "bc1fc4052c1ee918a56115a219cbcbbc4c147fa1a8080e77c7d58068eecac299",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/investigation.md",
-      "upstreamSha256": "bb28bfe2912511dbb777057326a8ccff3ef279d219e52271dcb5b10f68a38b5b",
+      "upstreamSha256": "dc66bcf6af3a074fc7f67aa5e12b93ef571a4fb4d8e17f2f1af5ae5359f42e46",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/investigation.md",
       "preservedInvariants": [
@@ -856,11 +1031,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "dc66bcf6af3a074fc7f67aa5e12b93ef571a4fb4d8e17f2f1af5ae5359f42e46",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/multi-phase-plan.md",
-      "upstreamSha256": "273af50da917358eeb2277a7438dae13a4670889f255ee82b1835670a4206a95",
+      "upstreamSha256": "63426a55519fbc4fb9f00baf5cc7b1148f70dfb62ad360a0f6533d287dd36edf",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/multi-phase-plan.md",
       "preservedInvariants": [
@@ -868,11 +1048,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "63426a55519fbc4fb9f00baf5cc7b1148f70dfb62ad360a0f6533d287dd36edf",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/opening-a-pr.md",
-      "upstreamSha256": "61bdec4b0df78d5d3fe2c966cd9b76afcc8686572c9e74c90e28268999f6c5ec",
+      "upstreamSha256": "b173ff9638ff62f91f6813c1a0ed3417cdf9f6545a659be0c1fb1f42130e0e66",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/opening-a-pr.md",
       "preservedInvariants": [
@@ -880,11 +1065,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "b173ff9638ff62f91f6813c1a0ed3417cdf9f6545a659be0c1fb1f42130e0e66",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/orchestrate.md",
-      "upstreamSha256": "8e2911af902df273504b1589747c13395229bcadc3e1e9448678a75f714dc9f6",
+      "upstreamSha256": "d42b4375f1bd4ce23da0b575a198571a2117df7eea10c3c9fc6d92ae1053f7be",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/orchestrate.md",
       "preservedInvariants": [
@@ -892,11 +1082,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "d42b4375f1bd4ce23da0b575a198571a2117df7eea10c3c9fc6d92ae1053f7be",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/pause-safely.md",
-      "upstreamSha256": "5a34883f8daa41596c0f69387f60c083fa826f90004e14952b8c831651a69b3c",
+      "upstreamSha256": "7d5fc10e144265f1b35f8157926541e738c1de64b6a85b3e61b51cf268c3dffd",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/pause-safely.md",
       "preservedInvariants": [
@@ -904,11 +1099,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "7d5fc10e144265f1b35f8157926541e738c1de64b6a85b3e61b51cf268c3dffd",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/perf-issue.md",
-      "upstreamSha256": "afb819ff5252f9d410a108bad60c42d31a10989b856c48b1993c68abd555b710",
+      "upstreamSha256": "b2ee9aed1466583361cb61b4e8d79ebb3b61f7f9f6540be7633852afacab1d89",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/perf-issue.md",
       "preservedInvariants": [
@@ -916,11 +1116,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "b2ee9aed1466583361cb61b4e8d79ebb3b61f7f9f6540be7633852afacab1d89",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/prototype.md",
-      "upstreamSha256": "0e539b57aa33deb09472e10ccab2a20cd166a86bea94c50e0b8be39e41164d33",
+      "upstreamSha256": "7aa1f52c691c3d46d5afc527b23f90977fce869ce33573c73c81a4c7f0cde962",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/prototype.md",
       "preservedInvariants": [
@@ -928,11 +1133,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "7aa1f52c691c3d46d5afc527b23f90977fce869ce33573c73c81a4c7f0cde962",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/refactoring.md",
-      "upstreamSha256": "437b86120a8044e85aabf77933d03ab8862d0b3635b0aece69cc3b98914ee7a4",
+      "upstreamSha256": "53bac1f1fe886600dd1991b5511b7975e6a206168038f9d282d88e45408e93cf",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/refactoring.md",
       "preservedInvariants": [
@@ -940,11 +1150,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "53bac1f1fe886600dd1991b5511b7975e6a206168038f9d282d88e45408e93cf",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/runtime-forensics.md",
-      "upstreamSha256": "96ac9a3a368e6a31d8a7aa56055e6f7f75e8e773c21b65c0f941c26403c8d105",
+      "upstreamSha256": "594f02c40c243a346e1f57b688ecf2ed5e882f21b3d24ed2204d1ac6f1c24a8a",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/runtime-forensics.md",
       "preservedInvariants": [
@@ -952,11 +1167,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "594f02c40c243a346e1f57b688ecf2ed5e882f21b3d24ed2204d1ac6f1c24a8a",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/session-pickup.md",
-      "upstreamSha256": "c1a4aa69e32e2950fb66f7351b5cea7bbf8acff9c2aed4a4623585ed688fbf1e",
+      "upstreamSha256": "1604fb463f7c7410d43fa024ca76c1c1824c166a01fd69d61f073d06fdca2a47",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/session-pickup.md",
       "preservedInvariants": [
@@ -964,11 +1184,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "1604fb463f7c7410d43fa024ca76c1c1824c166a01fd69d61f073d06fdca2a47",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/shipping.md",
-      "upstreamSha256": "828d7360c40ff68f3bf23e5b4e8d1eb826b3ef89436e342ea33ee1288289c39e",
+      "upstreamSha256": "c301902136e0a9a0a55403c35374f6f5738e501aee66c27458dc197b87557550",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/shipping.md",
       "preservedInvariants": [
@@ -976,11 +1201,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "c301902136e0a9a0a55403c35374f6f5738e501aee66c27458dc197b87557550",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/trace-forensics.md",
-      "upstreamSha256": "fcae1f68f349072a8b2518f09b73dedeb826192d2ec33befb8906f42292e38be",
+      "upstreamSha256": "137ce3984fb96e45971fdff4d3c79fa4ccc647c5b30ae4945783b9fb23f8cec7",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/trace-forensics.md",
       "preservedInvariants": [
@@ -988,11 +1218,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "137ce3984fb96e45971fdff4d3c79fa4ccc647c5b30ae4945783b9fb23f8cec7",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/visual-parity.md",
-      "upstreamSha256": "33165e74665bf8ddec181598c2b21b4a1cd310b1adf23742af90ac0d10652b39",
+      "upstreamSha256": "950ca51999a6454c98eee6bcbc3d1bbe501a4e3a5d5439b6f6ddc378991b256c",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/visual-parity.md",
       "preservedInvariants": [
@@ -1000,11 +1235,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "950ca51999a6454c98eee6bcbc3d1bbe501a4e3a5d5439b6f6ddc378991b256c",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/playbooks/worktree-cleanup.md",
-      "upstreamSha256": "b3a3b23f23972c6db490edc0403a0d717990871308fd57d69bb8438725df5dce",
+      "upstreamSha256": "fc464dc4121926df1704f483c5feca83717c0a40b4651d3e11bd3aedd89441b6",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/playbooks/worktree-cleanup.md",
       "preservedInvariants": [
@@ -1012,11 +1252,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "fc464dc4121926df1704f483c5feca83717c0a40b4651d3e11bd3aedd89441b6",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/references/bugbot-triage.md",
-      "upstreamSha256": "fb9e5cdc5ce20a1e4d1a5bdece14eac8b0161be19872a2f5fe08acdc32d811a3",
+      "upstreamSha256": "b2d146c770d8d3593e1ef3d77b668039b8e1f78093ea1a86f1d45d7f99614309",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/references/bugbot-triage.md",
       "preservedInvariants": [
@@ -1024,7 +1269,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "b2d146c770d8d3593e1ef3d77b668039b8e1f78093ea1a86f1d45d7f99614309",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/scripts/bootstrap.ts",
@@ -1268,7 +1518,7 @@
     },
     {
       "upstreamPath": "skills/poteto-mode/SKILL.md",
-      "upstreamSha256": "3b6793bdaeada0bfc7291bcc00422093bd8d10e64a9bc3b6707008ba3c4c7316",
+      "upstreamSha256": "6bbf35cb2111c358461c7ba90f210dad4573f3a3ada92f6459eac0c69d83b01a",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/SKILL.md",
       "preservedInvariants": [
@@ -1276,11 +1526,33 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6bbf35cb2111c358461c7ba90f210dad4573f3a3ada92f6459eac0c69d83b01a",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
+    },
+    {
+      "upstreamPath": "skills/principle-attack-the-premise/SKILL.md",
+      "upstreamSha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
+      "classification": "adapted",
+      "derivedPath": "skills/principle-attack-the-premise/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
+        "disposition": "ported-codex-native",
+        "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+      }
     },
     {
       "upstreamPath": "skills/principle-boundary-discipline/SKILL.md",
-      "upstreamSha256": "ab3c690ce361542ca00446b8406f5afd47776f544b8ce06a9ef2eaa2338bde6d",
+      "upstreamSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
       "classification": "adapted",
       "derivedPath": "skills/principle-boundary-discipline/SKILL.md",
       "preservedInvariants": [
@@ -1288,11 +1560,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-build-the-lever/SKILL.md",
-      "upstreamSha256": "3a0b02b1b890538810f27d00c525b2e677bb5d931f602fd7a774d5cd13b61c93",
+      "upstreamSha256": "458b269eab8e95a1573276955312f7d2a13ae8599879a9efc748248f6bc34b56",
       "classification": "adapted",
       "derivedPath": "skills/principle-build-the-lever/SKILL.md",
       "preservedInvariants": [
@@ -1300,11 +1577,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "458b269eab8e95a1573276955312f7d2a13ae8599879a9efc748248f6bc34b56",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-encode-lessons-in-structure/SKILL.md",
-      "upstreamSha256": "4acdb3f466efd0a433899aafce3e0f100566228b63ccff43f363a83e80624d81",
+      "upstreamSha256": "77044c83a9ac6df78fc643887ea5f1f11f082adaf14b717c060cdaed03cce863",
       "classification": "adapted",
       "derivedPath": "skills/principle-encode-lessons-in-structure/SKILL.md",
       "preservedInvariants": [
@@ -1312,7 +1594,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "77044c83a9ac6df78fc643887ea5f1f11f082adaf14b717c060cdaed03cce863",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-exhaust-the-design-space/SKILL.md",
@@ -1328,7 +1615,7 @@
     },
     {
       "upstreamPath": "skills/principle-experience-first/SKILL.md",
-      "upstreamSha256": "f8d643ddf2f6aa91d9607d1bb340fd2baf227d702e9738848b85312a312bb971",
+      "upstreamSha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
       "classification": "adapted",
       "derivedPath": "skills/principle-experience-first/SKILL.md",
       "preservedInvariants": [
@@ -1336,11 +1623,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-fix-root-causes/SKILL.md",
-      "upstreamSha256": "cfae13b5a3e27bc88d069092cae97b3e95246879d5bf14f0e9a4db719c781952",
+      "upstreamSha256": "ba4cd38da1dcc8fe5432feb64457cba95594736a9b21b2ebf8f8c52aee068707",
       "classification": "adapted",
       "derivedPath": "skills/principle-fix-root-causes/SKILL.md",
       "preservedInvariants": [
@@ -1348,11 +1640,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "ba4cd38da1dcc8fe5432feb64457cba95594736a9b21b2ebf8f8c52aee068707",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-foundational-thinking/SKILL.md",
-      "upstreamSha256": "a522488c9d4481e8bfcbe35cbf3838169c8e3801ee0738ae2859067684144579",
+      "upstreamSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
       "classification": "adapted",
       "derivedPath": "skills/principle-foundational-thinking/SKILL.md",
       "preservedInvariants": [
@@ -1360,11 +1657,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-guard-the-context-window/SKILL.md",
-      "upstreamSha256": "291d0125125eabbc2109c880b1c1083aa95826187119a648b26c1c8ea6367179",
+      "upstreamSha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
       "classification": "adapted",
       "derivedPath": "skills/principle-guard-the-context-window/SKILL.md",
       "preservedInvariants": [
@@ -1372,11 +1674,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-laziness-protocol/SKILL.md",
-      "upstreamSha256": "8999fda9fde65fd905835c86e3bfc64190369a84bba30b1e93769f39ad6580fe",
+      "upstreamSha256": "9006579e9e3f33955d17569733db688ae65f22577dc3b21803d219a5a8445aff",
       "classification": "adapted",
       "derivedPath": "skills/principle-laziness-protocol/SKILL.md",
       "preservedInvariants": [
@@ -1384,7 +1691,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "9006579e9e3f33955d17569733db688ae65f22577dc3b21803d219a5a8445aff",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-make-operations-idempotent/SKILL.md",
@@ -1400,7 +1712,7 @@
     },
     {
       "upstreamPath": "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
-      "upstreamSha256": "e29b6b6534a23dcaf8c7e16fc25d6484000d7b6e289c48eb0a32a97280633c5d",
+      "upstreamSha256": "09978915a4a11990cf0a9a02d9c08cc59e0b7a04c5c24b83aa560fbe4146f75b",
       "classification": "adapted",
       "derivedPath": "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
       "preservedInvariants": [
@@ -1408,11 +1720,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "09978915a4a11990cf0a9a02d9c08cc59e0b7a04c5c24b83aa560fbe4146f75b",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-minimize-reader-load/SKILL.md",
-      "upstreamSha256": "480f4ddec29e7e3058a8f17eb97c0cec4a2c8b4b33ba6401e960167c1fc95a81",
+      "upstreamSha256": "42551c5dc74cd578163c148da552db3ff67d29b78600ef216bfd311fb828fe69",
       "classification": "adapted",
       "derivedPath": "skills/principle-minimize-reader-load/SKILL.md",
       "preservedInvariants": [
@@ -1420,11 +1737,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "42551c5dc74cd578163c148da552db3ff67d29b78600ef216bfd311fb828fe69",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-model-the-domain/SKILL.md",
-      "upstreamSha256": "6b359783c5c9be87860d0999321e864940ff17729b9f9a27f38abae449640022",
+      "upstreamSha256": "bbadbb9a723fac3f76e782ae45665eb94058ec10993e4bae36d4dc6b0e4eac07",
       "classification": "adapted",
       "derivedPath": "skills/principle-model-the-domain/SKILL.md",
       "preservedInvariants": [
@@ -1432,11 +1754,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "bbadbb9a723fac3f76e782ae45665eb94058ec10993e4bae36d4dc6b0e4eac07",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-never-block-on-the-human/SKILL.md",
-      "upstreamSha256": "f656f3b7581df55e79f53cc47df93905c3a940b822c25071ba95f40e530d102a",
+      "upstreamSha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
       "classification": "adapted",
       "derivedPath": "skills/principle-never-block-on-the-human/SKILL.md",
       "preservedInvariants": [
@@ -1444,7 +1771,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-outcome-oriented-execution/SKILL.md",
@@ -1460,7 +1792,7 @@
     },
     {
       "upstreamPath": "skills/principle-prove-it-works/SKILL.md",
-      "upstreamSha256": "9bbe6138505be34d81e9395d95d3639b384f71d71d65cc1903075126e1da1508",
+      "upstreamSha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
       "classification": "adapted",
       "derivedPath": "skills/principle-prove-it-works/SKILL.md",
       "preservedInvariants": [
@@ -1468,11 +1800,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-redesign-from-first-principles/SKILL.md",
-      "upstreamSha256": "9ae97b35d6338cc9e34c7023c995a39cb7afdaf4bfd41e1d3d665da04d7515d5",
+      "upstreamSha256": "a1c7fd0a96b40e12a74bceb0e6bb20a9666dd844dcabfb624acb27da23b929fe",
       "classification": "adapted",
       "derivedPath": "skills/principle-redesign-from-first-principles/SKILL.md",
       "preservedInvariants": [
@@ -1480,11 +1817,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "a1c7fd0a96b40e12a74bceb0e6bb20a9666dd844dcabfb624acb27da23b929fe",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
-      "upstreamSha256": "5b14fd656441580061f760968c828f3f4ba034242d8fa06b544763efb25e89ee",
+      "upstreamSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
       "classification": "adapted",
       "derivedPath": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
       "preservedInvariants": [
@@ -1492,11 +1834,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-sequence-verifiable-units/SKILL.md",
-      "upstreamSha256": "7478f8160ba5701ca40c742a81e90aff12d45f53ac9191e80ad79b9763e4489f",
+      "upstreamSha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
       "classification": "adapted",
       "derivedPath": "skills/principle-sequence-verifiable-units/SKILL.md",
       "preservedInvariants": [
@@ -1504,11 +1851,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/principle-subtract-before-you-add/SKILL.md",
-      "upstreamSha256": "3999888dc21ced33b86054c2ffde1a3cb438e16bed1213f5dab2b5c000446292",
+      "upstreamSha256": "a983a50e732c1ed315eba7aaf47a61329e31c4794eb1ab9d25d9945265b31e03",
       "classification": "adapted",
       "derivedPath": "skills/principle-subtract-before-you-add/SKILL.md",
       "preservedInvariants": [
@@ -1516,11 +1868,33 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "a983a50e732c1ed315eba7aaf47a61329e31c4794eb1ab9d25d9945265b31e03",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
+    },
+    {
+      "upstreamPath": "skills/principle-test-behavior-not-implementation/SKILL.md",
+      "upstreamSha256": "87e40efe4e486f7ea639d2ed1fc0abe6c93b8fd0e89a81218086909d2470a52e",
+      "classification": "adapted",
+      "derivedPath": "skills/principle-test-behavior-not-implementation/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "87e40efe4e486f7ea639d2ed1fc0abe6c93b8fd0e89a81218086909d2470a52e",
+        "disposition": "ported-codex-native",
+        "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+      }
     },
     {
       "upstreamPath": "skills/principle-type-system-discipline/SKILL.md",
-      "upstreamSha256": "662ed1ad53fb491e97b9c4eac7317fba8ec5ed722fec8d71beb94da0111619cf",
+      "upstreamSha256": "c83da8031ffb4c86410030d3e261f659598fca2b7d8158fd9dc269d70a3a025e",
       "classification": "adapted",
       "derivedPath": "skills/principle-type-system-discipline/SKILL.md",
       "preservedInvariants": [
@@ -1528,11 +1902,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "c83da8031ffb4c86410030d3e261f659598fca2b7d8158fd9dc269d70a3a025e",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/recall/SKILL.md",
-      "upstreamSha256": "90d290daec500f548a167bbd20d69a3a248e345c546ca847ca12967d1c99cbf3",
+      "upstreamSha256": "d265b0e5b6dc5b89c0407f3387d24462c988e1990a37d5359735137908128c5a",
       "classification": "adapted",
       "derivedPath": "skills/recall/SKILL.md",
       "preservedInvariants": [
@@ -1540,11 +1919,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "d265b0e5b6dc5b89c0407f3387d24462c988e1990a37d5359735137908128c5a",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/reflect/references/divergent-reviewer.md",
-      "upstreamSha256": "823167d485c8fc424530ac4eff447f132a10e318a2db35380312c7e843f17683",
+      "upstreamSha256": "7da0334ce282e6d8d7349c0cff14ffbd10a91a756c0b5c3ccc97291f57b8bed6",
       "classification": "adapted",
       "derivedPath": "skills/reflect/references/divergent-reviewer.md",
       "preservedInvariants": [
@@ -1552,11 +1936,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "7da0334ce282e6d8d7349c0cff14ffbd10a91a756c0b5c3ccc97291f57b8bed6",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/reflect/references/judgment-reviewer.md",
-      "upstreamSha256": "8db7a315ccf9280486b4df08b1277ba0fe4c4ac533ad3719945aa1aab2ebddea",
+      "upstreamSha256": "917bb2ad21240a42b440aeb2a17766092e09f70d0982417b2f4caa6d74f27164",
       "classification": "adapted",
       "derivedPath": "skills/reflect/references/judgment-reviewer.md",
       "preservedInvariants": [
@@ -1564,11 +1953,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "917bb2ad21240a42b440aeb2a17766092e09f70d0982417b2f4caa6d74f27164",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/reflect/references/synthesizer.md",
-      "upstreamSha256": "52767b4566c37df0adc6350fff1c5c7a919a1178c2be539e0efbf920f2803702",
+      "upstreamSha256": "2f76c847eb45b182dc6fbcbf7d96c8ee7e2986ecfd9e0d640fec44e3cc5a617c",
       "classification": "adapted",
       "derivedPath": "skills/reflect/references/synthesizer.md",
       "preservedInvariants": [
@@ -1576,11 +1970,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "2f76c847eb45b182dc6fbcbf7d96c8ee7e2986ecfd9e0d640fec44e3cc5a617c",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/reflect/references/tooling-reviewer.md",
-      "upstreamSha256": "3a4dc9e87d0d74b46d0d0bc2c1af6acba10be7c95d1adafeab6ec5701e247933",
+      "upstreamSha256": "8c74ebf7811801d634db7ab609b097d77ea00ab77bb4b258d69bd96e671cfa39",
       "classification": "adapted",
       "derivedPath": "skills/reflect/references/tooling-reviewer.md",
       "preservedInvariants": [
@@ -1588,11 +1987,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "8c74ebf7811801d634db7ab609b097d77ea00ab77bb4b258d69bd96e671cfa39",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/reflect/SKILL.md",
-      "upstreamSha256": "5485347991eb60ee226ca78c5972f9c694f6927cff3263b7f48b631ed7a9de56",
+      "upstreamSha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
       "classification": "adapted",
       "derivedPath": "skills/reflect/SKILL.md",
       "preservedInvariants": [
@@ -1600,11 +2004,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/setup-pstack/SKILL.md",
-      "upstreamSha256": "3b62d9fd4cce8f450b36b2bc6b1df2f00d887e0a3abd55e7fc1ccbde5db96cea",
+      "upstreamSha256": "5acdc3db4f15f3e9b81fb56eab7f17cdccde1a11a40053ed7743f7467729c8a9",
       "classification": "adapted",
       "derivedPath": "skills/setup-pstack/SKILL.md",
       "preservedInvariants": [
@@ -1612,7 +2021,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "5acdc3db4f15f3e9b81fb56eab7f17cdccde1a11a40053ed7743f7467729c8a9",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/show-me-your-work/references/decision-log-template.tsv",
@@ -1640,7 +2054,7 @@
     },
     {
       "upstreamPath": "skills/show-me-your-work/SKILL.md",
-      "upstreamSha256": "b99833c41a8781a6af191487f1af37711a3198b98f9373e3c02292b8a6e09aba",
+      "upstreamSha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
       "classification": "adapted",
       "derivedPath": "skills/show-me-your-work/SKILL.md",
       "preservedInvariants": [
@@ -1648,11 +2062,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/swarm/SKILL.md",
-      "upstreamSha256": "8e6494e296af5496cacb0fb83f33f647c84286d2e1d1b85580bc0f0f577a81cd",
+      "upstreamSha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
       "classification": "adapted",
       "derivedPath": "skills/swarm/SKILL.md",
       "preservedInvariants": [
@@ -1660,11 +2079,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/tdd/SKILL.md",
-      "upstreamSha256": "adad031f9e79d7f7389fa128f7af8e03344831270e282cf4e40bdacb8418c386",
+      "upstreamSha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
       "classification": "adapted",
       "derivedPath": "skills/tdd/SKILL.md",
       "preservedInvariants": [
@@ -1672,11 +2096,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/teach/SKILL.md",
-      "upstreamSha256": "0a5987b0588dc56e14bfd84d0300e2ab405abc7c5c2aa81e0d3d7c6b243db7a7",
+      "upstreamSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
       "classification": "adapted",
       "derivedPath": "skills/teach/SKILL.md",
       "preservedInvariants": [
@@ -1684,11 +2113,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/technical-writing/SKILL.md",
-      "upstreamSha256": "bd0cb21034f4fe6695cfdf8cd3561026eec943f0bb6e9300bc78a2b3340865a7",
+      "upstreamSha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
       "classification": "adapted",
       "derivedPath": "skills/technical-writing/SKILL.md",
       "preservedInvariants": [
@@ -1696,11 +2130,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/typescript-best-practices/references/patterns.md",
-      "upstreamSha256": "83d89dd2fdb81021eb18c77c57437f60314a60da79447756a547f08ece64b433",
+      "upstreamSha256": "62e9cd32d2fa066a35d0d1349aac22dce31a48ad7d5eaf142570770cfe707384",
       "classification": "adapted",
       "derivedPath": "skills/typescript-best-practices/references/patterns.md",
       "preservedInvariants": [
@@ -1708,11 +2147,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "62e9cd32d2fa066a35d0d1349aac22dce31a48ad7d5eaf142570770cfe707384",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/typescript-best-practices/SKILL.md",
-      "upstreamSha256": "df0ecd7518b33778f4b02c2f85ee577bbaea52caa1c49df6816b0594e128bb64",
+      "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
       "classification": "adapted",
       "derivedPath": "skills/typescript-best-practices/SKILL.md",
       "preservedInvariants": [
@@ -1720,11 +2164,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/unslop/SKILL.md",
-      "upstreamSha256": "181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441",
+      "upstreamSha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
       "classification": "adapted",
       "derivedPath": "skills/unslop/SKILL.md",
       "preservedInvariants": [
@@ -1732,11 +2181,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
     },
     {
       "upstreamPath": "skills/why/references/epistemics.md",
-      "upstreamSha256": "ba99dcdc4fbce91a83b50fc0c9b2c5769febd95540b1722c6b87fe8f900bb60a",
+      "upstreamSha256": "fcc0f559c072832c869a5ada72434b4849320a637ae63c09e8ee14f7ad787059",
       "classification": "adapted",
       "derivedPath": "skills/why/references/epistemics.md",
       "preservedInvariants": [
@@ -1744,11 +2198,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "fcc0f559c072832c869a5ada72434b4849320a637ae63c09e8ee14f7ad787059",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/investigator-prompt.md",
-      "upstreamSha256": "e35d8eaea13f0a027dd35572d525e9f66e8f8918ca9e555237dc228f26278d5f",
+      "upstreamSha256": "6892956a7ab0b5ee6c4babaf4f793703abe89b350ea7cb9463b4a56eea1c8266",
       "classification": "adapted",
       "derivedPath": "skills/why/references/investigator-prompt.md",
       "preservedInvariants": [
@@ -1756,11 +2215,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6892956a7ab0b5ee6c4babaf4f793703abe89b350ea7cb9463b4a56eea1c8266",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/source-playbook.md",
-      "upstreamSha256": "3cfb0245d5b2019eeeaa7a0e023579d390f2cdcdff6942d2fe009b9efac0eb11",
+      "upstreamSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
       "classification": "adapted",
       "derivedPath": "skills/why/references/source-playbook.md",
       "preservedInvariants": [
@@ -1768,7 +2232,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/code-archaeology.md",
@@ -1784,7 +2253,7 @@
     },
     {
       "upstreamPath": "skills/why/references/sources/databricks.md",
-      "upstreamSha256": "269a22032f027ee30a33c1b5e30443d13dd6d127ff20d8d1e8a20715b06a69cc",
+      "upstreamSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/databricks.md",
       "preservedInvariants": [
@@ -1792,11 +2261,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/datadog.md",
-      "upstreamSha256": "db80803f1635a5015e3190f4753c4228083e6cebf222c84e24fc3c3919aa5574",
+      "upstreamSha256": "ebe9c07bac28e47757ee7f16fb93b0c01d427a08c501957d047f395a2f37b7e7",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/datadog.md",
       "preservedInvariants": [
@@ -1804,11 +2278,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "ebe9c07bac28e47757ee7f16fb93b0c01d427a08c501957d047f395a2f37b7e7",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/incident-postmortem.md",
-      "upstreamSha256": "486132457d3782eea64292ce7a2d3bbe3b24b372b20ca00de4329e820f74cd42",
+      "upstreamSha256": "a899470f05f86029630a13a2696491cc708ca7b56a6e822a69ff6e954d6ff8cf",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/incident-postmortem.md",
       "preservedInvariants": [
@@ -1816,11 +2295,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "a899470f05f86029630a13a2696491cc708ca7b56a6e822a69ff6e954d6ff8cf",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/linear.md",
-      "upstreamSha256": "7e1b72ba459089168efd701502f8c268d2481154aeeda1ddd84f840f7e974760",
+      "upstreamSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/linear.md",
       "preservedInvariants": [
@@ -1828,11 +2312,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/notion.md",
-      "upstreamSha256": "2ce336dd3052967187a56ec33d308c7a69e7ef3b04ba7b17386a8b3914a0f000",
+      "upstreamSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/notion.md",
       "preservedInvariants": [
@@ -1840,11 +2329,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/sentry.md",
-      "upstreamSha256": "0eef902cb0f835f7fa9bd85a8e19ba1505d05e59a0173dfe852d8d52d828266d",
+      "upstreamSha256": "6f292bc4fb1548e956f95e1900b9481abf5134254419f1cd9edec95428c82d73",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/sentry.md",
       "preservedInvariants": [
@@ -1852,11 +2346,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "6f292bc4fb1548e956f95e1900b9481abf5134254419f1cd9edec95428c82d73",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/sources/slack.md",
-      "upstreamSha256": "60e4c8dbb941f563c86aec7267cde66443b1dc651422569c8d112bc9da7551f6",
+      "upstreamSha256": "58fee61d024b3700b407e7acbed367944720ff05adfddb6954d36c88368f3ba7",
       "classification": "adapted",
       "derivedPath": "skills/why/references/sources/slack.md",
       "preservedInvariants": [
@@ -1864,11 +2363,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "58fee61d024b3700b407e7acbed367944720ff05adfddb6954d36c88368f3ba7",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/references/synthesizer-prompt.md",
-      "upstreamSha256": "fcdc69ede22f94da9e22f510bb0c4a75a63820f0b49b8d5fd54a196b4010bf2a",
+      "upstreamSha256": "733a3e9cf897b1aca56aaddeae01a3832e4bfed024c2f602db2d1bf807d7a73b",
       "classification": "adapted",
       "derivedPath": "skills/why/references/synthesizer-prompt.md",
       "preservedInvariants": [
@@ -1876,11 +2380,16 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "733a3e9cf897b1aca56aaddeae01a3832e4bfed024c2f602db2d1bf807d7a73b",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
     },
     {
       "upstreamPath": "skills/why/SKILL.md",
-      "upstreamSha256": "dc8f2d8a7dbef7d0467cca8e6d055a4dbde027db6e2cbbfb18aa9071d8f20b6c",
+      "upstreamSha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
       "classification": "adapted",
       "derivedPath": "skills/why/SKILL.md",
       "preservedInvariants": [
@@ -1888,7 +2397,1613 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
+        "disposition": "retained-codex-safety-overlay",
+        "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+      }
+    }
+  ],
+  "refresh": {
+    "from": {
+      "commit": "bdf7aa355337897f167153e05069aca505dae17c",
+      "version": "0.14.3",
+      "fileCount": 156
+    },
+    "to": {
+      "commit": "f8abeddd1862dc73704e3d719dd73df0d51b8c71",
+      "version": "0.15.1",
+      "fileCount": 158
+    },
+    "deltaCounts": {
+      "added": 4,
+      "changed": 94,
+      "deleted-or-renamed": 2
+    },
+    "fromFiles": [
+      {
+        "path": ".cursor-plugin/plugin.json",
+        "sha256": "41b2c5bcb51057303de9373f931eda02e577e3b7a96520fd74c8784495b4e1bd",
+        "bytes": 693
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "8ffe9de56bd30c1a95cd945262d6e3ac355ada4111551dde41f67851b9f1fc55",
+        "bytes": 30
+      },
+      {
+        "path": "agents/comment-sicko.md",
+        "sha256": "c0fd0383008da45fc78cfac17b9007d62c42f87ad1c8d5c2fb658b1fd01f7c82",
+        "bytes": 2230
+      },
+      {
+        "path": "agents/poteto-agent.md",
+        "sha256": "c3850be1b97bc97cec0568ed8b26d04e7693c4e07868137c58fe546d37f288e9",
+        "bytes": 641
+      },
+      {
+        "path": "automations/benny/FOR_AGENTS.md",
+        "sha256": "a125e317dec1b8731fdc71f404c669f1127a73af932f7a7b8b8744a5542328a7",
+        "bytes": 7460
+      },
+      {
+        "path": "automations/benny/README.md",
+        "sha256": "ca3c42cbb7f0bf7068f7407eb355815e6c234d5c2786942f3cbe751a3690024b",
+        "bytes": 1321
+      },
+      {
+        "path": "automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
+        "sha256": "58b0615d2fca895f9a20df83266e280042b0d585b5f2fd324e2094a682fd846b",
+        "bytes": 5517
+      },
+      {
+        "path": "automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md",
+        "sha256": "1e5c7c8522daec3e43fcc2e73ceb97289ded65b552949ce65a11cc8eb3d2b6ee",
+        "bytes": 5646
+      },
+      {
+        "path": "automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md",
+        "sha256": "c90eae00abcdec71a58fa8d60f2c495b082a526ad50b8e8e494837609129bf29",
+        "bytes": 3149
+      },
+      {
+        "path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+        "sha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
+        "bytes": 14238
+      },
+      {
+        "path": "automations/benny/skills/setup-benny/SKILL.md",
+        "sha256": "5a3cbe63360c9f6373b6cb6c79a1eaf7e0eba181bfaa1577e2e6431af3407282",
+        "bytes": 13992
+      },
+      {
+        "path": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
+        "sha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
+        "bytes": 1892
+      },
+      {
+        "path": "automations/benny/skills/triage-issue-reports/SKILL.md",
+        "sha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
+        "bytes": 10320
+      },
+      {
+        "path": "automations/benny/templates/configuration.example.yaml",
+        "sha256": "13e24b4ce9b9a0913916e85fe3b080b88d45f8e55dccfe8ae38e0751a997b6f5",
+        "bytes": 2424
+      },
+      {
+        "path": "automations/benny/templates/reproduce-automation-prompt.md",
+        "sha256": "71ec574f1844e379394ae4ef14c48d7df10afbaa319d395c788d7f856f0e6899",
+        "bytes": 1822
+      },
+      {
+        "path": "automations/benny/templates/triage-automation-prompt.md",
+        "sha256": "e0bba594547834f013ec805915610eb597e7929efe3ffbe85ae00339ee16d474",
+        "bytes": 1569
+      },
+      {
+        "path": "docs/guide/01-setup.md",
+        "sha256": "e6e501f8f58405dcffab8a71f829bf0985466a28f23f49ef29a301f5e8a62087",
+        "bytes": 2798
+      },
+      {
+        "path": "docs/guide/02-poteto-mode.md",
+        "sha256": "528ef62a66ae0ac74cf3eb489b960a80ee4370e0256342cb2b94c6712241c8aa",
+        "bytes": 4726
+      },
+      {
+        "path": "docs/guide/03-understand.md",
+        "sha256": "0a42633faaa03cbc3c8d48cc3987c3a2f5924ff3b4651d045486933cbc5f1b10",
+        "bytes": 3794
+      },
+      {
+        "path": "docs/guide/04-design.md",
+        "sha256": "21e820ff73c0b70682aa570a967ede446b4d7caf62e8f391d0dd733ccb74874c",
+        "bytes": 4866
+      },
+      {
+        "path": "docs/guide/05-build-and-clean.md",
+        "sha256": "6bd421b43a3cf9fec3cd201fd40ce65fd8c657264eac48b0c9a175b6afd7c252",
+        "bytes": 4763
+      },
+      {
+        "path": "docs/guide/06-verify-and-ship.md",
+        "sha256": "12e0540d20ac06b2b01ff4be7023f1e83d510882cd95f56d8ea52a53ab8ccf8a",
+        "bytes": 5955
+      },
+      {
+        "path": "docs/guide/07-overnight.md",
+        "sha256": "d3ff086392beb2a0da27a6ef881cb280a9d0a4214ef9b3d36173ac11d7c6c708",
+        "bytes": 5354
+      },
+      {
+        "path": "docs/guide/08-principles.md",
+        "sha256": "34c0b6d6f789738cc05fdfbc2d8f8e6a45f52acc47f78752f4ee28c1525bc576",
+        "bytes": 4779
+      },
+      {
+        "path": "docs/guide/09-make-it-yours.md",
+        "sha256": "b98588a232a38ca7acebbeecb95ac771df1981aed662dcb45c96b4b66ed20ec0",
+        "bytes": 4641
+      },
+      {
+        "path": "docs/guide/10-recipes-and-pitfalls.md",
+        "sha256": "a4662cd98870f08c6abe117a832abe37670ee84f8ed25dcbe7e99ef4eb8e05e0",
+        "bytes": 4598
+      },
+      {
+        "path": "docs/guide/images/design.jpg",
+        "sha256": "b8ed07427f6a0c37dd8ba97961fc0eb5071efeee6c4a230648bdb7547f6f2a8f",
+        "bytes": 402373
+      },
+      {
+        "path": "docs/guide/images/overnight.jpg",
+        "sha256": "4b4405e4df8925c5b3abbe702f681af0f3b1f5f32271b599f95717f578f1a0c8",
+        "bytes": 347071
+      },
+      {
+        "path": "docs/guide/images/recipes.jpg",
+        "sha256": "9fa2d51b476635712737795ddef81806efaa0086bb3bfa9f9f45695d9ab0f8e8",
+        "bytes": 410550
+      },
+      {
+        "path": "docs/guide/images/router.jpg",
+        "sha256": "525843055a4efd2b10acc50a8652fd02b0834ea733a8a2f895c1eb89036017da",
+        "bytes": 450945
+      },
+      {
+        "path": "docs/guide/images/understanding.jpg",
+        "sha256": "b60587e9a9bbe2550e93be9819cf0cd4acf77d90fac769a0c43d82bd8e34e279",
+        "bytes": 376523
+      },
+      {
+        "path": "docs/guide/images/verification.jpg",
+        "sha256": "2a76b52007a1cd2866ba67fd47d7d9ef3e1118bb5a09c4665eee8c3f161bd09a",
+        "bytes": 331450
+      },
+      {
+        "path": "docs/guide/README.md",
+        "sha256": "e2921b1ddb06cb8a4aee0d4fa66de340235f47f683bc4919c35eb00121f522d3",
+        "bytes": 2011
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+        "bytes": 1067
+      },
+      {
+        "path": "README.md",
+        "sha256": "7b2994ff3caa430bbdd5734e24f7b2f18afeee2dd0893e5dbbce0fca2790ce8d",
+        "bytes": 21603
+      },
+      {
+        "path": "skills/architect/references/design-red-flags.md",
+        "sha256": "905066f9bbac81c573c2b325be47751d2c0f9325e0a0772bd4384e82dafe9336",
+        "bytes": 1944
+      },
+      {
+        "path": "skills/architect/references/rationale-template.md",
+        "sha256": "6645a0e5f68c003298ec95b85a23262bdda0c79f998b926060169b54d9f23fbb",
+        "bytes": 3050
+      },
+      {
+        "path": "skills/architect/references/runner-prompt.md",
+        "sha256": "3ef8c1452a0382a15b7601c7c94f2a16a00954170d705b7af8cc49ac78080ec9",
+        "bytes": 3091
+      },
+      {
+        "path": "skills/architect/SKILL.md",
+        "sha256": "585d7a9e03c0cced84c80d4b60c09c8dc76010bb36c579f92d9e4deafec53df7",
+        "bytes": 6061
+      },
+      {
+        "path": "skills/arena/SKILL.md",
+        "sha256": "a2241e8500a44d9c16bd3260c8c70e28c4bb8a857c33061d42b267057e6f7093",
+        "bytes": 5367
+      },
+      {
+        "path": "skills/automate-me/SKILL.md",
+        "sha256": "34e7eab6f495093d474817bc4c13f26bcf5fafa439f2761b8c1ec72b07487764",
+        "bytes": 7809
+      },
+      {
+        "path": "skills/blast-radius/SKILL.md",
+        "sha256": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8",
+        "bytes": 4112
+      },
+      {
+        "path": "skills/bro/SKILL.md",
+        "sha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+        "bytes": 267
+      },
+      {
+        "path": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+        "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+        "bytes": 2926
+      },
+      {
+        "path": "skills/create-verification-skill/references/feature-map-example/README.md",
+        "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+        "bytes": 2601
+      },
+      {
+        "path": "skills/create-verification-skill/references/feature-map-example/search.md",
+        "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+        "bytes": 3478
+      },
+      {
+        "path": "skills/create-verification-skill/SKILL.md",
+        "sha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
+        "bytes": 5879
+      },
+      {
+        "path": "skills/figure-it-out/SKILL.md",
+        "sha256": "548616d04909de854f36869af2af127ce321fc6aaf95ea5a626997709fd46a2a",
+        "bytes": 5161
+      },
+      {
+        "path": "skills/how/references/critic-prompt.md",
+        "sha256": "aa77a15590814c814bd5cb074842029ab7b790c2e8379050525bdbc20739d1bb",
+        "bytes": 2286
+      },
+      {
+        "path": "skills/how/references/critique-rubric.md",
+        "sha256": "5774ff2caf51796e54c4a61b63620a165de5801f23c8f47406e527abfbe9addc",
+        "bytes": 2877
+      },
+      {
+        "path": "skills/how/references/explainer-prompt.md",
+        "sha256": "04336086e7c415394459ca2f461717d920e15339517dbf5a56ca042f8b4fead3",
+        "bytes": 3121
+      },
+      {
+        "path": "skills/how/references/explorer-prompt.md",
+        "sha256": "fd1218b8cf1f467c644d4ce6fa5e54e6089ede65a28fbbae61f6ee7a2d462f85",
+        "bytes": 2693
+      },
+      {
+        "path": "skills/how/SKILL.md",
+        "sha256": "fe503e7a9b2a3a7ad2622a2de6124cb06c466922fb44bc61817b49b52042b885",
+        "bytes": 7285
+      },
+      {
+        "path": "skills/interrogate/references/code-quality-review.md",
+        "sha256": "2462f1347b99b412b04fcb0577b96d8744c801f792f2651746f9409fd4465dc9",
+        "bytes": 5372
+      },
+      {
+        "path": "skills/interrogate/references/lead-judgment.md",
+        "sha256": "d2cea6cc308758201c6b8b82baf780947645f1ab752707ddf97fab374bf473f9",
+        "bytes": 3465
+      },
+      {
+        "path": "skills/interrogate/references/reviewer-prompt.md",
+        "sha256": "a397cc61102add709803d917fb23d726920525bf23e7c06dc4ed0b5cbeb00e54",
+        "bytes": 2756
+      },
+      {
+        "path": "skills/interrogate/references/rubric.md",
+        "sha256": "a67bf02426f88714634ff481d667db821d4b2cea7b335bcd165fe3126e427fb5",
+        "bytes": 5096
+      },
+      {
+        "path": "skills/interrogate/SKILL.md",
+        "sha256": "a009220dfe6869c8f7980a94fb1c9c7763a081a0b32fb6d0afb65b8ff1868146",
+        "bytes": 5629
+      },
+      {
+        "path": "skills/maintain-verification-skill/SKILL.md",
+        "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+        "bytes": 4922
+      },
+      {
+        "path": "skills/no-comments/SKILL.md",
+        "sha256": "72d3b153712ab641875f1d7424de0f77375af1cec03707935f08fa7d8f17bbf3",
+        "bytes": 2655
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/authoring-a-skill.md",
+        "sha256": "5479e2b3914acccbafd70f8be56520e1774775d9527f79ac255fd31ec554538a",
+        "bytes": 956
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/autonomous-run.md",
+        "sha256": "e4d9e2fc9195dbc521131021c23c6c53d66390048ca3e58be79bdb3d47b9d737",
+        "bytes": 2032
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/autopilot-full.md",
+        "sha256": "5ad2358069b95003a08dca297ffc792f3446af8458f16cdbc8e7025902d6c018",
+        "bytes": 5278
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/autopilot-stack.md",
+        "sha256": "9ef6ead011127a4cd641ab6979e42e903d15342eef5a2c2b5ab3da028d514311",
+        "bytes": 4871
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/babysit.md",
+        "sha256": "84eddcd4d1560ca79a81465cf354f08d1267b114c0470e4a87e1266820c92f86",
+        "bytes": 8275
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/bug-fix.md",
+        "sha256": "ffb71024f8af25923e6a937399d6424c07bc09363eb8a81c708c0a68c4afcb9d",
+        "bytes": 2669
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/eval.md",
+        "sha256": "4881699e688353f7f5c64ae6f4db20fe96bf7267b2a77ce5a6198d2abf218ed3",
+        "bytes": 3114
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/feature.md",
+        "sha256": "a2a04c2e4b273c0c33e4e3a22940049b60b917b064202e39bd34018356aa0926",
+        "bytes": 3001
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/hillclimb.md",
+        "sha256": "0078ed4be36486f257cf0ceeea4aec39e1e4d1900dacbffc58ef242b9037d6b0",
+        "bytes": 4533
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/investigation.md",
+        "sha256": "bb28bfe2912511dbb777057326a8ccff3ef279d219e52271dcb5b10f68a38b5b",
+        "bytes": 1124
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/multi-phase-plan.md",
+        "sha256": "273af50da917358eeb2277a7438dae13a4670889f255ee82b1835670a4206a95",
+        "bytes": 11180
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/opening-a-pr.md",
+        "sha256": "61bdec4b0df78d5d3fe2c966cd9b76afcc8686572c9e74c90e28268999f6c5ec",
+        "bytes": 3399
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/orchestrate.md",
+        "sha256": "8e2911af902df273504b1589747c13395229bcadc3e1e9448678a75f714dc9f6",
+        "bytes": 17496
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/pause-safely.md",
+        "sha256": "5a34883f8daa41596c0f69387f60c083fa826f90004e14952b8c831651a69b3c",
+        "bytes": 1509
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/perf-issue.md",
+        "sha256": "afb819ff5252f9d410a108bad60c42d31a10989b856c48b1993c68abd555b710",
+        "bytes": 3530
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/prototype.md",
+        "sha256": "0e539b57aa33deb09472e10ccab2a20cd166a86bea94c50e0b8be39e41164d33",
+        "bytes": 2532
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/refactoring.md",
+        "sha256": "437b86120a8044e85aabf77933d03ab8862d0b3635b0aece69cc3b98914ee7a4",
+        "bytes": 4006
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/runtime-forensics.md",
+        "sha256": "96ac9a3a368e6a31d8a7aa56055e6f7f75e8e773c21b65c0f941c26403c8d105",
+        "bytes": 1414
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/session-pickup.md",
+        "sha256": "c1a4aa69e32e2950fb66f7351b5cea7bbf8acff9c2aed4a4623585ed688fbf1e",
+        "bytes": 2121
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/shipping.md",
+        "sha256": "828d7360c40ff68f3bf23e5b4e8d1eb826b3ef89436e342ea33ee1288289c39e",
+        "bytes": 4145
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/trace-forensics.md",
+        "sha256": "fcae1f68f349072a8b2518f09b73dedeb826192d2ec33befb8906f42292e38be",
+        "bytes": 2080
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/visual-parity.md",
+        "sha256": "33165e74665bf8ddec181598c2b21b4a1cd310b1adf23742af90ac0d10652b39",
+        "bytes": 1345
+      },
+      {
+        "path": "skills/poteto-mode/playbooks/worktree-cleanup.md",
+        "sha256": "b3a3b23f23972c6db490edc0403a0d717990871308fd57d69bb8438725df5dce",
+        "bytes": 2932
+      },
+      {
+        "path": "skills/poteto-mode/references/bugbot-triage.md",
+        "sha256": "fb9e5cdc5ce20a1e4d1a5bdece14eac8b0161be19872a2f5fe08acdc32d811a3",
+        "bytes": 9604
+      },
+      {
+        "path": "skills/poteto-mode/scripts/bootstrap.ts",
+        "sha256": "ccd2ed08fd9da9d0d942e5f2491cfc74bb92d8a08fa51755e0da1ac8de287361",
+        "bytes": 1737
+      },
+      {
+        "path": "skills/poteto-mode/scripts/bun.lock",
+        "sha256": "667d9cf7222e9aae3fa42a4be383e657784216e9df115da02227fbc5ac7bbe46",
+        "bytes": 6679
+      },
+      {
+        "path": "skills/poteto-mode/scripts/check-plan.mjs",
+        "sha256": "4f5118edf719b481983dc87dfadd5b4b5473d05aad04a7ba65191ff9c73faf1b",
+        "bytes": 7630
+      },
+      {
+        "path": "skills/poteto-mode/scripts/orch/orch.test.ts",
+        "sha256": "174b86d21ff51ccd28d1a8c938cb2e0c6fa287b209d4ca6c03932fcb1b53372e",
+        "bytes": 18424
+      },
+      {
+        "path": "skills/poteto-mode/scripts/orch/orch.ts",
+        "sha256": "f091687df627a0b75fabd54af58945a9cd6c7039ef0622012ac9ed60cd8ec434",
+        "bytes": 15511
+      },
+      {
+        "path": "skills/poteto-mode/scripts/orch/store.ts",
+        "sha256": "0eae7cf69282e827b1227166f2e32cee3560f2f3e65b3f1f2faf6fb83d3b4c5b",
+        "bytes": 42927
+      },
+      {
+        "path": "skills/poteto-mode/scripts/package.json",
+        "sha256": "d1f815091209d49763775cc188e8e06ff32d5fec648bffd2272bc25a165e87c3",
+        "bytes": 352
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/cli.test.ts",
+        "sha256": "a35592b4c6da96caf8d47987e9cd503fab6c7774ab87d11a43f24b4b5df2a9d1",
+        "bytes": 6161
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/cli.ts",
+        "sha256": "89c08863089181a232be782c4b2ed90a1552f44aeecb0dcb7aac2c623620e680",
+        "bytes": 6983
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/fakes.test-helper.ts",
+        "sha256": "e53e31b7f03068063f53a99a3591b052aaed66e4e2b196b3a364980f60324ab1",
+        "bytes": 2944
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/github.test.ts",
+        "sha256": "0cbce011050522938523e36bb42a260e92b812dcd2076930fa681672ad316b24",
+        "bytes": 9059
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/github.ts",
+        "sha256": "d1bbbafbe8e2c703c84da2029de7f2c4011412512f8cf65a42100f46bcb92c8a",
+        "bytes": 24072
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/policy.test.ts",
+        "sha256": "a9fedb25feefd1f57ef6a662f80c99018690170a3a8070773a08eaf694d1d3d9",
+        "bytes": 12397
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/policy.ts",
+        "sha256": "68d240505852cf23c9b2dea463342e9e61243f486b3cc86c735d140f9ee7be49",
+        "bytes": 25132
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/render.ts",
+        "sha256": "2b709e86628d5b8fdb61f860e60ababc342b0626c67576305442cf548283a604",
+        "bytes": 7083
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/tsconfig.json",
+        "sha256": "1ecccc72320b086c63ce3f73c959896fd747363e63553b3b1136296ea4069e45",
+        "bytes": 270
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/types.compile.ts",
+        "sha256": "621af4c9a664fbf699a9737efccdc248abb416df8819c9dc5f824beae2b9b1d6",
+        "bytes": 2258
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/types.ts",
+        "sha256": "64ba6221e3bfe61bbb292337d199cdec6309455477280efb060203dba34e0e91",
+        "bytes": 12359
+      },
+      {
+        "path": "skills/poteto-mode/scripts/watch-pr/watch-pr",
+        "sha256": "d955603be6cc0e8b8ffcec722f635192b2261410b1f2929abea94480e47eb5d4",
+        "bytes": 211
+      },
+      {
+        "path": "skills/poteto-mode/scripts/worktree-audit.sh",
+        "sha256": "95b8530f3c0ccada8cabc4b0727c052fbc85c141531375aaace65c427af8aecc",
+        "bytes": 3984
+      },
+      {
+        "path": "skills/poteto-mode/SKILL.md",
+        "sha256": "3b6793bdaeada0bfc7291bcc00422093bd8d10e64a9bc3b6707008ba3c4c7316",
+        "bytes": 18858
+      },
+      {
+        "path": "skills/principle-boundary-discipline/SKILL.md",
+        "sha256": "ab3c690ce361542ca00446b8406f5afd47776f544b8ce06a9ef2eaa2338bde6d",
+        "bytes": 1919
+      },
+      {
+        "path": "skills/principle-build-the-lever/SKILL.md",
+        "sha256": "3a0b02b1b890538810f27d00c525b2e677bb5d931f602fd7a774d5cd13b61c93",
+        "bytes": 2655
+      },
+      {
+        "path": "skills/principle-encode-lessons-in-structure/SKILL.md",
+        "sha256": "4acdb3f466efd0a433899aafce3e0f100566228b63ccff43f363a83e80624d81",
+        "bytes": 2243
+      },
+      {
+        "path": "skills/principle-exhaust-the-design-space/SKILL.md",
+        "sha256": "8583310d7297b7823d75494faa57b003564d436807febecdecbd8321abe5cf6e",
+        "bytes": 1152
+      },
+      {
+        "path": "skills/principle-experience-first/SKILL.md",
+        "sha256": "f8d643ddf2f6aa91d9607d1bb340fd2baf227d702e9738848b85312a312bb971",
+        "bytes": 1308
+      },
+      {
+        "path": "skills/principle-fix-root-causes/SKILL.md",
+        "sha256": "cfae13b5a3e27bc88d069092cae97b3e95246879d5bf14f0e9a4db719c781952",
+        "bytes": 1366
+      },
+      {
+        "path": "skills/principle-foundational-thinking/SKILL.md",
+        "sha256": "a522488c9d4481e8bfcbe35cbf3838169c8e3801ee0738ae2859067684144579",
+        "bytes": 1780
+      },
+      {
+        "path": "skills/principle-guard-the-context-window/SKILL.md",
+        "sha256": "291d0125125eabbc2109c880b1c1083aa95826187119a648b26c1c8ea6367179",
+        "bytes": 1152
+      },
+      {
+        "path": "skills/principle-laziness-protocol/SKILL.md",
+        "sha256": "8999fda9fde65fd905835c86e3bfc64190369a84bba30b1e93769f39ad6580fe",
+        "bytes": 1520
+      },
+      {
+        "path": "skills/principle-make-operations-idempotent/SKILL.md",
+        "sha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+        "bytes": 1390
+      },
+      {
+        "path": "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+        "sha256": "e29b6b6534a23dcaf8c7e16fc25d6484000d7b6e289c48eb0a32a97280633c5d",
+        "bytes": 1152
+      },
+      {
+        "path": "skills/principle-minimize-reader-load/SKILL.md",
+        "sha256": "480f4ddec29e7e3058a8f17eb97c0cec4a2c8b4b33ba6401e960167c1fc95a81",
+        "bytes": 2099
+      },
+      {
+        "path": "skills/principle-model-the-domain/SKILL.md",
+        "sha256": "6b359783c5c9be87860d0999321e864940ff17729b9f9a27f38abae449640022",
+        "bytes": 2127
+      },
+      {
+        "path": "skills/principle-never-block-on-the-human/SKILL.md",
+        "sha256": "f656f3b7581df55e79f53cc47df93905c3a940b822c25071ba95f40e530d102a",
+        "bytes": 1596
+      },
+      {
+        "path": "skills/principle-outcome-oriented-execution/SKILL.md",
+        "sha256": "beedcaed75572a6a1662d47f16da203c2bd2c9dbffbbd678d4ba187d67b7e670",
+        "bytes": 1132
+      },
+      {
+        "path": "skills/principle-prove-it-works/SKILL.md",
+        "sha256": "9bbe6138505be34d81e9395d95d3639b384f71d71d65cc1903075126e1da1508",
+        "bytes": 2068
+      },
+      {
+        "path": "skills/principle-redesign-from-first-principles/SKILL.md",
+        "sha256": "9ae97b35d6338cc9e34c7023c995a39cb7afdaf4bfd41e1d3d665da04d7515d5",
+        "bytes": 943
+      },
+      {
+        "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
+        "sha256": "5b14fd656441580061f760968c828f3f4ba034242d8fa06b544763efb25e89ee",
+        "bytes": 1631
+      },
+      {
+        "path": "skills/principle-sequence-verifiable-units/SKILL.md",
+        "sha256": "7478f8160ba5701ca40c742a81e90aff12d45f53ac9191e80ad79b9763e4489f",
+        "bytes": 2290
+      },
+      {
+        "path": "skills/principle-subtract-before-you-add/SKILL.md",
+        "sha256": "3999888dc21ced33b86054c2ffde1a3cb438e16bed1213f5dab2b5c000446292",
+        "bytes": 1337
+      },
+      {
+        "path": "skills/principle-type-system-discipline/SKILL.md",
+        "sha256": "662ed1ad53fb491e97b9c4eac7317fba8ec5ed722fec8d71beb94da0111619cf",
+        "bytes": 5097
+      },
+      {
+        "path": "skills/recall/SKILL.md",
+        "sha256": "90d290daec500f548a167bbd20d69a3a248e345c546ca847ca12967d1c99cbf3",
+        "bytes": 5696
+      },
+      {
+        "path": "skills/reflect/references/divergent-reviewer.md",
+        "sha256": "823167d485c8fc424530ac4eff447f132a10e318a2db35380312c7e843f17683",
+        "bytes": 3956
+      },
+      {
+        "path": "skills/reflect/references/judgment-reviewer.md",
+        "sha256": "8db7a315ccf9280486b4df08b1277ba0fe4c4ac533ad3719945aa1aab2ebddea",
+        "bytes": 3322
+      },
+      {
+        "path": "skills/reflect/references/synthesizer.md",
+        "sha256": "52767b4566c37df0adc6350fff1c5c7a919a1178c2be539e0efbf920f2803702",
+        "bytes": 4164
+      },
+      {
+        "path": "skills/reflect/references/tooling-reviewer.md",
+        "sha256": "3a4dc9e87d0d74b46d0d0bc2c1af6acba10be7c95d1adafeab6ec5701e247933",
+        "bytes": 4795
+      },
+      {
+        "path": "skills/reflect/SKILL.md",
+        "sha256": "5485347991eb60ee226ca78c5972f9c694f6927cff3263b7f48b631ed7a9de56",
+        "bytes": 5045
+      },
+      {
+        "path": "skills/setup-pstack/SKILL.md",
+        "sha256": "3b62d9fd4cce8f450b36b2bc6b1df2f00d887e0a3abd55e7fc1ccbde5db96cea",
+        "bytes": 4648
+      },
+      {
+        "path": "skills/show-me-your-work/references/decision-log-template.tsv",
+        "sha256": "6779378006a2f5225e8c06deb84f1d913fb532041ebbb6e50d94600bfe3f4b76",
+        "bytes": 38
+      },
+      {
+        "path": "skills/show-me-your-work/scripts/log.sh",
+        "sha256": "1601bc18f9aba0af3f5d6375e4f2d5dc6102334d1bca935026c0e3547cdadbbf",
+        "bytes": 1234
+      },
+      {
+        "path": "skills/show-me-your-work/SKILL.md",
+        "sha256": "b99833c41a8781a6af191487f1af37711a3198b98f9373e3c02292b8a6e09aba",
+        "bytes": 6762
+      },
+      {
+        "path": "skills/swarm/SKILL.md",
+        "sha256": "8e6494e296af5496cacb0fb83f33f647c84286d2e1d1b85580bc0f0f577a81cd",
+        "bytes": 2232
+      },
+      {
+        "path": "skills/tdd/SKILL.md",
+        "sha256": "adad031f9e79d7f7389fa128f7af8e03344831270e282cf4e40bdacb8418c386",
+        "bytes": 3536
+      },
+      {
+        "path": "skills/teach/SKILL.md",
+        "sha256": "0a5987b0588dc56e14bfd84d0300e2ab405abc7c5c2aa81e0d3d7c6b243db7a7",
+        "bytes": 6253
+      },
+      {
+        "path": "skills/technical-writing/SKILL.md",
+        "sha256": "bd0cb21034f4fe6695cfdf8cd3561026eec943f0bb6e9300bc78a2b3340865a7",
+        "bytes": 11522
+      },
+      {
+        "path": "skills/typescript-best-practices/references/patterns.md",
+        "sha256": "83d89dd2fdb81021eb18c77c57437f60314a60da79447756a547f08ece64b433",
+        "bytes": 8695
+      },
+      {
+        "path": "skills/typescript-best-practices/SKILL.md",
+        "sha256": "df0ecd7518b33778f4b02c2f85ee577bbaea52caa1c49df6816b0594e128bb64",
+        "bytes": 2532
+      },
+      {
+        "path": "skills/unslop/SKILL.md",
+        "sha256": "181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441",
+        "bytes": 6595
+      },
+      {
+        "path": "skills/why/references/epistemics.md",
+        "sha256": "ba99dcdc4fbce91a83b50fc0c9b2c5769febd95540b1722c6b87fe8f900bb60a",
+        "bytes": 7749
+      },
+      {
+        "path": "skills/why/references/investigator-prompt.md",
+        "sha256": "e35d8eaea13f0a027dd35572d525e9f66e8f8918ca9e555237dc228f26278d5f",
+        "bytes": 6985
+      },
+      {
+        "path": "skills/why/references/source-playbook.md",
+        "sha256": "3cfb0245d5b2019eeeaa7a0e023579d390f2cdcdff6942d2fe009b9efac0eb11",
+        "bytes": 1363
+      },
+      {
+        "path": "skills/why/references/sources/code-archaeology.md",
+        "sha256": "8c14aa382f0de40829b2668d43e3f54814480bb93a486c9282ada4003f6b9dbd",
+        "bytes": 3489
+      },
+      {
+        "path": "skills/why/references/sources/databricks.md",
+        "sha256": "269a22032f027ee30a33c1b5e30443d13dd6d127ff20d8d1e8a20715b06a69cc",
+        "bytes": 6994
+      },
+      {
+        "path": "skills/why/references/sources/datadog.md",
+        "sha256": "db80803f1635a5015e3190f4753c4228083e6cebf222c84e24fc3c3919aa5574",
+        "bytes": 5323
+      },
+      {
+        "path": "skills/why/references/sources/incident-postmortem.md",
+        "sha256": "486132457d3782eea64292ce7a2d3bbe3b24b372b20ca00de4329e820f74cd42",
+        "bytes": 1973
+      },
+      {
+        "path": "skills/why/references/sources/linear.md",
+        "sha256": "7e1b72ba459089168efd701502f8c268d2481154aeeda1ddd84f840f7e974760",
+        "bytes": 2996
+      },
+      {
+        "path": "skills/why/references/sources/notion.md",
+        "sha256": "2ce336dd3052967187a56ec33d308c7a69e7ef3b04ba7b17386a8b3914a0f000",
+        "bytes": 2853
+      },
+      {
+        "path": "skills/why/references/sources/sentry.md",
+        "sha256": "0eef902cb0f835f7fa9bd85a8e19ba1505d05e59a0173dfe852d8d52d828266d",
+        "bytes": 4947
+      },
+      {
+        "path": "skills/why/references/sources/slack.md",
+        "sha256": "60e4c8dbb941f563c86aec7267cde66443b1dc651422569c8d112bc9da7551f6",
+        "bytes": 3105
+      },
+      {
+        "path": "skills/why/references/synthesizer-prompt.md",
+        "sha256": "fcdc69ede22f94da9e22f510bb0c4a75a63820f0b49b8d5fd54a196b4010bf2a",
+        "bytes": 7984
+      },
+      {
+        "path": "skills/why/SKILL.md",
+        "sha256": "dc8f2d8a7dbef7d0467cca8e6d055a4dbde027db6e2cbbfb18aa9071d8f20b6c",
+        "bytes": 21343
+      }
+    ]
+  },
+  "refreshDecisions": [
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "kind": "changed",
+      "oldSha256": "41b2c5bcb51057303de9373f931eda02e577e3b7a96520fd74c8784495b4e1bd",
+      "newSha256": "5f4311823e4c1d3e611ee1bd30cf7378ded6c413553d070a7ecabaabc82d6dda",
+      "disposition": "replaced-by-codex-manifest",
+      "rationale": "The upstream host manifest remains provenance only; the Codex manifest keeps the supported field set and namespace."
+    },
+    {
+      "path": "assets/logo.png",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "672f6791589ef758b0ced2c4c477913fa2758623c438e265639a0d539ce90695",
+      "disposition": "ported-codex-native",
+      "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+    },
+    {
+      "path": "docs/guide/01-setup.md",
+      "kind": "changed",
+      "oldSha256": "e6e501f8f58405dcffab8a71f829bf0985466a28f23f49ef29a301f5e8a62087",
+      "newSha256": "5530cdb0138b1abf9f2bbb3d54b1bb7447cfb4d8aa3db5444410257473607c39",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/02-poteto-mode.md",
+      "kind": "changed",
+      "oldSha256": "528ef62a66ae0ac74cf3eb489b960a80ee4370e0256342cb2b94c6712241c8aa",
+      "newSha256": "379a1b2c9cd2ba54032b2b142563328d0f3d65039f067863d19b1d4c008737f5",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/03-understand.md",
+      "kind": "changed",
+      "oldSha256": "0a42633faaa03cbc3c8d48cc3987c3a2f5924ff3b4651d045486933cbc5f1b10",
+      "newSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/06-verify-and-ship.md",
+      "kind": "changed",
+      "oldSha256": "12e0540d20ac06b2b01ff4be7023f1e83d510882cd95f56d8ea52a53ab8ccf8a",
+      "newSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/07-overnight.md",
+      "kind": "changed",
+      "oldSha256": "d3ff086392beb2a0da27a6ef881cb280a9d0a4214ef9b3d36173ac11d7c6c708",
+      "newSha256": "eefbc665ad411ee22b6430d779674e5e8d8f304d51fafd80a62ab2334d095ebc",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/08-principles.md",
+      "kind": "changed",
+      "oldSha256": "34c0b6d6f789738cc05fdfbc2d8f8e6a45f52acc47f78752f4ee28c1525bc576",
+      "newSha256": "3ede7c9cf74d9631142aec016a01843d97c1e20469387144b70c2660d50fa96f",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "docs/guide/README.md",
+      "kind": "changed",
+      "oldSha256": "e2921b1ddb06cb8a4aee0d4fa66de340235f47f683bc4919c35eb00121f522d3",
+      "newSha256": "0db8dd72e832c06638ca2f43489e8597d44dc0ea8da3b5088e4382ea26d904c5",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "README.md",
+      "kind": "changed",
+      "oldSha256": "7b2994ff3caa430bbdd5734e24f7b2f18afeee2dd0893e5dbbce0fca2790ce8d",
+      "newSha256": "fc81cde088c66ee3d0ea904066495e246a07bf8f62ad385780614ada1bef86db",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/architect/references/rationale-template.md",
+      "kind": "changed",
+      "oldSha256": "6645a0e5f68c003298ec95b85a23262bdda0c79f998b926060169b54d9f23fbb",
+      "newSha256": "0cedfccdc7b47fc881febd5a8293eecbc542c20f8df825639904a8102d2eb5d3",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/architect/references/runner-prompt.md",
+      "kind": "changed",
+      "oldSha256": "3ef8c1452a0382a15b7601c7c94f2a16a00954170d705b7af8cc49ac78080ec9",
+      "newSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/architect/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "585d7a9e03c0cced84c80d4b60c09c8dc76010bb36c579f92d9e4deafec53df7",
+      "newSha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/arena/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "a2241e8500a44d9c16bd3260c8c70e28c4bb8a857c33061d42b267057e6f7093",
+      "newSha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/automate-me/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "34e7eab6f495093d474817bc4c13f26bcf5fafa439f2761b8c1ec72b07487764",
+      "newSha256": "1510979b0b71b54284427a19c09918f8b1fdfc168f9b7f9e30098793a5ec88ef",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/blast-radius/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8",
+      "newSha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/figure-it-out/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "548616d04909de854f36869af2af127ce321fc6aaf95ea5a626997709fd46a2a",
+      "newSha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/how/references/explainer-prompt.md",
+      "kind": "changed",
+      "oldSha256": "04336086e7c415394459ca2f461717d920e15339517dbf5a56ca042f8b4fead3",
+      "newSha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/how/references/explorer-prompt.md",
+      "kind": "changed",
+      "oldSha256": "fd1218b8cf1f467c644d4ce6fa5e54e6089ede65a28fbbae61f6ee7a2d462f85",
+      "newSha256": "3a6965276d23be7d8da6c305bfd5d7bf29d2aef09e5dae4119463ac72022a02d",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/how/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "fe503e7a9b2a3a7ad2622a2de6124cb06c466922fb44bc61817b49b52042b885",
+      "newSha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/interrogate/references/code-quality-review.md",
+      "kind": "changed",
+      "oldSha256": "2462f1347b99b412b04fcb0577b96d8744c801f792f2651746f9409fd4465dc9",
+      "newSha256": "623d3d8122d075c303b562783b471a732992e84166b318f85ab6d6c118b13304",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/interrogate/references/lead-judgment.md",
+      "kind": "changed",
+      "oldSha256": "d2cea6cc308758201c6b8b82baf780947645f1ab752707ddf97fab374bf473f9",
+      "newSha256": "6e5bdf5670eb34017692e9b6c546f36ac7552e6bb9f3f2f3429164fcc46a9361",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/interrogate/references/rubric.md",
+      "kind": "changed",
+      "oldSha256": "a67bf02426f88714634ff481d667db821d4b2cea7b335bcd165fe3126e427fb5",
+      "newSha256": "59e9b7cc4556e735e1b859a7dd1f7637b013a2426a84825ac1c51979942c158a",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/interrogate/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "a009220dfe6869c8f7980a94fb1c9c7763a081a0b32fb6d0afb65b8ff1868146",
+      "newSha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/make-bot-ui/SKILL.md",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "3624c8ef16cf2e48deb2a4049e72c6962a9431c8d6c6af90e7bd7ea0375224ec",
+      "disposition": "ported-codex-native",
+      "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+    },
+    {
+      "path": "skills/no-comments/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "72d3b153712ab641875f1d7424de0f77375af1cec03707935f08fa7d8f17bbf3",
+      "newSha256": "5c5b0882297d704c3a9720c52b7a793c68b013eaf717989f0945624efdfe2b05",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/authoring-a-skill.md",
+      "kind": "changed",
+      "oldSha256": "5479e2b3914acccbafd70f8be56520e1774775d9527f79ac255fd31ec554538a",
+      "newSha256": "f6a13a445c360b48d6cd72780ac01955f45b82826476efe0e67c7559329407aa",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/autonomous-run.md",
+      "kind": "changed",
+      "oldSha256": "e4d9e2fc9195dbc521131021c23c6c53d66390048ca3e58be79bdb3d47b9d737",
+      "newSha256": "15e54ad3ac92565613980772d8708de6e19cc4690bfd4bb3fb8836522407377b",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/autopilot-full.md",
+      "kind": "changed",
+      "oldSha256": "5ad2358069b95003a08dca297ffc792f3446af8458f16cdbc8e7025902d6c018",
+      "newSha256": "52f69170bd7fa6b436992d90d3ef7fba893201e0b497297b416e9aea0e567d5f",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/autopilot-stack.md",
+      "kind": "changed",
+      "oldSha256": "9ef6ead011127a4cd641ab6979e42e903d15342eef5a2c2b5ab3da028d514311",
+      "newSha256": "66364cd3a2286cbecfb73d3a7bf7d1fa387ede8525d37ef22b69d4ac03c2c5b2",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/babysit.md",
+      "kind": "changed",
+      "oldSha256": "84eddcd4d1560ca79a81465cf354f08d1267b114c0470e4a87e1266820c92f86",
+      "newSha256": "51be21872152f97612d37258273269b88212b6696432d25d678cac30f02f4157",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/bug-fix.md",
+      "kind": "changed",
+      "oldSha256": "ffb71024f8af25923e6a937399d6424c07bc09363eb8a81c708c0a68c4afcb9d",
+      "newSha256": "e958c67d5454fc12d76ec645b50dfd85c423082aac13a49e2913ef2815948216",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/eval.md",
+      "kind": "changed",
+      "oldSha256": "4881699e688353f7f5c64ae6f4db20fe96bf7267b2a77ce5a6198d2abf218ed3",
+      "newSha256": "b862bfa2fae2399abf047a8e80d3e3dddb64003af96fb1cebb625216131e36bb",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/feature.md",
+      "kind": "changed",
+      "oldSha256": "a2a04c2e4b273c0c33e4e3a22940049b60b917b064202e39bd34018356aa0926",
+      "newSha256": "430dae0fd736554ff7dffc3ef0644c9f0c845e25742f69e598c35b9b89660301",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/hillclimb.md",
+      "kind": "changed",
+      "oldSha256": "0078ed4be36486f257cf0ceeea4aec39e1e4d1900dacbffc58ef242b9037d6b0",
+      "newSha256": "bc1fc4052c1ee918a56115a219cbcbbc4c147fa1a8080e77c7d58068eecac299",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/investigation.md",
+      "kind": "changed",
+      "oldSha256": "bb28bfe2912511dbb777057326a8ccff3ef279d219e52271dcb5b10f68a38b5b",
+      "newSha256": "dc66bcf6af3a074fc7f67aa5e12b93ef571a4fb4d8e17f2f1af5ae5359f42e46",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/multi-phase-plan.md",
+      "kind": "changed",
+      "oldSha256": "273af50da917358eeb2277a7438dae13a4670889f255ee82b1835670a4206a95",
+      "newSha256": "63426a55519fbc4fb9f00baf5cc7b1148f70dfb62ad360a0f6533d287dd36edf",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/opening-a-pr.md",
+      "kind": "changed",
+      "oldSha256": "61bdec4b0df78d5d3fe2c966cd9b76afcc8686572c9e74c90e28268999f6c5ec",
+      "newSha256": "b173ff9638ff62f91f6813c1a0ed3417cdf9f6545a659be0c1fb1f42130e0e66",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/orchestrate.md",
+      "kind": "changed",
+      "oldSha256": "8e2911af902df273504b1589747c13395229bcadc3e1e9448678a75f714dc9f6",
+      "newSha256": "d42b4375f1bd4ce23da0b575a198571a2117df7eea10c3c9fc6d92ae1053f7be",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/pause-safely.md",
+      "kind": "changed",
+      "oldSha256": "5a34883f8daa41596c0f69387f60c083fa826f90004e14952b8c831651a69b3c",
+      "newSha256": "7d5fc10e144265f1b35f8157926541e738c1de64b6a85b3e61b51cf268c3dffd",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/perf-issue.md",
+      "kind": "changed",
+      "oldSha256": "afb819ff5252f9d410a108bad60c42d31a10989b856c48b1993c68abd555b710",
+      "newSha256": "b2ee9aed1466583361cb61b4e8d79ebb3b61f7f9f6540be7633852afacab1d89",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/prototype.md",
+      "kind": "changed",
+      "oldSha256": "0e539b57aa33deb09472e10ccab2a20cd166a86bea94c50e0b8be39e41164d33",
+      "newSha256": "7aa1f52c691c3d46d5afc527b23f90977fce869ce33573c73c81a4c7f0cde962",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/refactoring.md",
+      "kind": "changed",
+      "oldSha256": "437b86120a8044e85aabf77933d03ab8862d0b3635b0aece69cc3b98914ee7a4",
+      "newSha256": "53bac1f1fe886600dd1991b5511b7975e6a206168038f9d282d88e45408e93cf",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/runtime-forensics.md",
+      "kind": "changed",
+      "oldSha256": "96ac9a3a368e6a31d8a7aa56055e6f7f75e8e773c21b65c0f941c26403c8d105",
+      "newSha256": "594f02c40c243a346e1f57b688ecf2ed5e882f21b3d24ed2204d1ac6f1c24a8a",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/session-pickup.md",
+      "kind": "changed",
+      "oldSha256": "c1a4aa69e32e2950fb66f7351b5cea7bbf8acff9c2aed4a4623585ed688fbf1e",
+      "newSha256": "1604fb463f7c7410d43fa024ca76c1c1824c166a01fd69d61f073d06fdca2a47",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/shipping.md",
+      "kind": "changed",
+      "oldSha256": "828d7360c40ff68f3bf23e5b4e8d1eb826b3ef89436e342ea33ee1288289c39e",
+      "newSha256": "c301902136e0a9a0a55403c35374f6f5738e501aee66c27458dc197b87557550",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/trace-forensics.md",
+      "kind": "changed",
+      "oldSha256": "fcae1f68f349072a8b2518f09b73dedeb826192d2ec33befb8906f42292e38be",
+      "newSha256": "137ce3984fb96e45971fdff4d3c79fa4ccc647c5b30ae4945783b9fb23f8cec7",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/visual-parity.md",
+      "kind": "changed",
+      "oldSha256": "33165e74665bf8ddec181598c2b21b4a1cd310b1adf23742af90ac0d10652b39",
+      "newSha256": "950ca51999a6454c98eee6bcbc3d1bbe501a4e3a5d5439b6f6ddc378991b256c",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/playbooks/worktree-cleanup.md",
+      "kind": "changed",
+      "oldSha256": "b3a3b23f23972c6db490edc0403a0d717990871308fd57d69bb8438725df5dce",
+      "newSha256": "fc464dc4121926df1704f483c5feca83717c0a40b4651d3e11bd3aedd89441b6",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/references/bugbot-triage.md",
+      "kind": "changed",
+      "oldSha256": "fb9e5cdc5ce20a1e4d1a5bdece14eac8b0161be19872a2f5fe08acdc32d811a3",
+      "newSha256": "b2d146c770d8d3593e1ef3d77b668039b8e1f78093ea1a86f1d45d7f99614309",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/poteto-mode/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "3b6793bdaeada0bfc7291bcc00422093bd8d10e64a9bc3b6707008ba3c4c7316",
+      "newSha256": "6bbf35cb2111c358461c7ba90f210dad4573f3a3ada92f6459eac0c69d83b01a",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/principle-attack-the-premise/SKILL.md",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
+      "disposition": "ported-codex-native",
+      "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+    },
+    {
+      "path": "skills/principle-boundary-discipline/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "ab3c690ce361542ca00446b8406f5afd47776f544b8ce06a9ef2eaa2338bde6d",
+      "newSha256": "62ac2862c2caa22dd14531f51c9c6bb445ceb198ca98a687e25b4d47c1f10a28",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-build-the-lever/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "3a0b02b1b890538810f27d00c525b2e677bb5d931f602fd7a774d5cd13b61c93",
+      "newSha256": "458b269eab8e95a1573276955312f7d2a13ae8599879a9efc748248f6bc34b56",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-encode-lessons-in-structure/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "4acdb3f466efd0a433899aafce3e0f100566228b63ccff43f363a83e80624d81",
+      "newSha256": "77044c83a9ac6df78fc643887ea5f1f11f082adaf14b717c060cdaed03cce863",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-experience-first/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "f8d643ddf2f6aa91d9607d1bb340fd2baf227d702e9738848b85312a312bb971",
+      "newSha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-fix-root-causes/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "cfae13b5a3e27bc88d069092cae97b3e95246879d5bf14f0e9a4db719c781952",
+      "newSha256": "ba4cd38da1dcc8fe5432feb64457cba95594736a9b21b2ebf8f8c52aee068707",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-foundational-thinking/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "a522488c9d4481e8bfcbe35cbf3838169c8e3801ee0738ae2859067684144579",
+      "newSha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-guard-the-context-window/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "291d0125125eabbc2109c880b1c1083aa95826187119a648b26c1c8ea6367179",
+      "newSha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-laziness-protocol/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "8999fda9fde65fd905835c86e3bfc64190369a84bba30b1e93769f39ad6580fe",
+      "newSha256": "9006579e9e3f33955d17569733db688ae65f22577dc3b21803d219a5a8445aff",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "e29b6b6534a23dcaf8c7e16fc25d6484000d7b6e289c48eb0a32a97280633c5d",
+      "newSha256": "09978915a4a11990cf0a9a02d9c08cc59e0b7a04c5c24b83aa560fbe4146f75b",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-minimize-reader-load/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "480f4ddec29e7e3058a8f17eb97c0cec4a2c8b4b33ba6401e960167c1fc95a81",
+      "newSha256": "42551c5dc74cd578163c148da552db3ff67d29b78600ef216bfd311fb828fe69",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-model-the-domain/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "6b359783c5c9be87860d0999321e864940ff17729b9f9a27f38abae449640022",
+      "newSha256": "bbadbb9a723fac3f76e782ae45665eb94058ec10993e4bae36d4dc6b0e4eac07",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-never-block-on-the-human/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "f656f3b7581df55e79f53cc47df93905c3a940b822c25071ba95f40e530d102a",
+      "newSha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-prove-it-works/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "9bbe6138505be34d81e9395d95d3639b384f71d71d65cc1903075126e1da1508",
+      "newSha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-redesign-from-first-principles/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "9ae97b35d6338cc9e34c7023c995a39cb7afdaf4bfd41e1d3d665da04d7515d5",
+      "newSha256": "a1c7fd0a96b40e12a74bceb0e6bb20a9666dd844dcabfb624acb27da23b929fe",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-separate-before-serializing-shared-state/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "5b14fd656441580061f760968c828f3f4ba034242d8fa06b544763efb25e89ee",
+      "newSha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-sequence-verifiable-units/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "7478f8160ba5701ca40c742a81e90aff12d45f53ac9191e80ad79b9763e4489f",
+      "newSha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-subtract-before-you-add/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "3999888dc21ced33b86054c2ffde1a3cb438e16bed1213f5dab2b5c000446292",
+      "newSha256": "a983a50e732c1ed315eba7aaf47a61329e31c4794eb1ab9d25d9945265b31e03",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/principle-test-behavior-not-implementation/SKILL.md",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "87e40efe4e486f7ea639d2ed1fc0abe6c93b8fd0e89a81218086909d2470a52e",
+      "disposition": "ported-codex-native",
+      "rationale": "New upstream surface was added in 0.15.1 and ported with Codex metadata and explicit-only boundaries."
+    },
+    {
+      "path": "skills/principle-type-system-discipline/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "662ed1ad53fb491e97b9c4eac7317fba8ec5ed722fec8d71beb94da0111619cf",
+      "newSha256": "c83da8031ffb4c86410030d3e261f659598fca2b7d8158fd9dc269d70a3a025e",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/recall/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "90d290daec500f548a167bbd20d69a3a248e345c546ca847ca12967d1c99cbf3",
+      "newSha256": "d265b0e5b6dc5b89c0407f3387d24462c988e1990a37d5359735137908128c5a",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/reflect/references/divergent-reviewer.md",
+      "kind": "changed",
+      "oldSha256": "823167d485c8fc424530ac4eff447f132a10e318a2db35380312c7e843f17683",
+      "newSha256": "7da0334ce282e6d8d7349c0cff14ffbd10a91a756c0b5c3ccc97291f57b8bed6",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/reflect/references/judgment-reviewer.md",
+      "kind": "changed",
+      "oldSha256": "8db7a315ccf9280486b4df08b1277ba0fe4c4ac533ad3719945aa1aab2ebddea",
+      "newSha256": "917bb2ad21240a42b440aeb2a17766092e09f70d0982417b2f4caa6d74f27164",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/reflect/references/synthesizer.md",
+      "kind": "changed",
+      "oldSha256": "52767b4566c37df0adc6350fff1c5c7a919a1178c2be539e0efbf920f2803702",
+      "newSha256": "2f76c847eb45b182dc6fbcbf7d96c8ee7e2986ecfd9e0d640fec44e3cc5a617c",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/reflect/references/tooling-reviewer.md",
+      "kind": "changed",
+      "oldSha256": "3a4dc9e87d0d74b46d0d0bc2c1af6acba10be7c95d1adafeab6ec5701e247933",
+      "newSha256": "8c74ebf7811801d634db7ab609b097d77ea00ab77bb4b258d69bd96e671cfa39",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/reflect/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "5485347991eb60ee226ca78c5972f9c694f6927cff3263b7f48b631ed7a9de56",
+      "newSha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/setup-pstack/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "3b62d9fd4cce8f450b36b2bc6b1df2f00d887e0a3abd55e7fc1ccbde5db96cea",
+      "newSha256": "5acdc3db4f15f3e9b81fb56eab7f17cdccde1a11a40053ed7743f7467729c8a9",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/show-me-your-work/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "b99833c41a8781a6af191487f1af37711a3198b98f9373e3c02292b8a6e09aba",
+      "newSha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/swarm/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "8e6494e296af5496cacb0fb83f33f647c84286d2e1d1b85580bc0f0f577a81cd",
+      "newSha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/tdd/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "adad031f9e79d7f7389fa128f7af8e03344831270e282cf4e40bdacb8418c386",
+      "newSha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/teach/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "0a5987b0588dc56e14bfd84d0300e2ab405abc7c5c2aa81e0d3d7c6b243db7a7",
+      "newSha256": "bd286e5a6290673be2cd28aef7af2ec7f1fb138e6bce156ea657368c7e7fc8a4",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/technical-writing/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "bd0cb21034f4fe6695cfdf8cd3561026eec943f0bb6e9300bc78a2b3340865a7",
+      "newSha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/typescript-best-practices/references/patterns.md",
+      "kind": "changed",
+      "oldSha256": "83d89dd2fdb81021eb18c77c57437f60314a60da79447756a547f08ece64b433",
+      "newSha256": "62e9cd32d2fa066a35d0d1349aac22dce31a48ad7d5eaf142570770cfe707384",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/typescript-best-practices/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "df0ecd7518b33778f4b02c2f85ee577bbaea52caa1c49df6816b0594e128bb64",
+      "newSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/unslop/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441",
+      "newSha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
+      "disposition": "reviewed-codex-overlay-retained",
+      "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+    },
+    {
+      "path": "skills/why/references/epistemics.md",
+      "kind": "changed",
+      "oldSha256": "ba99dcdc4fbce91a83b50fc0c9b2c5769febd95540b1722c6b87fe8f900bb60a",
+      "newSha256": "fcc0f559c072832c869a5ada72434b4849320a637ae63c09e8ee14f7ad787059",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/investigator-prompt.md",
+      "kind": "changed",
+      "oldSha256": "e35d8eaea13f0a027dd35572d525e9f66e8f8918ca9e555237dc228f26278d5f",
+      "newSha256": "6892956a7ab0b5ee6c4babaf4f793703abe89b350ea7cb9463b4a56eea1c8266",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/source-playbook.md",
+      "kind": "changed",
+      "oldSha256": "3cfb0245d5b2019eeeaa7a0e023579d390f2cdcdff6942d2fe009b9efac0eb11",
+      "newSha256": "9ae9dcb9d09111c9facc68510331c5aba4aed9b1b057314ff1fc0e166ad3993a",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/databricks.md",
+      "kind": "changed",
+      "oldSha256": "269a22032f027ee30a33c1b5e30443d13dd6d127ff20d8d1e8a20715b06a69cc",
+      "newSha256": "236ede7aab6454662a992db088a5393537a5233a4c26719c93188f9e174488f6",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/datadog.md",
+      "kind": "changed",
+      "oldSha256": "db80803f1635a5015e3190f4753c4228083e6cebf222c84e24fc3c3919aa5574",
+      "newSha256": "ebe9c07bac28e47757ee7f16fb93b0c01d427a08c501957d047f395a2f37b7e7",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/incident-postmortem.md",
+      "kind": "changed",
+      "oldSha256": "486132457d3782eea64292ce7a2d3bbe3b24b372b20ca00de4329e820f74cd42",
+      "newSha256": "a899470f05f86029630a13a2696491cc708ca7b56a6e822a69ff6e954d6ff8cf",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/linear.md",
+      "kind": "changed",
+      "oldSha256": "7e1b72ba459089168efd701502f8c268d2481154aeeda1ddd84f840f7e974760",
+      "newSha256": "01304e7f1badfcfb78babbb0edcadeb3cc8dd3f713793420cdff24ba190f907c",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/notion.md",
+      "kind": "changed",
+      "oldSha256": "2ce336dd3052967187a56ec33d308c7a69e7ef3b04ba7b17386a8b3914a0f000",
+      "newSha256": "3bcfa695c49dfad4ac036d5d7181c12585f55ac04f1936198d16ab75a2788997",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/sentry.md",
+      "kind": "changed",
+      "oldSha256": "0eef902cb0f835f7fa9bd85a8e19ba1505d05e59a0173dfe852d8d52d828266d",
+      "newSha256": "6f292bc4fb1548e956f95e1900b9481abf5134254419f1cd9edec95428c82d73",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/sources/slack.md",
+      "kind": "changed",
+      "oldSha256": "60e4c8dbb941f563c86aec7267cde66443b1dc651422569c8d112bc9da7551f6",
+      "newSha256": "58fee61d024b3700b407e7acbed367944720ff05adfddb6954d36c88368f3ba7",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/references/synthesizer-prompt.md",
+      "kind": "changed",
+      "oldSha256": "fcdc69ede22f94da9e22f510bb0c4a75a63820f0b49b8d5fd54a196b4010bf2a",
+      "newSha256": "733a3e9cf897b1aca56aaddeae01a3832e4bfed024c2f602db2d1bf807d7a73b",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/why/SKILL.md",
+      "kind": "changed",
+      "oldSha256": "dc8f2d8a7dbef7d0467cca8e6d055a4dbde027db6e2cbbfb18aa9071d8f20b6c",
+      "newSha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
+      "disposition": "retained-codex-safety-overlay",
+      "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
+    },
+    {
+      "path": "skills/how/references/critic-prompt.md",
+      "kind": "deleted-or-renamed",
+      "oldSha256": "aa77a15590814c814bd5cb074842029ab7b790c2e8379050525bdbc20739d1bb",
+      "newSha256": null,
+      "disposition": "retained-codex-adaptation",
+      "rationale": "The upstream support files were removed, but the current Codex adaptation still references and requires these review resources."
+    },
+    {
+      "path": "skills/how/references/critique-rubric.md",
+      "kind": "deleted-or-renamed",
+      "oldSha256": "5774ff2caf51796e54c4a61b63620a165de5801f23c8f47406e527abfbe9addc",
+      "newSha256": null,
+      "disposition": "retained-codex-adaptation",
+      "rationale": "The upstream support files were removed, but the current Codex adaptation still references and requires these review resources."
     }
   ]
 }

@@ -189,6 +189,40 @@ export function validateCompatibility(lock, map, upstreamFiles, derived = {}) {
   for (const locked of lock.files) {
     if (!mapByPath.has(locked.path)) errors.push(`unclassified locked path: ${locked.path}`);
   }
+  const refreshDecisions = map.refreshDecisions ?? [];
+  const refreshByPath = new Map();
+  for (const decision of refreshDecisions) {
+    if (refreshByPath.has(decision.path)) errors.push(`duplicate refresh decision: ${decision.path}`);
+    refreshByPath.set(decision.path, decision);
+    if (typeof decision.path !== "string" || !["added", "changed", "deleted-or-renamed"].includes(decision.kind)) {
+      errors.push(`invalid refresh decision: ${JSON.stringify(decision)}`);
+    }
+    if (!decision.disposition || !decision.rationale) {
+      errors.push(`incomplete refresh decision: ${decision.path ?? "unknown"}`);
+    }
+  }
+  const fromFiles = map.refresh?.fromFiles ?? [];
+  const historyDeltas = compareFileInventories(fromFiles, lock.files);
+  if (refreshDecisions.length && !fromFiles.length) errors.push("refresh decisions require a recorded fromFiles inventory");
+  if (fromFiles.length) {
+    const historyByPath = new Map(historyDeltas.map((delta) => [delta.path, delta]));
+    for (const [file, actual] of historyByPath) {
+      const decision = refreshByPath.get(file);
+      if (!decision) errors.push(`stored refresh delta has no decision: ${file}`);
+      else if (decision.kind !== actual.kind || decision.oldSha256 !== actual.oldSha256 || decision.newSha256 !== actual.newSha256) {
+        errors.push(`stored refresh decision does not match source history: ${file}`);
+      }
+    }
+    for (const decision of refreshDecisions) {
+      if (!historyByPath.has(decision.path)) errors.push(`stored refresh decision is not a source delta: ${decision.path}`);
+    }
+  }
+  if (map.refresh?.deltaCounts) {
+    for (const kind of ["added", "changed", "deleted-or-renamed"]) {
+      const actual = historyDeltas.filter((delta) => delta.kind === kind).length;
+      if (map.refresh.deltaCounts[kind] !== actual) errors.push(`refresh count differs for ${kind}: ${map.refresh.deltaCounts[kind]} vs ${actual}`);
+    }
+  }
 
   const deltas = [];
   if (upstreamFiles) {
@@ -240,6 +274,21 @@ export function validateCompatibility(lock, map, upstreamFiles, derived = {}) {
   return { errors, deltas, derivedDeltas };
 }
 
+function compareFileInventories(previousFiles, currentFiles) {
+  const previousByPath = new Map(previousFiles.map((file) => [file.path, file]));
+  const currentByPath = new Map(currentFiles.map((file) => [file.path, file]));
+  const deltas = [];
+  for (const file of currentFiles) {
+    const previous = previousByPath.get(file.path);
+    if (!previous) deltas.push({ path: file.path, kind: "added", oldSha256: null, newSha256: file.sha256 });
+    else if (previous.sha256 !== file.sha256) deltas.push({ path: file.path, kind: "changed", oldSha256: previous.sha256, newSha256: file.sha256 });
+  }
+  for (const file of previousFiles) {
+    if (!currentByPath.has(file.path)) deltas.push({ path: file.path, kind: "deleted-or-renamed", oldSha256: file.sha256, newSha256: null });
+  }
+  return deltas;
+}
+
 export function renderReport(lock, map, result) {
   const counts = Object.fromEntries([...CLASSIFICATIONS].map((name) => [name, 0]));
   for (const entry of map.entries) counts[entry.classification] += 1;
@@ -274,6 +323,12 @@ export function renderReport(lock, map, result) {
       lines.push(`| \`${delta.upstreamPath}\` | \`${delta.path}\` | ${delta.kind} | ${delta.conflict ? "review required" : "no"} |`);
     }
     if (result.derivedDeltas.every((item) => item.kind === "unchanged")) lines.push("| — | — | unchanged | no |");
+  }
+  if (map.refreshDecisions?.length) {
+    lines.push("", "## Recorded refresh dispositions", "", "| Upstream path | Change | Disposition | Rationale |", "|---|---|---|---|");
+    for (const decision of map.refreshDecisions) {
+      lines.push(`| \`${decision.path}\` | ${decision.kind} | ${decision.disposition} | ${decision.rationale} |`);
+    }
   }
   lines.push("", "## Path inventory", "", "| Upstream path | Classification | Codex path | Validation |", "|---|---|---|---|");
   for (const entry of map.entries) {

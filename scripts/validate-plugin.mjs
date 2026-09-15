@@ -5,7 +5,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-export const EXPECTED_SKILL_COUNT = 45;
+export const EXPECTED_SKILL_COUNT = 48;
 export const SKILL_IDENTITY_LIMIT = 64;
 const MANIFEST_FIELDS = new Set([
   "name",

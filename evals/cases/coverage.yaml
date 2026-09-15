@@ -2,6 +2,39 @@
   "schema_version": 1,
   "upstream_skills": [
     {
+      "id": "skill:make-bot-ui",
+      "kind": "skill",
+      "source": "skills/make-bot-ui/SKILL.md",
+      "case": "skill-positive:make-bot-ui",
+      "positive_outcome": "Explicit $make-bot-ui invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+    },
+    {
+      "id": "skill:principle-attack-the-premise",
+      "kind": "skill",
+      "source": "skills/principle-attack-the-premise/SKILL.md",
+      "case": "skill-positive:principle-attack-the-premise",
+      "positive_outcome": "Explicit $principle-attack-the-premise invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+    },
+    {
+      "id": "skill:principle-test-behavior-not-implementation",
+      "kind": "skill",
+      "source": "skills/principle-test-behavior-not-implementation/SKILL.md",
+      "case": "skill-positive:principle-test-behavior-not-implementation",
+      "positive_outcome": "Explicit $principle-test-behavior-not-implementation invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+    },
+    {
       "id": "skill:architect",
       "kind": "skill",
       "source": "skills/architect/SKILL.md",
@@ -1456,4 +1489,3 @@
     }
   ]
 }
-

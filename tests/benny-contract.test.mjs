@@ -27,8 +27,8 @@ function qualifiedConfig() {
 
 test("only setup-benny is registered and the inventory includes it", async () => {
   const records = await listSkillRecords(root);
-  assert.equal(EXPECTED_SKILL_COUNT, 45);
-  assert.equal(records.length, 45);
+  assert.equal(EXPECTED_SKILL_COUNT, 48);
+  assert.equal(records.length, 48);
   assert.equal(records.filter((record) => record.name === "setup-benny").length, 1);
   assert.equal(records.some((record) => record.name === "benny-triage-poll"), false);
   assert.equal(records.some((record) => record.name === "benny-reproduce-poll"), false);
