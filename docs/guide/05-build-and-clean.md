@@ -41,3 +41,5 @@ $no-comments inspect comments added by this diff and remove the ones the code ca
 The `pstack-comment-sicko` custom profile is optional. Without it, the skill uses a generic read-only reviewer loaded with the portable Comment Sicko prompt. The parent accepts or rejects each finding and applies edits.
 
 Next: [Verify and ship](./06-verify-and-ship.md).
+
+Invoke [`$typescript-best-practices`](../../skills/typescript-best-practices/SKILL.md) explicitly for TypeScript work. Boundary schemas own the parsed type; a handwritten type predicate alone does not prove the shape.

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Poteto help"
+  short_description: "Find the right pstack workflow"
+  default_prompt: "Use $poteto-help to explain pstack."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

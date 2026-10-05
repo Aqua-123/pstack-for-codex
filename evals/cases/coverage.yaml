@@ -7,10 +7,21 @@
       "source": "skills/make-bot-ui/SKILL.md",
       "case": "skill-positive:make-bot-ui",
       "positive_outcome": "Explicit $make-bot-ui invocation selects the documented Codex workflow and produces its named artifact or decision.",
-      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
       "disposition": "explicit-only",
       "verdict": "passed-offline-contract",
-      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
     },
     {
       "id": "skill:principle-attack-the-premise",
@@ -18,10 +29,21 @@
       "source": "skills/principle-attack-the-premise/SKILL.md",
       "case": "skill-positive:principle-attack-the-premise",
       "positive_outcome": "Explicit $principle-attack-the-premise invocation selects the documented Codex workflow and produces its named artifact or decision.",
-      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
       "disposition": "explicit-only",
       "verdict": "passed-offline-contract",
-      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
     },
     {
       "id": "skill:principle-test-behavior-not-implementation",
@@ -29,10 +51,21 @@
       "source": "skills/principle-test-behavior-not-implementation/SKILL.md",
       "case": "skill-positive:principle-test-behavior-not-implementation",
       "positive_outcome": "Explicit $principle-test-behavior-not-implementation invocation selects the documented Codex workflow and produces its named artifact or decision.",
-      "boundaries": ["explicit-only", "authority", "capability", "negative-trigger"],
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
       "disposition": "explicit-only",
       "verdict": "passed-offline-contract",
-      "grades": {"workflow": "required", "role": "required", "authority": "required", "evidence": "required", "stop_condition": "required"}
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
     },
     {
       "id": "skill:architect",
@@ -986,6 +1019,94 @@
       "source": "skills/why/SKILL.md",
       "case": "skill-positive:why",
       "positive_outcome": "Explicit $why invocation selects the documented Codex workflow and produces its named artifact or decision.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:benchmark-checklist",
+      "kind": "skill",
+      "source": "skills/benchmark-checklist/SKILL.md",
+      "case": "skill-positive:benchmark-checklist",
+      "positive_outcome": "Explicit $benchmark-checklist invocation follows its scoped Codex contract and produces the named decision or evidence.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:correct",
+      "kind": "skill",
+      "source": "skills/correct/SKILL.md",
+      "case": "skill-positive:correct",
+      "positive_outcome": "Explicit $correct invocation follows its scoped Codex contract and produces the named decision or evidence.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:poteto-help",
+      "kind": "skill",
+      "source": "skills/poteto-help/SKILL.md",
+      "case": "skill-positive:poteto-help",
+      "positive_outcome": "Explicit $poteto-help invocation follows its scoped Codex contract and produces the named decision or evidence.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:principle-explain-the-number",
+      "kind": "skill",
+      "source": "skills/principle-explain-the-number/SKILL.md",
+      "case": "skill-positive:principle-explain-the-number",
+      "positive_outcome": "Explicit $principle-explain-the-number invocation follows its scoped Codex contract and produces the named decision or evidence.",
       "boundaries": [
         "explicit-only",
         "authority",

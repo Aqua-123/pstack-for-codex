@@ -1,0 +1,8 @@
+interface:
+  display_name: "benchmark-checklist"
+  short_description: "Benchmark checklist"
+  default_prompt: "Use $benchmark-checklist for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

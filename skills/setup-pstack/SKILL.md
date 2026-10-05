@@ -20,7 +20,7 @@ Read `references/model-profile.md` before changing configuration. The portable p
 
 ## Model policy
 
-Ask whether each role should inherit the parent or request an explicit `model` plus `reasoning_effort` pair.
+Ask whether each role should inherit the parent or request an explicit `model` plus `reasoning_effort` pair. If the user wants a reasoning budget, offer unlimited (`max`), large (`xhigh`), medium (`high`), and small (`medium`). A budget is a requested effort, not an entitlement. Validate it separately for every chosen model. Do not write an unsupported pair or silently replace the user's choice. Existing receipted model and effort choices remain the starting point.
 
 If a supported Codex model-list surface is observable, convert it to JSON records shaped like:
 

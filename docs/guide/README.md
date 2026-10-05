@@ -22,3 +22,5 @@ $poteto-mode the export writes duplicate rows after a retry. Reproduce it first,
 The goal and the finish condition matter more than a list of tools. Poteto Mode chooses the playbook and reports any capability fallback.
 
 Next: [Set up pstack](./01-setup.md).
+
+For a usage question, invoke [`$poteto-help`](../../skills/poteto-help/SKILL.md). It reads the relevant guide or skill and gives a prompt without starting the work.

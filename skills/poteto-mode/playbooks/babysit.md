@@ -4,7 +4,7 @@ Delegation, lifecycle, isolation, history, and capability fallbacks follow `../r
 
 **You own the merge frontier. Declare a mode, clear one PR at a time, stop where the human's call begins.** For "babysit this", "get it green", "all green", "merge-ready", "watch CI", "address the bugbot comments", or "check on PR X". Step 1 owns the request-to-mode mapping. This playbook replaces any overlapping installed babysit skill for these requests, so do not route there even though its description matches the same words. A request to land or ship is `playbooks/shipping.md`, which begins where this playbook ends.
 
-Babysitting starts when the user asks for it, which is normally once a phase or a whole stack is built, not when a PR opens. Building and babysitting compete for the same agent, and interleaving them stalls the build while spending checks on commits a later wave will restart. Finish the stack, get it green here, then land it through Shipping.
+An explicitly assigned Autopilot owner starts its loop after the code-ready report. For other work, babysitting starts when the user asks for it, which is normally once a phase or a whole stack is built, not when a PR opens. Building and babysitting compete for the same agent, and interleaving them stalls the build while spending checks on commits a later wave will restart. Finish the stack, get it green here, then land it through Shipping.
 
 Babysitting fails the same few ways every time. Each step below exists because that failure cost a night.
 
