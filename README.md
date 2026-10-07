@@ -1,6 +1,6 @@
 # pstack for Codex
 
-`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 48 explicit-only skills and 23 Poteto Mode playbooks.
+`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 52 explicit-only skills and 23 Poteto Mode playbooks.
 
 Use `$poteto-mode` for a substantial engineering task. It selects a playbook, records the work as verifiable steps, and invokes narrower skills when the steps need them. The parent task keeps authority for integration, external writes, commits, pushes, and the final result.
 
@@ -21,7 +21,7 @@ codex plugin list --json
 
 Codex CLI `0.153.4` does not expose an offline runtime skill-index command. The release suite validates the skill catalog from the installed artifact; start a new task to exercise prompt-time skill discovery.
 
-All 48 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
+All 52 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
 
 ```text
 $poteto-mode add a --json flag to this command. Keep text output byte-identical. Verify both modes.
@@ -129,3 +129,5 @@ See [Codex adaptation notes](./docs/codex-adaptation.md) for the behavioral chan
 ## License
 
 MIT. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+
+The 0.3.0 refresh includes [`$poteto-help`](./skills/poteto-help/SKILL.md) for workflow guidance, [`$correct`](./skills/correct/SKILL.md) for recurring mistakes, and [`$benchmark-checklist`](./skills/benchmark-checklist/SKILL.md) with [Explain the Number](./skills/principle-explain-the-number/SKILL.md) for measured claims. Model budgets remain separate from model identity and require observable support. Autopilot verification starts at code-ready and repeats for each changed patch.

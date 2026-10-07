@@ -49,3 +49,5 @@ The parent integrates the winner and runs the authoritative checks.
 A playbook declares what happens when a custom profile, subagent, connector, control tool, or history API is unavailable. The common fallbacks are sequential parent work, a generic agent with a portable prompt, a labeled partial result, or a closed stop. Poteto Mode does not silently drop a lane.
 
 Next: [Understand the code](./03-understand.md).
+
+Use [`$poteto-help`](../../skills/poteto-help/SKILL.md) for a usage question. Cross-turn activation requires the trusted session receipt. Installation and casual mentions do not activate the mode.

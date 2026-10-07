@@ -25,6 +25,7 @@ Remaining triggers:
 
 - Nontrivial change, architecture decision, or "are we sure?" → the **how** skill.
 - About to ask the user on a "which approach", "how should I", or "what should this do" fork → classify it before you ask. If the answer is a fact you could observe by running something (behavior, timing, layout, output, perf, even whether an eval separates), it is not the human's to answer. Sketch it via the Prototype playbook (`playbooks/prototype.md`) and let the result decide. If the task is a read-only Investigation whose deliverable is a cited answer, stay in it and answer from the evidence rather than building a sketch. Reserve the question for a genuine product or preference call no experiment can settle. The ask is the slow path. A throwaway probe usually answers faster, and it hands the human a result to react to instead of a decision to make.
+- Running a benchmark or reporting a measured speedup or regression → the **benchmark-checklist** skill before trusting the number.
 - Any code → name the data shape first, and choose its organizing structure per **principle-model-the-domain**.
 - Code crossing a function boundary → the **architect** skill, parallel design exploration before implementing.
 - Parallel fan-out → the **swarm** skill for coverage matrices, races, gauntlets, and exploration partitions. Use **arena** for design or code bakeoffs with base selection and grafting.
@@ -69,6 +70,8 @@ Read the leaf skill in full for any principle you apply. Each entry names when i
 
 **Verification**
 
+- **Explain the Number** (**principle-explain-the-number**). Before trusting, reporting, or acting on a measured performance or eval number, name its limiter and rule out failed, skipped, untuned, or noisy work.
+
 - **Prove It Works** (**principle-prove-it-works**). After a task, before declaring done. Verify against the real artifact, not a proxy or "it compiles".
 - **Fix Root Causes** (**principle-fix-root-causes**). Debugging. Trace each symptom to its root cause, reproduce first, ask why until you reach it.
 - **Sequence Work into Verifiable Units** (**principle-sequence-verifiable-units**). Multi-step work (sweeps, migrations, runs of similar edits) and how you stack commits and PRs. Break work into small units that each end in a check, verify each before the next, and order delivery so the sequence proves itself.
@@ -97,7 +100,7 @@ Read the leaf skill in full for any principle you apply. Each entry names when i
 
 **Use the exact custom profile `pstack-poteto-agent` for playbook delegates when installed.** Otherwise use a generic delegate and include `references/poteto-agent-prompt.md` in its prompt. Routed workflow skills (`how`, `why`, `interrogate`, `reflect`, `swarm`) own their role choices. Model and effort remain separate, observable values. Inherit the parent when a configured pair cannot be validated.
 
-Follow `references/codex-agent-runtime.md` before dispatch. Prove write isolation first. The parent reviews actual results and produces the final summary. Steering, cancellation, retries, partial results, nested work, and unavailable capabilities use the contract's declared paths.
+Follow `references/codex-agent-runtime.md` before dispatch. Prove write isolation first. The parent reviews actual results and produces the final summary. Steering, cancellation, retries, partial results, nested work, and unavailable capabilities use the contract's declared paths. A second opinion receives the same brief. A next work item starts with a fresh agent. An existing owner continues only for fixes to its current artifact or a single linear task that fits its context. Do not recycle a completed owner for unrelated queue items.
 
 ## Writing the reply
 

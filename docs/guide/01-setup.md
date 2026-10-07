@@ -53,3 +53,5 @@ $setup-pstack uninstall the project profiles.
 Upgrade and uninstall touch only receipted files whose current hashes still match. A changed or relocated file produces `review-required` and remains untouched.
 
 Next: [Route work through `$poteto-mode`](./02-poteto-mode.md).
+
+For a requested reasoning budget, setup offers unlimited (`max`), large (`xhigh`), medium (`high`), and small (`medium`). It validates each model and effort separately. A written profile does not prove which model served a later agent.

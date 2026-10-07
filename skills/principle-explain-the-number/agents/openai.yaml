@@ -1,0 +1,8 @@
+interface:
+  display_name: "principle-explain-the-number"
+  short_description: "Principle explain the number"
+  default_prompt: "Use $principle-explain-the-number for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX
