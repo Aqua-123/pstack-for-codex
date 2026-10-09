@@ -12,6 +12,8 @@ $poteto-mode add JSON output to the status command. Keep existing text output by
 
 The parent task owns the integrated diff. A child owns only the files and operations named in its brief.
 
+Record the existing output before a behavior-preserving refactor. For a feature, verify the new behavior and each named compatibility constraint. For performance work, use one stable fixture and report completed work, errors, and before-and-after measurements.
+
 ## Reproduce bugs with `$tdd`
 
 ```text

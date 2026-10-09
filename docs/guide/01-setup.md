@@ -55,3 +55,5 @@ Upgrade and uninstall touch only receipted files whose current hashes still matc
 Next: [Route work through `$poteto-mode`](./02-poteto-mode.md).
 
 For a requested reasoning budget, setup offers unlimited (`max`), large (`xhigh`), medium (`high`), and small (`medium`). It validates each model and effort separately. A written profile does not prove which model served a later agent.
+
+The plugin does not require custom profiles. With no verified profile, roles inherit the parent model. Invoke `$poteto-help` if you want help selecting a budget or deciding whether profile setup is useful.

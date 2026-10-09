@@ -21,6 +21,8 @@ $poteto-mode the export writes duplicate rows after a retry. Reproduce it first,
 
 The goal and the finish condition matter more than a list of tools. Poteto Mode chooses the playbook and reports any capability fallback.
 
+A strong prompt also names relevant evidence, constraints, and the repository or artifact in scope. Use `$poteto-help` for one adapted prompt when you are not sure how to frame the task.
+
 Next: [Set up pstack](./01-setup.md).
 
-For a usage question, invoke [`$poteto-help`](../../skills/poteto-help/SKILL.md). It reads the relevant guide or skill and gives a prompt without starting the work.
+For a usage question, invoke [`$poteto-help`](../../skills/poteto-help/SKILL.md). It runs only when explicitly invoked. It reads the relevant guide or skill and gives a prompt without starting the work.

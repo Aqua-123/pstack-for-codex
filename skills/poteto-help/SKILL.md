@@ -1,6 +1,6 @@
 ---
 name: poteto-help
-description: Guides users through pstack setup, $poteto-mode, and picking the skill, playbook, or principle for a task. Use for $poteto-help, or when the user asks how to install, set up, or use pstack, or which pstack skill fits. Not for requests to do work, even ones that name pstack.
+description: Guides users through pstack setup, prompting, $poteto-mode, and selection of a skill, playbook, or principle. Use only when the user explicitly invokes $poteto-help. Not for requests to do work, even ones that name pstack.
 ---
 
 # Poteto help
@@ -11,11 +11,15 @@ A message asking for work routes to the matching workflow under [`poteto-mode`](
 
 Read the routed skill or guide before answering. Link the local file you read. For public links, use the repository identity from the installed `.codex-plugin/plugin.json`, and verify the page before giving it to the user.
 
+For a prompt-writing question, read [`references/prompting.md`](references/prompting.md). For a copyable example, also read [`references/recipes.md`](references/recipes.md). Adapt the prompt to the user's task instead of copying placeholders.
+
 ## Get set up
 
 Read the [README](../../README.md) and [setup guide](../../docs/guide/01-setup.md). Inspect the installed plugin through supported Codex plugin tools or CLI before describing its status. Installation, optional custom profiles, and session activation are separate operations.
 
 [`$setup-pstack`](../setup-pstack/SKILL.md) manages optional Codex custom profiles. It keeps model and reasoning effort separate and validates requested pairs against an observable model list. Missing model evidence means inheritance with an unverified receipt. Smaller panels and a lower validated effort reduce cost. Never invent model entitlement or change configuration merely to answer a help question.
+
+If the user asks about model roles and no owned profile receipt or verified model configuration exists, ask once whether they want to run `$setup-pstack`. Continue with inherited models if they decline. Do not repeat the question in the same help exchange.
 
 ## Start a task with `$poteto-mode`
 
@@ -38,7 +42,7 @@ The default answer is `$poteto-mode`, which runs most of the others when its ste
 | Settle types and module shape before code that crosses a function boundary | [`$architect`](../architect/SKILL.md) |
 | Get several attempts at one brief, merged into the best one | [`$arena`](../arena/SKILL.md) |
 | Run parallel checks over slices, or race workers, through supported Codex agents | [`$swarm`](../swarm/SKILL.md) |
-| Have several models review a diff and try to break it | [`$interrogate`](../interrogate/SKILL.md) |
+| Have different models review a diff and try to break it | [`$interrogate`](../interrogate/SKILL.md) |
 | Fix a bug test-first when a cheap local test exists | [`$tdd`](../tdd/SKILL.md) |
 | Apply TypeScript rules to `.ts` or `.tsx` work | [`$typescript-best-practices`](../typescript-best-practices/SKILL.md) |
 | Strip comments before review, using a reviewer that didn't write them | [`$no-comments`](../no-comments/SKILL.md) |
@@ -99,6 +103,8 @@ Principles are one-rule skills that `$poteto-mode` reads and cites in its replie
 | A reply claims success from a green build | Ask for the real command, stored value, flow, or profile. |
 
 Read [guide page 10](../../docs/guide/10-recipes-and-pitfalls.md) for further recipes.
+
+For prompt wording, use the concise structure in [`references/prompting.md`](references/prompting.md). Use [`references/recipes.md`](references/recipes.md) when the user wants an example for understanding, building, design, review, or unattended work.
 
 ## Make pstack my own
 

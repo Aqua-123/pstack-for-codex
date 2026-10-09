@@ -3,8 +3,8 @@
   "upstream": {
     "repository": "https://github.com/cursor/plugins",
     "subdirectory": "pstack",
-    "commit": "4e5b1cf2ccb0ea3716f08c8ee0a5856b5ab93536",
-    "version": "0.15.10"
+    "commit": "ccb5507cec1546dc88135c1139c811e6c59115ba",
+    "version": "0.15.15"
   },
   "classifications": [
     "preserved",
@@ -15,7 +15,7 @@
   "entries": [
     {
       "upstreamPath": ".cursor-plugin/plugin.json",
-      "upstreamSha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+      "upstreamSha256": "7bc736c60985805f70465e044e5adc7028663f72a73deea7fa3e95e52d70dc8e",
       "classification": "replaced",
       "derivedPath": ".codex-plugin/plugin.json",
       "preservedInvariants": [
@@ -28,9 +28,9 @@
         "installed-plugin"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+        "upstreamSha256": "7bc736c60985805f70465e044e5adc7028663f72a73deea7fa3e95e52d70dc8e",
         "disposition": "ported-codex-native",
-        "rationale": "The 0.15.10 Cursor manifest remains provenance. The supported Codex manifest and package identity advance to 0.3.0."
+        "rationale": "Keep the Cursor manifest as provenance. Advance the supported Codex package to 0.3.1 without copying Cursor-only fields or model defaults."
       }
     },
     {
@@ -44,35 +44,6 @@
       "validations": [
         "upstream-hash"
       ]
-    },
-    {
-      "upstreamPath": "LICENSE",
-      "upstreamSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "classification": "preserved",
-      "derivedPath": "LICENSE",
-      "preservedInvariants": [
-        "the upstream MIT license text remains intact"
-      ],
-      "validations": [
-        "upstream-hash"
-      ]
-    },
-    {
-      "upstreamPath": "README.md",
-      "upstreamSha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
-      "classification": "adapted",
-      "derivedPath": "README.md",
-      "preservedInvariants": [
-        "installation and workflow documentation describe the derived Codex fork"
-      ],
-      "validations": [
-        "documentation"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
-        "disposition": "ported-codex-native",
-        "rationale": "Document the four additions, 52 explicit-only skills, code-ready rounds, and validated separate reasoning budgets. Keep Codex installation and receipt-based activation."
-      }
     },
     {
       "upstreamPath": "agents/comment-sicko.md",
@@ -147,18 +118,6 @@
       ]
     },
     {
-      "upstreamPath": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
-      "upstreamSha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
-      "classification": "adapted",
-      "derivedPath": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
-      "preservedInvariants": [
-        "Benny behavior remains traceable and dormant until its safety gates pass"
-      ],
-      "validations": [
-        "benny-behavior"
-      ]
-    },
-    {
       "upstreamPath": "automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
       "upstreamSha256": "58b0615d2fca895f9a20df83266e280042b0d585b5f2fd324e2094a682fd846b",
       "classification": "adapted",
@@ -195,6 +154,18 @@
       ]
     },
     {
+      "upstreamPath": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+      "upstreamSha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
+      "classification": "adapted",
+      "derivedPath": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+      "preservedInvariants": [
+        "Benny behavior remains traceable and dormant until its safety gates pass"
+      ],
+      "validations": [
+        "benny-behavior"
+      ]
+    },
+    {
       "upstreamPath": "automations/benny/skills/setup-benny/SKILL.md",
       "upstreamSha256": "5a3cbe63360c9f6373b6cb6c79a1eaf7e0eba181bfaa1577e2e6431af3407282",
       "classification": "adapted",
@@ -207,10 +178,10 @@
       ]
     },
     {
-      "upstreamPath": "automations/benny/skills/triage-issue-reports/SKILL.md",
-      "upstreamSha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
+      "upstreamPath": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
+      "upstreamSha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
       "classification": "adapted",
-      "derivedPath": "automations/benny/skills/triage-issue-reports/SKILL.md",
+      "derivedPath": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
       "preservedInvariants": [
         "Benny behavior remains traceable and dormant until its safety gates pass"
       ],
@@ -219,10 +190,10 @@
       ]
     },
     {
-      "upstreamPath": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
-      "upstreamSha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
+      "upstreamPath": "automations/benny/skills/triage-issue-reports/SKILL.md",
+      "upstreamSha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
       "classification": "adapted",
-      "derivedPath": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
+      "derivedPath": "automations/benny/skills/triage-issue-reports/SKILL.md",
       "preservedInvariants": [
         "Benny behavior remains traceable and dormant until its safety gates pass"
       ],
@@ -268,7 +239,7 @@
     },
     {
       "upstreamPath": "docs/guide/01-setup.md",
-      "upstreamSha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
+      "upstreamSha256": "86d0330f245d16254a2069955f993c15d96cf29cd1a73690a0164074b7ac1190",
       "classification": "adapted",
       "derivedPath": "docs/guide/01-setup.md",
       "preservedInvariants": [
@@ -278,14 +249,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
+        "upstreamSha256": "86d0330f245d16254a2069955f993c15d96cf29cd1a73690a0164074b7ac1190",
         "disposition": "ported-codex-native",
-        "rationale": "Port requested effort budgets with exact observable Codex model/effort validation. Preserve profile ownership receipts and trusted-hook activation instead of Cursor Custom Modes."
+        "rationale": "Clarify that custom profiles are optional and unverified roles inherit the parent model."
       }
     },
     {
       "upstreamPath": "docs/guide/02-poteto-mode.md",
-      "upstreamSha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
+      "upstreamSha256": "979f61ca3d44cb8e68affda40327d32797e93fa9cc53ced7444c15e2600897e1",
       "classification": "adapted",
       "derivedPath": "docs/guide/02-poteto-mode.md",
       "preservedInvariants": [
@@ -295,14 +266,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
+        "upstreamSha256": "979f61ca3d44cb8e68affda40327d32797e93fa9cc53ced7444c15e2600897e1",
         "disposition": "ported-codex-native",
-        "rationale": "Link scoped help and clarify activation versus verified sticky receipt. Cursor Custom Mode keystrokes do not apply."
+        "rationale": "Port outcome, finish-check, evidence, constraint, scope, and short-follow-up prompt guidance with Codex activation rules."
       }
     },
     {
       "upstreamPath": "docs/guide/03-understand.md",
-      "upstreamSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
+      "upstreamSha256": "0090afa9b8670adf175466a2a973ff4349e95ed67d2aa8cebdfc55ff4b7382c9",
       "classification": "adapted",
       "derivedPath": "docs/guide/03-understand.md",
       "preservedInvariants": [
@@ -312,14 +283,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
-        "disposition": "reviewed-codex-overlay-retained",
-        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+        "upstreamSha256": "0090afa9b8670adf175466a2a973ff4349e95ed67d2aa8cebdfc55ff4b7382c9",
+        "disposition": "ported-codex-native",
+        "rationale": "Port read-only investigation and problem-restatement guidance with current-artifact verification."
       }
     },
     {
       "upstreamPath": "docs/guide/04-design.md",
-      "upstreamSha256": "21e820ff73c0b70682aa570a967ede446b4d7caf62e8f391d0dd733ccb74874c",
+      "upstreamSha256": "31f2abe6e9b29feafd1a9eece8f4fe21992f86b8c19ab2e9b5c11a20f36587e7",
       "classification": "adapted",
       "derivedPath": "docs/guide/04-design.md",
       "preservedInvariants": [
@@ -327,11 +298,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "31f2abe6e9b29feafd1a9eece8f4fe21992f86b8c19ab2e9b5c11a20f36587e7",
+        "disposition": "ported-codex-native",
+        "rationale": "Port prototype-first and tutorial-first design guidance with Codex evidence and isolation rules."
+      }
     },
     {
       "upstreamPath": "docs/guide/05-build-and-clean.md",
-      "upstreamSha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
+      "upstreamSha256": "a93cc7771f7b35c7b54d0120b6f66e8367794ce6791237e889a30e7585c190fa",
       "classification": "adapted",
       "derivedPath": "docs/guide/05-build-and-clean.md",
       "preservedInvariants": [
@@ -341,14 +317,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
+        "upstreamSha256": "a93cc7771f7b35c7b54d0120b6f66e8367794ce6791237e889a30e7585c190fa",
         "disposition": "ported-codex-native",
-        "rationale": "Keep TypeScript invocation explicit and document schema-owned boundary validation."
+        "rationale": "Port behavior-baseline, compatibility, and measured-performance guidance."
       }
     },
     {
       "upstreamPath": "docs/guide/06-verify-and-ship.md",
-      "upstreamSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
+      "upstreamSha256": "3ef0eed5ea084dfbbaf1b1ae9e08d84f2c8a2b536ffb3ef5226710bf105f70e6",
       "classification": "adapted",
       "derivedPath": "docs/guide/06-verify-and-ship.md",
       "preservedInvariants": [
@@ -358,14 +334,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
-        "disposition": "reviewed-codex-overlay-retained",
-        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+        "upstreamSha256": "3ef0eed5ea084dfbbaf1b1ae9e08d84f2c8a2b536ffb3ef5226710bf105f70e6",
+        "disposition": "ported-codex-native",
+        "rationale": "Port claim-specific proof and current-head revalidation guidance without adding repository-write authority."
       }
     },
     {
       "upstreamPath": "docs/guide/07-overnight.md",
-      "upstreamSha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
+      "upstreamSha256": "d7bd33a3d880768688dff4c1c2b5481ca9f0f194f5d97e44b65c9f96624d3ff0",
       "classification": "adapted",
       "derivedPath": "docs/guide/07-overnight.md",
       "preservedInvariants": [
@@ -375,14 +351,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
+        "upstreamSha256": "d7bd33a3d880768688dff4c1c2b5481ca9f0f194f5d97e44b65c9f96624d3ff0",
         "disposition": "ported-codex-native",
-        "rationale": "Document code-ready verification rounds and authorized hourly heartbeat audit instead of host loops."
+        "rationale": "Port unattended-run authority, stop-condition, and blocker guidance. Use supported Codex goals or heartbeats instead of Cursor loops."
       }
     },
     {
       "upstreamPath": "docs/guide/08-principles.md",
-      "upstreamSha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
+      "upstreamSha256": "73c3db659d356d4aa6d7674d30d0db46fab2bdd60152fca717c2d1772a042bdc",
       "classification": "adapted",
       "derivedPath": "docs/guide/08-principles.md",
       "preservedInvariants": [
@@ -392,14 +368,14 @@
         "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
-        "disposition": "ported-codex-native",
-        "rationale": "Index the twenty-fourth principle Explain the Number and benchmark evidence."
+        "upstreamSha256": "73c3db659d356d4aa6d7674d30d0db46fab2bdd60152fca717c2d1772a042bdc",
+        "disposition": "retained-codex-native",
+        "rationale": "The upstream text change is Cursor command wording. Keep the complete Codex principle index and dollar-prefixed invocation syntax."
       }
     },
     {
       "upstreamPath": "docs/guide/09-make-it-yours.md",
-      "upstreamSha256": "b98588a232a38ca7acebbeecb95ac771df1981aed662dcb45c96b4b66ed20ec0",
+      "upstreamSha256": "157e0c20ad3c657857c2fbbea3afd26895b71b8f68475bc56f4c382dcdd0e118",
       "classification": "adapted",
       "derivedPath": "docs/guide/09-make-it-yours.md",
       "preservedInvariants": [
@@ -407,11 +383,16 @@
       ],
       "validations": [
         "documentation"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "157e0c20ad3c657857c2fbbea3afd26895b71b8f68475bc56f4c382dcdd0e118",
+        "disposition": "ported-codex-native",
+        "rationale": "Port correction and benchmark guidance while retaining Codex skill-authoring and approval boundaries."
+      }
     },
     {
       "upstreamPath": "docs/guide/10-recipes-and-pitfalls.md",
-      "upstreamSha256": "a4662cd98870f08c6abe117a832abe37670ee84f8ed25dcbe7e99ef4eb8e05e0",
+      "upstreamSha256": "c652474764b08da4a6364d85f5d03cf1fc1cf35e9d7c549348fb66e2d09f7b1f",
       "classification": "adapted",
       "derivedPath": "docs/guide/10-recipes-and-pitfalls.md",
       "preservedInvariants": [
@@ -419,23 +400,11 @@
       ],
       "validations": [
         "documentation"
-      ]
-    },
-    {
-      "upstreamPath": "docs/guide/README.md",
-      "upstreamSha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
-      "classification": "adapted",
-      "derivedPath": "docs/guide/README.md",
-      "preservedInvariants": [
-        "the guide topic remains covered with verified Codex instructions"
-      ],
-      "validations": [
-        "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
+        "upstreamSha256": "c652474764b08da4a6364d85f5d03cf1fc1cf35e9d7c549348fb66e2d09f7b1f",
         "disposition": "ported-codex-native",
-        "rationale": "Add the scoped poteto-help route to the Codex guide."
+        "rationale": "Port new task recipes with dollar-prefixed skills and Codex authority boundaries."
       }
     },
     {
@@ -511,20 +480,49 @@
       ]
     },
     {
-      "upstreamPath": "skills/architect/SKILL.md",
-      "upstreamSha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
+      "upstreamPath": "docs/guide/README.md",
+      "upstreamSha256": "49d92cfe91e01c04bd1150e5b000ee4fd4dfda8ce789b66a9dda98f7e5456e00",
       "classification": "adapted",
-      "derivedPath": "skills/architect/SKILL.md",
+      "derivedPath": "docs/guide/README.md",
       "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
+        "the guide topic remains covered with verified Codex instructions"
       ],
       "validations": [
-        "skill-behavior"
+        "documentation"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
+        "upstreamSha256": "49d92cfe91e01c04bd1150e5b000ee4fd4dfda8ce789b66a9dda98f7e5456e00",
         "disposition": "ported-codex-native",
-        "rationale": "Port agent-local design screening. Retain observable Codex model-pair profiles instead of unsupported upstream family slugs."
+        "rationale": "Add concise prompt anatomy and state that help is explicit-only."
+      }
+    },
+    {
+      "upstreamPath": "LICENSE",
+      "upstreamSha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "classification": "preserved",
+      "derivedPath": "LICENSE",
+      "preservedInvariants": [
+        "the upstream MIT license text remains intact"
+      ],
+      "validations": [
+        "upstream-hash"
+      ]
+    },
+    {
+      "upstreamPath": "README.md",
+      "upstreamSha256": "7f39feae81103e18b567e1fa5075cba86425cf4697a01be66a7422ef93c2c855",
+      "classification": "adapted",
+      "derivedPath": "README.md",
+      "preservedInvariants": [
+        "installation and workflow documentation describe the derived Codex fork"
+      ],
+      "validations": [
+        "documentation"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "7f39feae81103e18b567e1fa5075cba86425cf4697a01be66a7422ef93c2c855",
+        "disposition": "ported-codex-native",
+        "rationale": "Document explicit-only help and Codex-native prompt guidance. Retain verified Codex model and reasoning-effort policy."
       }
     },
     {
@@ -563,7 +561,7 @@
     },
     {
       "upstreamPath": "skills/architect/references/runner-prompt.md",
-      "upstreamSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
+      "upstreamSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
       "classification": "adapted",
       "derivedPath": "skills/architect/references/runner-prompt.md",
       "preservedInvariants": [
@@ -573,14 +571,31 @@
         "skill-behavior"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
-        "disposition": "reviewed-codex-overlay-retained",
-        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+        "upstreamSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+        "disposition": "ported-codex-native",
+        "rationale": "Port parallel-runner wording and qualify model identity as observable."
+      }
+    },
+    {
+      "upstreamPath": "skills/architect/SKILL.md",
+      "upstreamSha256": "922238947195f2fb825e90688bb6cfa520b81a35a7bee12223c73a6cf96ae64b",
+      "classification": "adapted",
+      "derivedPath": "skills/architect/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "922238947195f2fb825e90688bb6cfa520b81a35a7bee12223c73a6cf96ae64b",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
       }
     },
     {
       "upstreamPath": "skills/arena/SKILL.md",
-      "upstreamSha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
+      "upstreamSha256": "6e17736b5228b661569c3af054f8302c55cf9bf1649447652d53705cce38bed6",
       "classification": "adapted",
       "derivedPath": "skills/arena/SKILL.md",
       "preservedInvariants": [
@@ -590,9 +605,9 @@
         "skill-behavior"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
+        "upstreamSha256": "6e17736b5228b661569c3af054f8302c55cf9bf1649447652d53705cce38bed6",
         "disposition": "retained-validated-codex-model-policy",
-        "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
+        "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs, families, or Task fields."
       }
     },
     {
@@ -632,7 +647,7 @@
     },
     {
       "upstreamPath": "skills/blast-radius/SKILL.md",
-      "upstreamSha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
+      "upstreamSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
       "classification": "adapted",
       "derivedPath": "skills/blast-radius/SKILL.md",
       "preservedInvariants": [
@@ -642,9 +657,9 @@
         "skill-behavior"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
+        "upstreamSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
         "disposition": "ported-codex-native",
-        "rationale": "Port concise risk reporting; retain proof limits and label unproven facts under the Codex verification contract."
+        "rationale": "Port the more-than-one-model wording and keep the observable-model requirement."
       }
     },
     {
@@ -678,10 +693,10 @@
       }
     },
     {
-      "upstreamPath": "skills/create-verification-skill/SKILL.md",
-      "upstreamSha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
+      "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+      "upstreamSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
       "classification": "adapted",
-      "derivedPath": "skills/create-verification-skill/SKILL.md",
+      "derivedPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
       "preservedInvariants": [
         "the skill or supporting resource preserves its user-visible purpose"
       ],
@@ -702,10 +717,10 @@
       ]
     },
     {
-      "upstreamPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
-      "upstreamSha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+      "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
+      "upstreamSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
       "classification": "adapted",
-      "derivedPath": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+      "derivedPath": "skills/create-verification-skill/references/feature-map-example/search.md",
       "preservedInvariants": [
         "the skill or supporting resource preserves its user-visible purpose"
       ],
@@ -714,10 +729,10 @@
       ]
     },
     {
-      "upstreamPath": "skills/create-verification-skill/references/feature-map-example/search.md",
-      "upstreamSha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+      "upstreamPath": "skills/create-verification-skill/SKILL.md",
+      "upstreamSha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
       "classification": "adapted",
-      "derivedPath": "skills/create-verification-skill/references/feature-map-example/search.md",
+      "derivedPath": "skills/create-verification-skill/SKILL.md",
       "preservedInvariants": [
         "the skill or supporting resource preserves its user-visible purpose"
       ],
@@ -740,23 +755,6 @@
         "upstreamSha256": "0eb9485f0e7d84fee56b5d0f0af0faf4635e3ca87c8cba3970c01293b76ecc19",
         "disposition": "ported-codex-native",
         "rationale": "Port shorter loop wording without removing verifiable-unit checks, Codex artifact audit, or the authority contract."
-      }
-    },
-    {
-      "upstreamPath": "skills/how/SKILL.md",
-      "upstreamSha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
-      "classification": "adapted",
-      "derivedPath": "skills/how/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
-        "disposition": "retained-validated-codex-model-policy",
-        "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
       }
     },
     {
@@ -794,10 +792,10 @@
       }
     },
     {
-      "upstreamPath": "skills/interrogate/SKILL.md",
-      "upstreamSha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
+      "upstreamPath": "skills/how/SKILL.md",
+      "upstreamSha256": "7e0d902484a90eba73dcf518bff478dc5b962b456d23c3d0a188c2ce36b236d8",
       "classification": "adapted",
-      "derivedPath": "skills/interrogate/SKILL.md",
+      "derivedPath": "skills/how/SKILL.md",
       "preservedInvariants": [
         "the skill or supporting resource preserves its user-visible purpose"
       ],
@@ -805,9 +803,9 @@
         "skill-behavior"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
+        "upstreamSha256": "7e0d902484a90eba73dcf518bff478dc5b962b456d23c3d0a188c2ce36b236d8",
         "disposition": "retained-validated-codex-model-policy",
-        "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
+        "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
       }
     },
     {
@@ -879,6 +877,23 @@
       }
     },
     {
+      "upstreamPath": "skills/interrogate/SKILL.md",
+      "upstreamSha256": "2f7e570ec23791ed2e485a09c98ed0597c46035e2050b351b84d3dc760ddd71f",
+      "classification": "adapted",
+      "derivedPath": "skills/interrogate/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "2f7e570ec23791ed2e485a09c98ed0597c46035e2050b351b84d3dc760ddd71f",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep the Codex reviewer-profile contract and observable model identity. Do not copy Cursor model slugs or defaults."
+      }
+    },
+    {
       "upstreamPath": "skills/maintain-verification-skill/SKILL.md",
       "upstreamSha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
       "classification": "adapted",
@@ -925,6 +940,40 @@
       }
     },
     {
+      "upstreamPath": "skills/poteto-help/references/prompting.md",
+      "upstreamSha256": "463f450c44a60afd001a2f69fdf8a5dea174351f339369b12ec3c41515e564d3",
+      "classification": "adapted",
+      "derivedPath": "skills/poteto-help/references/prompting.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "463f450c44a60afd001a2f69fdf8a5dea174351f339369b12ec3c41515e564d3",
+        "disposition": "ported-codex-native",
+        "rationale": "Add prompt anatomy, context, design, follow-up, unattended-work, and steering guidance with Codex syntax and authority rules."
+      }
+    },
+    {
+      "upstreamPath": "skills/poteto-help/references/recipes.md",
+      "upstreamSha256": "1872323419a3e5c7783b1933f7a180ca26c25a6e1f4ec83bd65e091ebbfb812b",
+      "classification": "adapted",
+      "derivedPath": "skills/poteto-help/references/recipes.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "1872323419a3e5c7783b1933f7a180ca26c25a6e1f4ec83bd65e091ebbfb812b",
+        "disposition": "ported-codex-native",
+        "rationale": "Add copyable Codex prompt recipes with dollar-prefixed skills, supported lifecycle behavior, and no Cursor loops."
+      }
+    },
+    {
       "upstreamPath": "skills/poteto-help/SKILL.md",
       "classification": "adapted",
       "derivedPath": "skills/poteto-help/SKILL.md",
@@ -935,28 +984,11 @@
         "skill-behavior",
         "skill-surface"
       ],
-      "upstreamSha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
+      "upstreamSha256": "ea71bcb15c023a5d9cc70686e4812144687ffe03bf80d85cc480af3e0b181d1e",
       "refreshDisposition": {
-        "upstreamSha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
+        "upstreamSha256": "ea71bcb15c023a5d9cc70686e4812144687ffe03bf80d85cc480af3e0b181d1e",
         "disposition": "ported-codex-native",
-        "rationale": "Add read-before-routing guidance, prompt examples, scoped troubleshooting, local links, and Codex profiles/hooks. Keep all skills explicit-only and remove Cursor modes/loops."
-      }
-    },
-    {
-      "upstreamPath": "skills/poteto-mode/SKILL.md",
-      "upstreamSha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
-      "classification": "adapted",
-      "derivedPath": "skills/poteto-mode/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
-        "disposition": "ported-codex-native",
-        "rationale": "Index benchmark checks and Explain the Number. Require fresh owners for new unrelated work while retaining same-task delegation and the runtime contract."
+        "rationale": "Make help explicit-only, add prompt routing and one-time optional profile setup guidance, and retain Codex links and lifecycle boundaries."
       }
     },
     {
@@ -1410,7 +1442,7 @@
     },
     {
       "upstreamPath": "skills/poteto-mode/scripts/orch/orch.test.ts",
-      "upstreamSha256": "174b86d21ff51ccd28d1a8c938cb2e0c6fa287b209d4ca6c03932fcb1b53372e",
+      "upstreamSha256": "773153ac74de6eb15f58d2682f487f5f30672d7efe3ef1d24a131aa9129d279b",
       "classification": "adapted",
       "derivedPath": "skills/poteto-mode/scripts/orch/orch.test.ts",
       "preservedInvariants": [
@@ -1418,7 +1450,12 @@
       ],
       "validations": [
         "skill-behavior"
-      ]
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "773153ac74de6eb15f58d2682f487f5f30672d7efe3ef1d24a131aa9129d279b",
+        "disposition": "retained-codex-native",
+        "rationale": "Keep the host-neutral verifier fixture. The upstream label change only follows a Cursor default-model change."
+      }
     },
     {
       "upstreamPath": "skills/poteto-mode/scripts/orch/orch.ts",
@@ -1611,6 +1648,23 @@
       "validations": [
         "skill-behavior"
       ]
+    },
+    {
+      "upstreamPath": "skills/poteto-mode/SKILL.md",
+      "upstreamSha256": "31cd02290360ce63564ef22b74d69fc6d90e62181d05a644cbed8f6c47cc9412",
+      "classification": "adapted",
+      "derivedPath": "skills/poteto-mode/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "31cd02290360ce63564ef22b74d69fc6d90e62181d05a644cbed8f6c47cc9412",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep the Codex runtime contract and observable model and effort profiles. Do not copy Cursor defaults."
+      }
     },
     {
       "upstreamPath": "skills/principle-attack-the-premise/SKILL.md",
@@ -2029,23 +2083,6 @@
       }
     },
     {
-      "upstreamPath": "skills/reflect/SKILL.md",
-      "upstreamSha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
-      "classification": "adapted",
-      "derivedPath": "skills/reflect/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
-        "disposition": "retained-validated-codex-model-policy",
-        "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
-      }
-    },
-    {
       "upstreamPath": "skills/reflect/references/divergent-reviewer.md",
       "upstreamSha256": "221dfc0abf7cbcd25e1da3cd87323f5d1050fc3bf652e096d093584e183c98fb",
       "classification": "adapted",
@@ -2114,8 +2151,25 @@
       }
     },
     {
+      "upstreamPath": "skills/reflect/SKILL.md",
+      "upstreamSha256": "31b8fb866ebe084e7fb7f16dc0ea46ab84ffdc838d54f948edc78556f301a497",
+      "classification": "adapted",
+      "derivedPath": "skills/reflect/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "31b8fb866ebe084e7fb7f16dc0ea46ab84ffdc838d54f948edc78556f301a497",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep observable Codex model and effort profiles. Do not remove OpenAI-compatible reviewer roles because Cursor changed its defaults."
+      }
+    },
+    {
       "upstreamPath": "skills/setup-pstack/SKILL.md",
-      "upstreamSha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
+      "upstreamSha256": "d61b47256a18155a81c8e5ef95e3cc6569ce8c18317c35c4dd9c8015cf68cb59",
       "classification": "adapted",
       "derivedPath": "skills/setup-pstack/SKILL.md",
       "preservedInvariants": [
@@ -2125,26 +2179,9 @@
         "skill-behavior"
       ],
       "refreshDisposition": {
-        "upstreamSha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
-        "disposition": "ported-codex-native",
-        "rationale": "Port requested unlimited/large/medium/small effort budgets. Validate each separate Codex model/effort pair, preserve owned profiles, and never write Cursor rules or substitute entitlement guesses."
-      }
-    },
-    {
-      "upstreamPath": "skills/show-me-your-work/SKILL.md",
-      "upstreamSha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
-      "classification": "adapted",
-      "derivedPath": "skills/show-me-your-work/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
-        "disposition": "ported-codex-native",
-        "rationale": "Port per-run start rows and append-only superseding audit corrections; use supported Codex task history and retain explicit verification limits."
+        "upstreamSha256": "d61b47256a18155a81c8e5ef95e3cc6569ce8c18317c35c4dd9c8015cf68cb59",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep exact Codex model and reasoning-effort validation, inheritance, ownership receipts, and user-selected budgets. Cursor rule files and defaults do not apply."
       }
     },
     {
@@ -2174,6 +2211,23 @@
         "upstreamSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
         "disposition": "ported-codex-native",
         "rationale": "Port nonempty-file detection and append-only header creation so a failed existence check cannot truncate prior rows."
+      }
+    },
+    {
+      "upstreamPath": "skills/show-me-your-work/SKILL.md",
+      "upstreamSha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
+      "classification": "adapted",
+      "derivedPath": "skills/show-me-your-work/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
+        "disposition": "ported-codex-native",
+        "rationale": "Port per-run start rows and append-only superseding audit corrections; use supported Codex task history and retain explicit verification limits."
       }
     },
     {
@@ -2245,23 +2299,6 @@
       }
     },
     {
-      "upstreamPath": "skills/typescript-best-practices/SKILL.md",
-      "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
-      "classification": "adapted",
-      "derivedPath": "skills/typescript-best-practices/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
-        "disposition": "reviewed-codex-overlay-retained",
-        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
-      }
-    },
-    {
       "upstreamPath": "skills/typescript-best-practices/references/patterns.md",
       "upstreamSha256": "faa1362055374452efccac1b629677c61acfb0bcc6c4e3311836b5715638ee18",
       "classification": "adapted",
@@ -2279,6 +2316,23 @@
       }
     },
     {
+      "upstreamPath": "skills/typescript-best-practices/SKILL.md",
+      "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+      "classification": "adapted",
+      "derivedPath": "skills/typescript-best-practices/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+        "disposition": "reviewed-codex-overlay-retained",
+        "rationale": "Reviewed the upstream prose or policy change and retained the current Codex adaptation as the authoritative runtime contract."
+      }
+    },
+    {
       "upstreamPath": "skills/unslop/SKILL.md",
       "upstreamSha256": "195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1",
       "classification": "adapted",
@@ -2293,23 +2347,6 @@
         "upstreamSha256": "195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1",
         "disposition": "ported-codex-native",
         "rationale": "Retain Codex concise drafting rules; removed upstream self-audit wording was already replaced by direct writing guidance."
-      }
-    },
-    {
-      "upstreamPath": "skills/why/SKILL.md",
-      "upstreamSha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
-      "classification": "adapted",
-      "derivedPath": "skills/why/SKILL.md",
-      "preservedInvariants": [
-        "the skill or supporting resource preserves its user-visible purpose"
-      ],
-      "validations": [
-        "skill-behavior"
-      ],
-      "refreshDisposition": {
-        "upstreamSha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
-        "disposition": "retained-validated-codex-model-policy",
-        "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
       }
     },
     {
@@ -2510,21 +2547,48 @@
         "disposition": "retained-codex-safety-overlay",
         "rationale": "The Codex safety, authority, lifecycle, or capability overlay remains authoritative over host-specific upstream mechanics."
       }
+    },
+    {
+      "upstreamPath": "skills/why/SKILL.md",
+      "upstreamSha256": "442215bf70e491d4d31bd200c197f2ec447445df38e074c40880fc4bf30a1f9e",
+      "classification": "adapted",
+      "derivedPath": "skills/why/SKILL.md",
+      "preservedInvariants": [
+        "the skill or supporting resource preserves its user-visible purpose"
+      ],
+      "validations": [
+        "skill-behavior"
+      ],
+      "refreshDisposition": {
+        "upstreamSha256": "442215bf70e491d4d31bd200c197f2ec447445df38e074c40880fc4bf30a1f9e",
+        "disposition": "retained-validated-codex-model-policy",
+        "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
+      }
     }
   ],
   "refresh": {
-    "fromCommit": "f8abeddd1862dc73704e3d719dd73df0d51b8c71",
-    "fromVersion": "0.15.1",
+    "fromCommit": "4e5b1cf2ccb0ea3716f08c8ee0a5856b5ab93536",
+    "fromVersion": "0.15.10",
     "fromFiles": [
       {
         "path": ".cursor-plugin/plugin.json",
-        "sha256": "5f4311823e4c1d3e611ee1bd30cf7378ded6c413553d070a7ecabaabc82d6dda",
-        "bytes": 721
+        "sha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+        "bytes": 722
       },
       {
         "path": ".gitignore",
         "sha256": "8ffe9de56bd30c1a95cd945262d6e3ac355ada4111551dde41f67851b9f1fc55",
         "bytes": 30
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+        "bytes": 1067
+      },
+      {
+        "path": "README.md",
+        "sha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
+        "bytes": 24539
       },
       {
         "path": "agents/comment-sicko.md",
@@ -2533,8 +2597,8 @@
       },
       {
         "path": "agents/poteto-agent.md",
-        "sha256": "c3850be1b97bc97cec0568ed8b26d04e7693c4e07868137c58fe546d37f288e9",
-        "bytes": 641
+        "sha256": "abe41c169ecbfe65641f1725f4188d568e046c0dec7fd2dc271abb594c299201",
+        "bytes": 686
       },
       {
         "path": "assets/logo.png",
@@ -2552,6 +2616,11 @@
         "bytes": 1321
       },
       {
+        "path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+        "sha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
+        "bytes": 14238
+      },
+      {
         "path": "automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
         "sha256": "58b0615d2fca895f9a20df83266e280042b0d585b5f2fd324e2094a682fd846b",
         "bytes": 5517
@@ -2567,24 +2636,19 @@
         "bytes": 3149
       },
       {
-        "path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
-        "sha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
-        "bytes": 14238
-      },
-      {
         "path": "automations/benny/skills/setup-benny/SKILL.md",
         "sha256": "5a3cbe63360c9f6373b6cb6c79a1eaf7e0eba181bfaa1577e2e6431af3407282",
         "bytes": 13992
       },
       {
-        "path": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
-        "sha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
-        "bytes": 1892
-      },
-      {
         "path": "automations/benny/skills/triage-issue-reports/SKILL.md",
         "sha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
         "bytes": 10320
+      },
+      {
+        "path": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
+        "sha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
+        "bytes": 1892
       },
       {
         "path": "automations/benny/templates/configuration.example.yaml",
@@ -2603,13 +2667,13 @@
       },
       {
         "path": "docs/guide/01-setup.md",
-        "sha256": "5530cdb0138b1abf9f2bbb3d54b1bb7447cfb4d8aa3db5444410257473607c39",
-        "bytes": 2749
+        "sha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
+        "bytes": 3263
       },
       {
         "path": "docs/guide/02-poteto-mode.md",
-        "sha256": "379a1b2c9cd2ba54032b2b142563328d0f3d65039f067863d19b1d4c008737f5",
-        "bytes": 4728
+        "sha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
+        "bytes": 4845
       },
       {
         "path": "docs/guide/03-understand.md",
@@ -2623,8 +2687,8 @@
       },
       {
         "path": "docs/guide/05-build-and-clean.md",
-        "sha256": "6bd421b43a3cf9fec3cd201fd40ce65fd8c657264eac48b0c9a175b6afd7c252",
-        "bytes": 4763
+        "sha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
+        "bytes": 4762
       },
       {
         "path": "docs/guide/06-verify-and-ship.md",
@@ -2633,13 +2697,13 @@
       },
       {
         "path": "docs/guide/07-overnight.md",
-        "sha256": "eefbc665ad411ee22b6430d779674e5e8d8f304d51fafd80a62ab2334d095ebc",
-        "bytes": 5357
+        "sha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
+        "bytes": 5447
       },
       {
         "path": "docs/guide/08-principles.md",
-        "sha256": "3ede7c9cf74d9631142aec016a01843d97c1e20469387144b70c2660d50fa96f",
-        "bytes": 5233
+        "sha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
+        "bytes": 5427
       },
       {
         "path": "docs/guide/09-make-it-yours.md",
@@ -2650,6 +2714,11 @@
         "path": "docs/guide/10-recipes-and-pitfalls.md",
         "sha256": "a4662cd98870f08c6abe117a832abe37670ee84f8ed25dcbe7e99ef4eb8e05e0",
         "bytes": 4598
+      },
+      {
+        "path": "docs/guide/README.md",
+        "sha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
+        "bytes": 2200
       },
       {
         "path": "docs/guide/images/design.jpg",
@@ -2682,24 +2751,14 @@
         "bytes": 331450
       },
       {
-        "path": "docs/guide/README.md",
-        "sha256": "0db8dd72e832c06638ca2f43489e8597d44dc0ea8da3b5088e4382ea26d904c5",
-        "bytes": 2011
-      },
-      {
-        "path": "LICENSE",
-        "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-        "bytes": 1067
-      },
-      {
-        "path": "README.md",
-        "sha256": "fc81cde088c66ee3d0ea904066495e246a07bf8f62ad385780614ada1bef86db",
-        "bytes": 22680
+        "path": "skills/architect/SKILL.md",
+        "sha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
+        "bytes": 5675
       },
       {
         "path": "skills/architect/references/design-red-flags.md",
-        "sha256": "905066f9bbac81c573c2b325be47751d2c0f9325e0a0772bd4384e82dafe9336",
-        "bytes": 1944
+        "sha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
+        "bytes": 3009
       },
       {
         "path": "skills/architect/references/rationale-template.md",
@@ -2712,14 +2771,9 @@
         "bytes": 3087
       },
       {
-        "path": "skills/architect/SKILL.md",
-        "sha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
-        "bytes": 5383
-      },
-      {
         "path": "skills/arena/SKILL.md",
-        "sha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
-        "bytes": 4591
+        "sha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
+        "bytes": 4973
       },
       {
         "path": "skills/automate-me/SKILL.md",
@@ -2727,9 +2781,14 @@
         "bytes": 7164
       },
       {
+        "path": "skills/benchmark-checklist/SKILL.md",
+        "sha256": "6a767e788a60428fa14e645ee10fe2e49896e514ff654f668b1d824deb9038e8",
+        "bytes": 5409
+      },
+      {
         "path": "skills/blast-radius/SKILL.md",
-        "sha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
-        "bytes": 4016
+        "sha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
+        "bytes": 3851
       },
       {
         "path": "skills/bro/SKILL.md",
@@ -2737,19 +2796,9 @@
         "bytes": 267
       },
       {
-        "path": "skills/create-verification-skill/references/feature-map-example/create-note.md",
-        "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
-        "bytes": 2926
-      },
-      {
-        "path": "skills/create-verification-skill/references/feature-map-example/README.md",
-        "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
-        "bytes": 2601
-      },
-      {
-        "path": "skills/create-verification-skill/references/feature-map-example/search.md",
-        "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
-        "bytes": 3478
+        "path": "skills/correct/SKILL.md",
+        "sha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
+        "bytes": 2445
       },
       {
         "path": "skills/create-verification-skill/SKILL.md",
@@ -2757,9 +2806,29 @@
         "bytes": 5879
       },
       {
+        "path": "skills/create-verification-skill/references/feature-map-example/README.md",
+        "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+        "bytes": 2601
+      },
+      {
+        "path": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+        "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+        "bytes": 2926
+      },
+      {
+        "path": "skills/create-verification-skill/references/feature-map-example/search.md",
+        "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+        "bytes": 3478
+      },
+      {
         "path": "skills/figure-it-out/SKILL.md",
-        "sha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
-        "bytes": 4384
+        "sha256": "0eb9485f0e7d84fee56b5d0f0af0faf4635e3ca87c8cba3970c01293b76ecc19",
+        "bytes": 4059
+      },
+      {
+        "path": "skills/how/SKILL.md",
+        "sha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
+        "bytes": 3077
       },
       {
         "path": "skills/how/references/explainer-prompt.md",
@@ -2768,18 +2837,18 @@
       },
       {
         "path": "skills/how/references/explorer-prompt.md",
-        "sha256": "3a6965276d23be7d8da6c305bfd5d7bf29d2aef09e5dae4119463ac72022a02d",
+        "sha256": "a3b44a6e5bb16a6d4d1cac19db8ed5322ffd5f5f5d45baca4e73990ca096f8be",
         "bytes": 2684
       },
       {
-        "path": "skills/how/SKILL.md",
-        "sha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
-        "bytes": 2738
+        "path": "skills/interrogate/SKILL.md",
+        "sha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
+        "bytes": 5054
       },
       {
         "path": "skills/interrogate/references/code-quality-review.md",
-        "sha256": "623d3d8122d075c303b562783b471a732992e84166b318f85ab6d6c118b13304",
-        "bytes": 5372
+        "sha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
+        "bytes": 5217
       },
       {
         "path": "skills/interrogate/references/lead-judgment.md",
@@ -2788,18 +2857,13 @@
       },
       {
         "path": "skills/interrogate/references/reviewer-prompt.md",
-        "sha256": "a397cc61102add709803d917fb23d726920525bf23e7c06dc4ed0b5cbeb00e54",
-        "bytes": 2756
+        "sha256": "e0598e254792b56de39bb16b1e6db559b03a522fdc54b98f942d254090920ae6",
+        "bytes": 2491
       },
       {
         "path": "skills/interrogate/references/rubric.md",
-        "sha256": "59e9b7cc4556e735e1b859a7dd1f7637b013a2426a84825ac1c51979942c158a",
-        "bytes": 5096
-      },
-      {
-        "path": "skills/interrogate/SKILL.md",
-        "sha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
-        "bytes": 4943
+        "sha256": "a85aa801abbaf14434f00579440abc0d8e2723227ba8bf57de7cca8d6e7d2f25",
+        "bytes": 5025
       },
       {
         "path": "skills/maintain-verification-skill/SKILL.md",
@@ -2817,6 +2881,16 @@
         "bytes": 2560
       },
       {
+        "path": "skills/poteto-help/SKILL.md",
+        "sha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
+        "bytes": 12706
+      },
+      {
+        "path": "skills/poteto-mode/SKILL.md",
+        "sha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
+        "bytes": 20559
+      },
+      {
         "path": "skills/poteto-mode/playbooks/authoring-a-skill.md",
         "sha256": "f6a13a445c360b48d6cd72780ac01955f45b82826476efe0e67c7559329407aa",
         "bytes": 831
@@ -2828,23 +2902,23 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/autopilot-full.md",
-        "sha256": "52f69170bd7fa6b436992d90d3ef7fba893201e0b497297b416e9aea0e567d5f",
-        "bytes": 5854
+        "sha256": "05ca30a16242c19d0c78ba1e88cca66f858d75252cb154fd740099fe292de802",
+        "bytes": 9431
       },
       {
         "path": "skills/poteto-mode/playbooks/autopilot-stack.md",
-        "sha256": "66364cd3a2286cbecfb73d3a7bf7d1fa387ede8525d37ef22b69d4ac03c2c5b2",
-        "bytes": 5287
+        "sha256": "007c0a3b12011954a224f54773ef4ad7b75918be0a311914c1b51ad4e794c1e5",
+        "bytes": 5031
       },
       {
         "path": "skills/poteto-mode/playbooks/babysit.md",
-        "sha256": "51be21872152f97612d37258273269b88212b6696432d25d678cac30f02f4157",
-        "bytes": 8010
+        "sha256": "a0346c37c2313f36a863b80f66ee7b98059c2242adf74fc7b3e48abdb9ec6f5a",
+        "bytes": 8289
       },
       {
         "path": "skills/poteto-mode/playbooks/bug-fix.md",
-        "sha256": "e958c67d5454fc12d76ec645b50dfd85c423082aac13a49e2913ef2815948216",
-        "bytes": 2422
+        "sha256": "018bbc146ae19145caa6c7e70591fee081b64447dda1c1c4b681c9974d928b13",
+        "bytes": 2255
       },
       {
         "path": "skills/poteto-mode/playbooks/eval.md",
@@ -2853,13 +2927,13 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/feature.md",
-        "sha256": "430dae0fd736554ff7dffc3ef0644c9f0c845e25742f69e598c35b9b89660301",
-        "bytes": 3022
+        "sha256": "3a62cc4a8cbcf144bb9dd05f05420a15be0d38b784d3b141bb730a5852f50a62",
+        "bytes": 2766
       },
       {
         "path": "skills/poteto-mode/playbooks/hillclimb.md",
-        "sha256": "bc1fc4052c1ee918a56115a219cbcbbc4c147fa1a8080e77c7d58068eecac299",
-        "bytes": 4091
+        "sha256": "244f289898fe67a458065e90fe8217c916c5acf61cdee8975ade3f9831a12e91",
+        "bytes": 4403
       },
       {
         "path": "skills/poteto-mode/playbooks/investigation.md",
@@ -2868,13 +2942,13 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/multi-phase-plan.md",
-        "sha256": "63426a55519fbc4fb9f00baf5cc7b1148f70dfb62ad360a0f6533d287dd36edf",
-        "bytes": 12242
+        "sha256": "27d310e3fc3937a60b8fcbe1318f9d249a7477a722907bf85b3e4eb3dc436b11",
+        "bytes": 12977
       },
       {
         "path": "skills/poteto-mode/playbooks/opening-a-pr.md",
-        "sha256": "b173ff9638ff62f91f6813c1a0ed3417cdf9f6545a659be0c1fb1f42130e0e66",
-        "bytes": 4923
+        "sha256": "ab40de7163c1c6e274f46ee559b2e53ef45673703f601f13f4931c199e6fb90f",
+        "bytes": 6142
       },
       {
         "path": "skills/poteto-mode/playbooks/orchestrate.md",
@@ -2883,13 +2957,13 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/pause-safely.md",
-        "sha256": "7d5fc10e144265f1b35f8157926541e738c1de64b6a85b3e61b51cf268c3dffd",
-        "bytes": 1180
+        "sha256": "77968cfe5f4a71a8cd33e0ae8ffcdbd88dd693a212c240457773e6c40c96c21d",
+        "bytes": 1135
       },
       {
         "path": "skills/poteto-mode/playbooks/perf-issue.md",
-        "sha256": "b2ee9aed1466583361cb61b4e8d79ebb3b61f7f9f6540be7633852afacab1d89",
-        "bytes": 3084
+        "sha256": "2b88ad0f880e4d4d755ac19fe52414d6631d6baa816d060f53cf0a7429d7e14a",
+        "bytes": 1446
       },
       {
         "path": "skills/poteto-mode/playbooks/prototype.md",
@@ -2898,8 +2972,8 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/refactoring.md",
-        "sha256": "53bac1f1fe886600dd1991b5511b7975e6a206168038f9d282d88e45408e93cf",
-        "bytes": 3316
+        "sha256": "50f4f7d3d301551f8b8a57c3303c99958c5ca630ae0d0051823b6987c0eb5b96",
+        "bytes": 3211
       },
       {
         "path": "skills/poteto-mode/playbooks/runtime-forensics.md",
@@ -2913,8 +2987,8 @@
       },
       {
         "path": "skills/poteto-mode/playbooks/shipping.md",
-        "sha256": "c301902136e0a9a0a55403c35374f6f5738e501aee66c27458dc197b87557550",
-        "bytes": 4849
+        "sha256": "19f3f6803a7bbe9ff04f624b03e3b55f07ac0a05e991aa00d5fe51239b920b2a",
+        "bytes": 5439
       },
       {
         "path": "skills/poteto-mode/playbooks/trace-forensics.md",
@@ -2948,8 +3022,8 @@
       },
       {
         "path": "skills/poteto-mode/scripts/check-plan.mjs",
-        "sha256": "4f5118edf719b481983dc87dfadd5b4b5473d05aad04a7ba65191ff9c73faf1b",
-        "bytes": 7630
+        "sha256": "4f9432d9989880b6afc2bdda503d5b12a9d07d357ecf31936b7ab5e83bc80523",
+        "bytes": 7594
       },
       {
         "path": "skills/poteto-mode/scripts/orch/orch.test.ts",
@@ -3037,11 +3111,6 @@
         "bytes": 3984
       },
       {
-        "path": "skills/poteto-mode/SKILL.md",
-        "sha256": "6bbf35cb2111c358461c7ba90f210dad4573f3a3ada92f6459eac0c69d83b01a",
-        "bytes": 18721
-      },
-      {
         "path": "skills/principle-attack-the-premise/SKILL.md",
         "sha256": "c87bd7536f772f8a403ad8155535ee17a1bbec9a353156693eb3bb1520c87ae3",
         "bytes": 1941
@@ -3072,6 +3141,11 @@
         "bytes": 1184
       },
       {
+        "path": "skills/principle-explain-the-number/SKILL.md",
+        "sha256": "5aac99e7ce0bb1b37e2579acf4fe88c32a1456d9d46afd4a57cfe1df9092e89c",
+        "bytes": 2109
+      },
+      {
         "path": "skills/principle-fix-root-causes/SKILL.md",
         "sha256": "ba4cd38da1dcc8fe5432feb64457cba95594736a9b21b2ebf8f8c52aee068707",
         "bytes": 1246
@@ -3083,8 +3157,8 @@
       },
       {
         "path": "skills/principle-guard-the-context-window/SKILL.md",
-        "sha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
-        "bytes": 1067
+        "sha256": "d2cef147862576e3d709b7afc149d85196245e8338b9c7eef337c95fba412b3e",
+        "bytes": 939
       },
       {
         "path": "skills/principle-laziness-protocol/SKILL.md",
@@ -3113,18 +3187,18 @@
       },
       {
         "path": "skills/principle-never-block-on-the-human/SKILL.md",
-        "sha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
-        "bytes": 1343
+        "sha256": "f2764bb9338cbfc788c903cf4b9cd0a5f4042d3a04dd6d59cbd525d9beaadd0a",
+        "bytes": 1172
       },
       {
         "path": "skills/principle-outcome-oriented-execution/SKILL.md",
-        "sha256": "beedcaed75572a6a1662d47f16da203c2bd2c9dbffbbd678d4ba187d67b7e670",
-        "bytes": 1132
+        "sha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d",
+        "bytes": 1078
       },
       {
         "path": "skills/principle-prove-it-works/SKILL.md",
-        "sha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
-        "bytes": 1879
+        "sha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+        "bytes": 1371
       },
       {
         "path": "skills/principle-redesign-from-first-principles/SKILL.md",
@@ -3138,8 +3212,8 @@
       },
       {
         "path": "skills/principle-sequence-verifiable-units/SKILL.md",
-        "sha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
-        "bytes": 2029
+        "sha256": "2ccbbacc56ace5afdfb8670cef19d7bd009fb2a0033b9a741cbdf2b6baf72187",
+        "bytes": 1705
       },
       {
         "path": "skills/principle-subtract-before-you-add/SKILL.md",
@@ -3162,14 +3236,19 @@
         "bytes": 5212
       },
       {
+        "path": "skills/reflect/SKILL.md",
+        "sha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
+        "bytes": 4982
+      },
+      {
         "path": "skills/reflect/references/divergent-reviewer.md",
-        "sha256": "7da0334ce282e6d8d7349c0cff14ffbd10a91a756c0b5c3ccc97291f57b8bed6",
-        "bytes": 3883
+        "sha256": "221dfc0abf7cbcd25e1da3cd87323f5d1050fc3bf652e096d093584e183c98fb",
+        "bytes": 3889
       },
       {
         "path": "skills/reflect/references/judgment-reviewer.md",
-        "sha256": "917bb2ad21240a42b440aeb2a17766092e09f70d0982417b2f4caa6d74f27164",
-        "bytes": 3249
+        "sha256": "a40ecb9b28bd2a3491e11a541157fe58efe158e0eda7b61a5006c14590aabe61",
+        "bytes": 3255
       },
       {
         "path": "skills/reflect/references/synthesizer.md",
@@ -3178,18 +3257,18 @@
       },
       {
         "path": "skills/reflect/references/tooling-reviewer.md",
-        "sha256": "8c74ebf7811801d634db7ab609b097d77ea00ab77bb4b258d69bd96e671cfa39",
-        "bytes": 4603
-      },
-      {
-        "path": "skills/reflect/SKILL.md",
-        "sha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
-        "bytes": 4588
+        "sha256": "bc49ced90fa81eaba3083b88aeb430d900a6d8f14ff40c1d6b52263bacfc77b6",
+        "bytes": 4609
       },
       {
         "path": "skills/setup-pstack/SKILL.md",
-        "sha256": "5acdc3db4f15f3e9b81fb56eab7f17cdccde1a11a40053ed7743f7467729c8a9",
-        "bytes": 4367
+        "sha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
+        "bytes": 5548
+      },
+      {
+        "path": "skills/show-me-your-work/SKILL.md",
+        "sha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
+        "bytes": 6418
       },
       {
         "path": "skills/show-me-your-work/references/decision-log-template.tsv",
@@ -3198,23 +3277,18 @@
       },
       {
         "path": "skills/show-me-your-work/scripts/log.sh",
-        "sha256": "1601bc18f9aba0af3f5d6375e4f2d5dc6102334d1bca935026c0e3547cdadbbf",
-        "bytes": 1234
-      },
-      {
-        "path": "skills/show-me-your-work/SKILL.md",
-        "sha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
-        "bytes": 5459
+        "sha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
+        "bytes": 1377
       },
       {
         "path": "skills/swarm/SKILL.md",
-        "sha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
-        "bytes": 2172
+        "sha256": "bdcee4168e22428036e93d7cdeec3f391dbc4132f927f6db2540328c22db0273",
+        "bytes": 2949
       },
       {
         "path": "skills/tdd/SKILL.md",
-        "sha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
-        "bytes": 3536
+        "sha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+        "bytes": 3143
       },
       {
         "path": "skills/teach/SKILL.md",
@@ -3223,13 +3297,8 @@
       },
       {
         "path": "skills/technical-writing/SKILL.md",
-        "sha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
-        "bytes": 10982
-      },
-      {
-        "path": "skills/typescript-best-practices/references/patterns.md",
-        "sha256": "62e9cd32d2fa066a35d0d1349aac22dce31a48ad7d5eaf142570770cfe707384",
-        "bytes": 8860
+        "sha256": "f5c512ffeec70bc4e0dee50f7bb4c26742e1be77967a6e8b15d1921e1c209ceb",
+        "bytes": 9792
       },
       {
         "path": "skills/typescript-best-practices/SKILL.md",
@@ -3237,9 +3306,19 @@
         "bytes": 2684
       },
       {
+        "path": "skills/typescript-best-practices/references/patterns.md",
+        "sha256": "faa1362055374452efccac1b629677c61acfb0bcc6c4e3311836b5715638ee18",
+        "bytes": 9214
+      },
+      {
         "path": "skills/unslop/SKILL.md",
-        "sha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
-        "bytes": 6093
+        "sha256": "195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1",
+        "bytes": 6015
+      },
+      {
+        "path": "skills/why/SKILL.md",
+        "sha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
+        "bytes": 10360
       },
       {
         "path": "skills/why/references/epistemics.md",
@@ -3300,18 +3379,13 @@
         "path": "skills/why/references/synthesizer-prompt.md",
         "sha256": "733a3e9cf897b1aca56aaddeae01a3832e4bfed024c2f602db2d1bf807d7a73b",
         "bytes": 7984
-      },
-      {
-        "path": "skills/why/SKILL.md",
-        "sha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
-        "bytes": 9999
       }
     ],
-    "toCommit": "4e5b1cf2ccb0ea3716f08c8ee0a5856b5ab93536",
-    "toVersion": "0.15.10",
+    "toCommit": "ccb5507cec1546dc88135c1139c811e6c59115ba",
+    "toVersion": "0.15.15",
     "deltaCounts": {
-      "added": 4,
-      "changed": 52,
+      "added": 2,
+      "changed": 25,
       "deleted-or-renamed": 0
     }
   },
@@ -3319,450 +3393,218 @@
     {
       "path": ".cursor-plugin/plugin.json",
       "kind": "changed",
-      "oldSha256": "5f4311823e4c1d3e611ee1bd30cf7378ded6c413553d070a7ecabaabc82d6dda",
-      "newSha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+      "oldSha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+      "newSha256": "7bc736c60985805f70465e044e5adc7028663f72a73deea7fa3e95e52d70dc8e",
       "disposition": "ported-codex-native",
-      "rationale": "The 0.15.10 Cursor manifest remains provenance. The supported Codex manifest and package identity advance to 0.3.0."
-    },
-    {
-      "path": "README.md",
-      "kind": "changed",
-      "oldSha256": "fc81cde088c66ee3d0ea904066495e246a07bf8f62ad385780614ada1bef86db",
-      "newSha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
-      "disposition": "ported-codex-native",
-      "rationale": "Document the four additions, 52 explicit-only skills, code-ready rounds, and validated separate reasoning budgets. Keep Codex installation and receipt-based activation."
-    },
-    {
-      "path": "agents/poteto-agent.md",
-      "kind": "changed",
-      "oldSha256": "c3850be1b97bc97cec0568ed8b26d04e7693c4e07868137c58fe546d37f288e9",
-      "newSha256": "abe41c169ecbfe65641f1725f4188d568e046c0dec7fd2dc271abb594c299201",
-      "disposition": "ported-codex-native",
-      "rationale": "Retain one delegate for a parent task and same-artifact fixes. Require a fresh delegate for an unrelated next task or queue item; preserve portable persona and authority."
+      "rationale": "Keep the Cursor manifest as provenance. Advance the supported Codex package to 0.3.1 without copying Cursor-only fields or model defaults."
     },
     {
       "path": "docs/guide/01-setup.md",
       "kind": "changed",
-      "oldSha256": "5530cdb0138b1abf9f2bbb3d54b1bb7447cfb4d8aa3db5444410257473607c39",
-      "newSha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
+      "oldSha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
+      "newSha256": "86d0330f245d16254a2069955f993c15d96cf29cd1a73690a0164074b7ac1190",
       "disposition": "ported-codex-native",
-      "rationale": "Port requested effort budgets with exact observable Codex model/effort validation. Preserve profile ownership receipts and trusted-hook activation instead of Cursor Custom Modes."
+      "rationale": "Clarify that custom profiles are optional and unverified roles inherit the parent model."
     },
     {
       "path": "docs/guide/02-poteto-mode.md",
       "kind": "changed",
-      "oldSha256": "379a1b2c9cd2ba54032b2b142563328d0f3d65039f067863d19b1d4c008737f5",
-      "newSha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
+      "oldSha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
+      "newSha256": "979f61ca3d44cb8e68affda40327d32797e93fa9cc53ced7444c15e2600897e1",
       "disposition": "ported-codex-native",
-      "rationale": "Link scoped help and clarify activation versus verified sticky receipt. Cursor Custom Mode keystrokes do not apply."
+      "rationale": "Port outcome, finish-check, evidence, constraint, scope, and short-follow-up prompt guidance with Codex activation rules."
+    },
+    {
+      "path": "docs/guide/03-understand.md",
+      "kind": "changed",
+      "oldSha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
+      "newSha256": "0090afa9b8670adf175466a2a973ff4349e95ed67d2aa8cebdfc55ff4b7382c9",
+      "disposition": "ported-codex-native",
+      "rationale": "Port read-only investigation and problem-restatement guidance with current-artifact verification."
+    },
+    {
+      "path": "docs/guide/04-design.md",
+      "kind": "changed",
+      "oldSha256": "21e820ff73c0b70682aa570a967ede446b4d7caf62e8f391d0dd733ccb74874c",
+      "newSha256": "31f2abe6e9b29feafd1a9eece8f4fe21992f86b8c19ab2e9b5c11a20f36587e7",
+      "disposition": "ported-codex-native",
+      "rationale": "Port prototype-first and tutorial-first design guidance with Codex evidence and isolation rules."
     },
     {
       "path": "docs/guide/05-build-and-clean.md",
       "kind": "changed",
-      "oldSha256": "6bd421b43a3cf9fec3cd201fd40ce65fd8c657264eac48b0c9a175b6afd7c252",
-      "newSha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
+      "oldSha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
+      "newSha256": "a93cc7771f7b35c7b54d0120b6f66e8367794ce6791237e889a30e7585c190fa",
       "disposition": "ported-codex-native",
-      "rationale": "Keep TypeScript invocation explicit and document schema-owned boundary validation."
+      "rationale": "Port behavior-baseline, compatibility, and measured-performance guidance."
+    },
+    {
+      "path": "docs/guide/06-verify-and-ship.md",
+      "kind": "changed",
+      "oldSha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
+      "newSha256": "3ef0eed5ea084dfbbaf1b1ae9e08d84f2c8a2b536ffb3ef5226710bf105f70e6",
+      "disposition": "ported-codex-native",
+      "rationale": "Port claim-specific proof and current-head revalidation guidance without adding repository-write authority."
     },
     {
       "path": "docs/guide/07-overnight.md",
       "kind": "changed",
-      "oldSha256": "eefbc665ad411ee22b6430d779674e5e8d8f304d51fafd80a62ab2334d095ebc",
-      "newSha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
+      "oldSha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
+      "newSha256": "d7bd33a3d880768688dff4c1c2b5481ca9f0f194f5d97e44b65c9f96624d3ff0",
       "disposition": "ported-codex-native",
-      "rationale": "Document code-ready verification rounds and authorized hourly heartbeat audit instead of host loops."
+      "rationale": "Port unattended-run authority, stop-condition, and blocker guidance. Use supported Codex goals or heartbeats instead of Cursor loops."
     },
     {
       "path": "docs/guide/08-principles.md",
       "kind": "changed",
-      "oldSha256": "3ede7c9cf74d9631142aec016a01843d97c1e20469387144b70c2660d50fa96f",
-      "newSha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
+      "oldSha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
+      "newSha256": "73c3db659d356d4aa6d7674d30d0db46fab2bdd60152fca717c2d1772a042bdc",
+      "disposition": "retained-codex-native",
+      "rationale": "The upstream text change is Cursor command wording. Keep the complete Codex principle index and dollar-prefixed invocation syntax."
+    },
+    {
+      "path": "docs/guide/09-make-it-yours.md",
+      "kind": "changed",
+      "oldSha256": "b98588a232a38ca7acebbeecb95ac771df1981aed662dcb45c96b4b66ed20ec0",
+      "newSha256": "157e0c20ad3c657857c2fbbea3afd26895b71b8f68475bc56f4c382dcdd0e118",
       "disposition": "ported-codex-native",
-      "rationale": "Index the twenty-fourth principle Explain the Number and benchmark evidence."
+      "rationale": "Port correction and benchmark guidance while retaining Codex skill-authoring and approval boundaries."
+    },
+    {
+      "path": "docs/guide/10-recipes-and-pitfalls.md",
+      "kind": "changed",
+      "oldSha256": "a4662cd98870f08c6abe117a832abe37670ee84f8ed25dcbe7e99ef4eb8e05e0",
+      "newSha256": "c652474764b08da4a6364d85f5d03cf1fc1cf35e9d7c549348fb66e2d09f7b1f",
+      "disposition": "ported-codex-native",
+      "rationale": "Port new task recipes with dollar-prefixed skills and Codex authority boundaries."
     },
     {
       "path": "docs/guide/README.md",
       "kind": "changed",
-      "oldSha256": "0db8dd72e832c06638ca2f43489e8597d44dc0ea8da3b5088e4382ea26d904c5",
-      "newSha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
+      "oldSha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
+      "newSha256": "49d92cfe91e01c04bd1150e5b000ee4fd4dfda8ce789b66a9dda98f7e5456e00",
       "disposition": "ported-codex-native",
-      "rationale": "Add the scoped poteto-help route to the Codex guide."
+      "rationale": "Add concise prompt anatomy and state that help is explicit-only."
+    },
+    {
+      "path": "README.md",
+      "kind": "changed",
+      "oldSha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
+      "newSha256": "7f39feae81103e18b567e1fa5075cba86425cf4697a01be66a7422ef93c2c855",
+      "disposition": "ported-codex-native",
+      "rationale": "Document explicit-only help and Codex-native prompt guidance. Retain verified Codex model and reasoning-effort policy."
+    },
+    {
+      "path": "skills/architect/references/runner-prompt.md",
+      "kind": "changed",
+      "oldSha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
+      "newSha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+      "disposition": "ported-codex-native",
+      "rationale": "Port parallel-runner wording and qualify model identity as observable."
     },
     {
       "path": "skills/architect/SKILL.md",
       "kind": "changed",
-      "oldSha256": "897a59beaa3cab107d98c256206e062cc4a5e9421a45b9d462fbded19291fea5",
-      "newSha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
-      "disposition": "ported-codex-native",
-      "rationale": "Port agent-local design screening. Retain observable Codex model-pair profiles instead of unsupported upstream family slugs."
-    },
-    {
-      "path": "skills/architect/references/design-red-flags.md",
-      "kind": "changed",
-      "oldSha256": "905066f9bbac81c573c2b325be47751d2c0f9325e0a0772bd4384e82dafe9336",
-      "newSha256": "d0e639e4cc588ec865f930d3a4111faad60987ae36925917e319d7ceca7c69ce",
-      "disposition": "ported-codex-native",
-      "rationale": "Port split state ownership, duplicate supported paths, importable internals, and hand-synced inventory flags."
+      "oldSha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
+      "newSha256": "922238947195f2fb825e90688bb6cfa520b81a35a7bee12223c73a6cf96ae64b",
+      "disposition": "retained-validated-codex-model-policy",
+      "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
     },
     {
       "path": "skills/arena/SKILL.md",
       "kind": "changed",
-      "oldSha256": "8d431f7b1aa19daf6300366fc876c4d1aadac06417ec5502407345ffaf4e90d9",
-      "newSha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
+      "oldSha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
+      "newSha256": "6e17736b5228b661569c3af054f8302c55cf9bf1649447652d53705cce38bed6",
       "disposition": "retained-validated-codex-model-policy",
-      "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
-    },
-    {
-      "path": "skills/benchmark-checklist/SKILL.md",
-      "kind": "added",
-      "oldSha256": null,
-      "newSha256": "6a767e788a60428fa14e645ee10fe2e49896e514ff654f668b1d824deb9038e8",
-      "disposition": "ported-codex-native",
-      "rationale": "Add seven measurement checks, at least five alternating samples, median/range, completed-work/error evidence, limiter/tuning checks, and macOS/Linux core discovery."
+      "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs, families, or Task fields."
     },
     {
       "path": "skills/blast-radius/SKILL.md",
       "kind": "changed",
-      "oldSha256": "20cb2945f5fe62055166f745107274af5f19428ca033e53a9b8bc69650d3ded1",
-      "newSha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
+      "oldSha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
+      "newSha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
       "disposition": "ported-codex-native",
-      "rationale": "Port concise risk reporting; retain proof limits and label unproven facts under the Codex verification contract."
-    },
-    {
-      "path": "skills/correct/SKILL.md",
-      "kind": "added",
-      "oldSha256": null,
-      "newSha256": "bf482bacc972b3f124a4af8bf9364b4b3e280cb5845e44c326ea4f4565e5c904",
-      "disposition": "ported-codex-native",
-      "rationale": "Add recurrence classes after two examples, architecture/types/lint/tests/docs order, negative-control proof, and an enforcement table. Scope wider sweeps to explicit requests."
-    },
-    {
-      "path": "skills/figure-it-out/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "e041c64a39f1084a20e60ee99762c4dbd3ec8be56ed33fd68ea867b8bd8bd3e4",
-      "newSha256": "0eb9485f0e7d84fee56b5d0f0af0faf4635e3ca87c8cba3970c01293b76ecc19",
-      "disposition": "ported-codex-native",
-      "rationale": "Port shorter loop wording without removing verifiable-unit checks, Codex artifact audit, or the authority contract."
+      "rationale": "Port the more-than-one-model wording and keep the observable-model requirement."
     },
     {
       "path": "skills/how/SKILL.md",
       "kind": "changed",
-      "oldSha256": "06b714dbd830bc829bfb89e33a1c39daf6d72ea412e488ea9d65f5f33b885a0c",
-      "newSha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
+      "oldSha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
+      "newSha256": "7e0d902484a90eba73dcf518bff478dc5b962b456d23c3d0a188c2ce36b236d8",
       "disposition": "retained-validated-codex-model-policy",
-      "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
-    },
-    {
-      "path": "skills/how/references/explorer-prompt.md",
-      "kind": "changed",
-      "oldSha256": "3a6965276d23be7d8da6c305bfd5d7bf29d2aef09e5dae4119463ac72022a02d",
-      "newSha256": "a3b44a6e5bb16a6d4d1cac19db8ed5322ffd5f5f5d45baca4e73990ca096f8be",
-      "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
+      "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
     },
     {
       "path": "skills/interrogate/SKILL.md",
       "kind": "changed",
-      "oldSha256": "2867910309e81411123ae4edca68ffca5795e66521d3f3bc0876f6213b542fb9",
-      "newSha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
+      "oldSha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
+      "newSha256": "2f7e570ec23791ed2e485a09c98ed0597c46035e2050b351b84d3dc760ddd71f",
       "disposition": "retained-validated-codex-model-policy",
-      "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
+      "rationale": "Keep the Codex reviewer-profile contract and observable model identity. Do not copy Cursor model slugs or defaults."
     },
     {
-      "path": "skills/interrogate/references/code-quality-review.md",
-      "kind": "changed",
-      "oldSha256": "623d3d8122d075c303b562783b471a732992e84166b318f85ab6d6c118b13304",
-      "newSha256": "79162fda183eafd40d51661fbb5e151c7ba250f89e506ba17f5bd135dcbd50a8",
+      "path": "skills/poteto-help/references/prompting.md",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "463f450c44a60afd001a2f69fdf8a5dea174351f339369b12ec3c41515e564d3",
       "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
+      "rationale": "Add prompt anatomy, context, design, follow-up, unattended-work, and steering guidance with Codex syntax and authority rules."
     },
     {
-      "path": "skills/interrogate/references/reviewer-prompt.md",
-      "kind": "changed",
-      "oldSha256": "a397cc61102add709803d917fb23d726920525bf23e7c06dc4ed0b5cbeb00e54",
-      "newSha256": "e0598e254792b56de39bb16b1e6db559b03a522fdc54b98f942d254090920ae6",
+      "path": "skills/poteto-help/references/recipes.md",
+      "kind": "added",
+      "oldSha256": null,
+      "newSha256": "1872323419a3e5c7783b1933f7a180ca26c25a6e1f4ec83bd65e091ebbfb812b",
       "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
-    },
-    {
-      "path": "skills/interrogate/references/rubric.md",
-      "kind": "changed",
-      "oldSha256": "59e9b7cc4556e735e1b859a7dd1f7637b013a2426a84825ac1c51979942c158a",
-      "newSha256": "a85aa801abbaf14434f00579440abc0d8e2723227ba8bf57de7cca8d6e7d2f25",
-      "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
+      "rationale": "Add copyable Codex prompt recipes with dollar-prefixed skills, supported lifecycle behavior, and no Cursor loops."
     },
     {
       "path": "skills/poteto-help/SKILL.md",
-      "kind": "added",
-      "oldSha256": null,
-      "newSha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
+      "kind": "changed",
+      "oldSha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
+      "newSha256": "ea71bcb15c023a5d9cc70686e4812144687ffe03bf80d85cc480af3e0b181d1e",
       "disposition": "ported-codex-native",
-      "rationale": "Add read-before-routing guidance, prompt examples, scoped troubleshooting, local links, and Codex profiles/hooks. Keep all skills explicit-only and remove Cursor modes/loops."
+      "rationale": "Make help explicit-only, add prompt routing and one-time optional profile setup guidance, and retain Codex links and lifecycle boundaries."
+    },
+    {
+      "path": "skills/poteto-mode/scripts/orch/orch.test.ts",
+      "kind": "changed",
+      "oldSha256": "174b86d21ff51ccd28d1a8c938cb2e0c6fa287b209d4ca6c03932fcb1b53372e",
+      "newSha256": "773153ac74de6eb15f58d2682f487f5f30672d7efe3ef1d24a131aa9129d279b",
+      "disposition": "retained-codex-native",
+      "rationale": "Keep the host-neutral verifier fixture. The upstream label change only follows a Cursor default-model change."
     },
     {
       "path": "skills/poteto-mode/SKILL.md",
       "kind": "changed",
-      "oldSha256": "6bbf35cb2111c358461c7ba90f210dad4573f3a3ada92f6459eac0c69d83b01a",
-      "newSha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
-      "disposition": "ported-codex-native",
-      "rationale": "Index benchmark checks and Explain the Number. Require fresh owners for new unrelated work while retaining same-task delegation and the runtime contract."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/autopilot-full.md",
-      "kind": "changed",
-      "oldSha256": "52f69170bd7fa6b436992d90d3ef7fba893201e0b497297b416e9aea0e567d5f",
-      "newSha256": "05ca30a16242c19d0c78ba1e88cca66f858d75252cb154fd740099fe292de802",
-      "disposition": "ported-codex-native",
-      "rationale": "Port code-ready rounds, focused lanes, all-site red proof, child tables, stable fix-round base, committed-head checks, merge-tree/CI overlap gates, hourly audit, and fresh owners. Independent PRs use the resolved forge without requiring Graphite. Parent authority and one bounded replacement remain."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/autopilot-stack.md",
-      "kind": "changed",
-      "oldSha256": "66364cd3a2286cbecfb73d3a7bf7d1fa387ede8525d37ef22b69d4ac03c2c5b2",
-      "newSha256": "007c0a3b12011954a224f54773ef4ad7b75918be0a311914c1b51ad4e794c1e5",
-      "disposition": "ported-codex-native",
-      "rationale": "Port code-ready rounds and hourly audits while retaining parent topology authority. Maintain exact linear membership and parent base/head pairs through supported PR tools or forge operations. Graphite is an optional capability, never a prerequisite."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/babysit.md",
-      "kind": "changed",
-      "oldSha256": "51be21872152f97612d37258273269b88212b6696432d25d678cac30f02f4157",
-      "newSha256": "a0346c37c2313f36a863b80f66ee7b98059c2242adf74fc7b3e48abdb9ec6f5a",
-      "disposition": "ported-codex-native",
-      "rationale": "Add the explicitly assigned Autopilot owner exception. Retain topology isolation, current-SHA gates, and user-only landing authority."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/bug-fix.md",
-      "kind": "changed",
-      "oldSha256": "e958c67d5454fc12d76ec645b50dfd85c423082aac13a49e2913ef2815948216",
-      "newSha256": "018bbc146ae19145caa6c7e70591fee081b64447dda1c1c4b681c9974d928b13",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise repro instructions and retain observable Codex role selection and required red-first proof; runtime authority supersedes upstream host defaults."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/feature.md",
-      "kind": "changed",
-      "oldSha256": "430dae0fd736554ff7dffc3ef0644c9f0c845e25742f69e598c35b9b89660301",
-      "newSha256": "3a62cc4a8cbcf144bb9dd05f05420a15be0d38b784d3b141bb730a5852f50a62",
-      "disposition": "ported-codex-native",
-      "rationale": "Retain explicit architecture skip receipts and validated Codex model selection. Upstream host default changes do not change Codex entitlement."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/hillclimb.md",
-      "kind": "changed",
-      "oldSha256": "bc1fc4052c1ee918a56115a219cbcbbc4c147fa1a8080e77c7d58068eecac299",
-      "newSha256": "244f289898fe67a458065e90fe8217c916c5acf61cdee8975ade3f9831a12e91",
-      "disposition": "ported-codex-native",
-      "rationale": "Vet and freeze the measurement harness with benchmark checks, errors and completed-work counts; order attempts by performance mantras."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/multi-phase-plan.md",
-      "kind": "changed",
-      "oldSha256": "63426a55519fbc4fb9f00baf5cc7b1148f70dfb62ad360a0f6533d287dd36edf",
-      "newSha256": "27d310e3fc3937a60b8fcbe1318f9d249a7477a722907bf85b3e4eb3dc436b11",
-      "disposition": "ported-codex-native",
-      "rationale": "Use hourly authorized heartbeat audit with every-tick log and change-only messages. Start focused review rounds at code-ready and permit only shipping-rule lane reuse."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/opening-a-pr.md",
-      "kind": "changed",
-      "oldSha256": "b173ff9638ff62f91f6813c1a0ed3417cdf9f6545a659be0c1fb1f42130e0e66",
-      "newSha256": "ab40de7163c1c6e274f46ee559b2e53ef45673703f601f13f4931c199e6fb90f",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise What changed/Scope/risk/proof sections, built-in PR capability preference, and linear parent-base/head stack semantics. Use the resolved forge with optional Graphite; preserve parent publication and PR attachment."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/pause-safely.md",
-      "kind": "changed",
-      "oldSha256": "7d5fc10e144265f1b35f8157926541e738c1de64b6a85b3e61b51cf268c3dffd",
-      "newSha256": "77968cfe5f4a71a8cd33e0ae8ffcdbd88dd693a212c240457773e6c40c96c21d",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise pause wording while preserving Codex supported lifecycle and resume receipts."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/perf-issue.md",
-      "kind": "changed",
-      "oldSha256": "b2ee9aed1466583361cb61b4e8d79ebb3b61f7f9f6540be7633852afacab1d89",
-      "newSha256": "2b88ad0f880e4d4d755ac19fe52414d6631d6baa816d060f53cf0a7429d7e14a",
-      "disposition": "ported-codex-native",
-      "rationale": "Port benchmark baseline checks and seven cost-ordered performance mantras. Retain validated Codex model roles."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/refactoring.md",
-      "kind": "changed",
-      "oldSha256": "53bac1f1fe886600dd1991b5511b7975e6a206168038f9d282d88e45408e93cf",
-      "newSha256": "50f4f7d3d301551f8b8a57c3303c99958c5ca630ae0d0051823b6987c0eb5b96",
-      "disposition": "ported-codex-native",
-      "rationale": "Retain behavior pin, explicit evidence, and configured Codex profiles instead of the new unsupported host default."
-    },
-    {
-      "path": "skills/poteto-mode/playbooks/shipping.md",
-      "kind": "changed",
-      "oldSha256": "c301902136e0a9a0a55403c35374f6f5738e501aee66c27458dc197b87557550",
-      "newSha256": "19f3f6803a7bbe9ff04f624b03e3b55f07ac0a05e991aa00d5fe51239b920b2a",
-      "disposition": "ported-codex-native",
-      "rationale": "Port forge selection with no required Graphite, independent per-PR verdicts, verified contiguous root, one bottom PR prepared and landed at a time, exact-head patch-id/build-output lane reuse, forge-specific readiness, post-merge membership reconciliation, and frontier monitoring. Parent writes and authorized Codex lifecycle remain."
-    },
-    {
-      "path": "skills/poteto-mode/scripts/check-plan.mjs",
-      "kind": "changed",
-      "oldSha256": "4f5118edf719b481983dc87dfadd5b4b5473d05aad04a7ba65191ff9c73faf1b",
-      "newSha256": "4f9432d9989880b6afc2bdda503d5b12a9d07d357ecf31936b7ab5e83bc80523",
-      "disposition": "ported-codex-native",
-      "rationale": "Accept observable model names or inherited Codex fast profiles without a host slug; enforce hourly audit markers and keep verification/shape checks."
-    },
-    {
-      "path": "skills/principle-explain-the-number/SKILL.md",
-      "kind": "added",
-      "oldSha256": null,
-      "newSha256": "5aac99e7ce0bb1b37e2579acf4fe88c32a1456d9d46afd4a57cfe1df9092e89c",
-      "disposition": "ported-codex-native",
-      "rationale": "Add limiter, spread, count, and alternate-explanation proof for perf and eval numbers."
-    },
-    {
-      "path": "skills/principle-guard-the-context-window/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "9f60e2c79b35f865cb103462f9128c6760b70f603475d1e535e5930f61840f66",
-      "newSha256": "d2cef147862576e3d709b7afc149d85196245e8338b9c7eef337c95fba412b3e",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise principle wording and remove redundant self-audit repetitions. The shared Codex runtime retains independent artifact verification and authority boundaries."
-    },
-    {
-      "path": "skills/principle-never-block-on-the-human/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "d82bce9ab9193249d1ec0d514202d89602f0fd3d312174d622c2dd222bae5a2e",
-      "newSha256": "f2764bb9338cbfc788c903cf4b9cd0a5f4042d3a04dd6d59cbd525d9beaadd0a",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise principle wording and remove redundant self-audit repetitions. The shared Codex runtime retains independent artifact verification and authority boundaries."
-    },
-    {
-      "path": "skills/principle-outcome-oriented-execution/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "beedcaed75572a6a1662d47f16da203c2bd2c9dbffbbd678d4ba187d67b7e670",
-      "newSha256": "10eb91633aa570355ba4bb37088fcade2b22e498df7a58edc749e65bc5a78e2d",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise principle wording and remove redundant self-audit repetitions. The shared Codex runtime retains independent artifact verification and authority boundaries."
-    },
-    {
-      "path": "skills/principle-prove-it-works/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "ae13d287984a5864312b6286899d4ee2b60f8272b5e5e8fcc586a7c3ea51020b",
-      "newSha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise principle wording and remove redundant self-audit repetitions. The shared Codex runtime retains independent artifact verification and authority boundaries."
-    },
-    {
-      "path": "skills/principle-sequence-verifiable-units/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "761390804ee36c32f5338d8db47ec54463d40ff96dbb296dfafabcd5f2593eec",
-      "newSha256": "2ccbbacc56ace5afdfb8670cef19d7bd009fb2a0033b9a741cbdf2b6baf72187",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise principle wording and remove redundant self-audit repetitions. The shared Codex runtime retains independent artifact verification and authority boundaries."
+      "oldSha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
+      "newSha256": "31cd02290360ce63564ef22b74d69fc6d90e62181d05a644cbed8f6c47cc9412",
+      "disposition": "retained-validated-codex-model-policy",
+      "rationale": "Keep the Codex runtime contract and observable model and effort profiles. Do not copy Cursor defaults."
     },
     {
       "path": "skills/reflect/SKILL.md",
       "kind": "changed",
-      "oldSha256": "6a4d4ccaace9ce88c3e268fcbedf3cfd40e527162a5e5aad6de8edbaf5e2b83f",
-      "newSha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
+      "oldSha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
+      "newSha256": "31b8fb866ebe084e7fb7f16dc0ea46ab84ffdc838d54f948edc78556f301a497",
       "disposition": "retained-validated-codex-model-policy",
-      "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
-    },
-    {
-      "path": "skills/reflect/references/divergent-reviewer.md",
-      "kind": "changed",
-      "oldSha256": "7da0334ce282e6d8d7349c0cff14ffbd10a91a756c0b5c3ccc97291f57b8bed6",
-      "newSha256": "221dfc0abf7cbcd25e1da3cd87323f5d1050fc3bf652e096d093584e183c98fb",
-      "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
-    },
-    {
-      "path": "skills/reflect/references/judgment-reviewer.md",
-      "kind": "changed",
-      "oldSha256": "917bb2ad21240a42b440aeb2a17766092e09f70d0982417b2f4caa6d74f27164",
-      "newSha256": "a40ecb9b28bd2a3491e11a541157fe58efe158e0eda7b61a5006c14590aabe61",
-      "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
-    },
-    {
-      "path": "skills/reflect/references/tooling-reviewer.md",
-      "kind": "changed",
-      "oldSha256": "8c74ebf7811801d634db7ab609b097d77ea00ab77bb4b258d69bd96e671cfa39",
-      "newSha256": "bc49ced90fa81eaba3083b88aeb430d900a6d8f14ff40c1d6b52263bacfc77b6",
-      "disposition": "ported-codex-native",
-      "rationale": "Port upstream concise reviewer wording and remove redundant self-audit prose while retaining the Codex role, authority, artifact evidence, and unsupported-capability guards."
+      "rationale": "Keep observable Codex model and effort profiles. Do not remove OpenAI-compatible reviewer roles because Cursor changed its defaults."
     },
     {
       "path": "skills/setup-pstack/SKILL.md",
       "kind": "changed",
-      "oldSha256": "5acdc3db4f15f3e9b81fb56eab7f17cdccde1a11a40053ed7743f7467729c8a9",
-      "newSha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
-      "disposition": "ported-codex-native",
-      "rationale": "Port requested unlimited/large/medium/small effort budgets. Validate each separate Codex model/effort pair, preserve owned profiles, and never write Cursor rules or substitute entitlement guesses."
-    },
-    {
-      "path": "skills/show-me-your-work/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "831e85ba3f84f38bf338cd03e6af050fea357752e25a825e334c99f59d7f2077",
-      "newSha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
-      "disposition": "ported-codex-native",
-      "rationale": "Port per-run start rows and append-only superseding audit corrections; use supported Codex task history and retain explicit verification limits."
-    },
-    {
-      "path": "skills/show-me-your-work/scripts/log.sh",
-      "kind": "changed",
-      "oldSha256": "1601bc18f9aba0af3f5d6375e4f2d5dc6102334d1bca935026c0e3547cdadbbf",
-      "newSha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
-      "disposition": "ported-codex-native",
-      "rationale": "Port nonempty-file detection and append-only header creation so a failed existence check cannot truncate prior rows."
-    },
-    {
-      "path": "skills/swarm/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "d578d877c3b8b9de7163f52579c4683337a940acc0fbe4496a498f5d3b27df30",
-      "newSha256": "bdcee4168e22428036e93d7cdeec3f391dbc4132f927f6db2540328c22db0273",
-      "disposition": "ported-codex-native",
-      "rationale": "Port exact SHA and sample/method/order receipts, all proven issues, and one retry before visible gaps; keep capacity, write isolation, and Codex model validation."
-    },
-    {
-      "path": "skills/tdd/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "011cab0ecc04a3632121efb493ae4d60aa282a9b72c66de74dd8ad7e4313e05a",
-      "newSha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
-      "disposition": "ported-codex-native",
-      "rationale": "Port concise executable-repro guidance and preserve meaningful regressions and runtime proof."
-    },
-    {
-      "path": "skills/technical-writing/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "6d6d9e625ae412ee8f36df8deb6fd9203d7c6acca776d5ee3cabbb9126f8b84c",
-      "newSha256": "f5c512ffeec70bc4e0dee50f7bb4c26742e1be77967a6e8b15d1921e1c209ceb",
-      "disposition": "ported-codex-native",
-      "rationale": "Remove redundant static source dates and self-review checklist while retaining prose standards and Codex scope."
-    },
-    {
-      "path": "skills/typescript-best-practices/references/patterns.md",
-      "kind": "changed",
-      "oldSha256": "62e9cd32d2fa066a35d0d1349aac22dce31a48ad7d5eaf142570770cfe707384",
-      "newSha256": "faa1362055374452efccac1b629677c61acfb0bcc6c4e3311836b5715638ee18",
-      "disposition": "ported-codex-native",
-      "rationale": "Port schema parsing and inferred boundary types; typed validator assignment rejects incomplete shape instead of trusting handwritten predicates."
-    },
-    {
-      "path": "skills/unslop/SKILL.md",
-      "kind": "changed",
-      "oldSha256": "c6d2572294d933a428211921069e9a248490e9b466ca59437cb4d9de248600ca",
-      "newSha256": "195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1",
-      "disposition": "ported-codex-native",
-      "rationale": "Retain Codex concise drafting rules; removed upstream self-audit wording was already replaced by direct writing guidance."
+      "oldSha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
+      "newSha256": "d61b47256a18155a81c8e5ef95e3cc6569ce8c18317c35c4dd9c8015cf68cb59",
+      "disposition": "retained-validated-codex-model-policy",
+      "rationale": "Keep exact Codex model and reasoning-effort validation, inheritance, ownership receipts, and user-selected budgets. Cursor rule files and defaults do not apply."
     },
     {
       "path": "skills/why/SKILL.md",
       "kind": "changed",
-      "oldSha256": "222b93789754ba6ee901835137184acdca667f7e47c523bcc85aca86675fb249",
-      "newSha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
+      "oldSha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
+      "newSha256": "442215bf70e491d4d31bd200c197f2ec447445df38e074c40880fc4bf30a1f9e",
       "disposition": "retained-validated-codex-model-policy",
-      "rationale": "Retain validated separate Codex model and effort pairs with inheritance when unobservable. New upstream Cursor role lines, family fallback slugs, and Task fields cannot establish Codex model entitlement."
+      "rationale": "Keep observable Codex model and effort profiles. Do not copy Cursor model slugs or defaults."
     }
   ]
 }

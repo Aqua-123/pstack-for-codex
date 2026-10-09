@@ -3,36 +3,26 @@
   "source": {
     "repository": "https://github.com/cursor/plugins",
     "subdirectory": "pstack",
-    "commit": "4e5b1cf2ccb0ea3716f08c8ee0a5856b5ab93536",
-    "version": "0.15.10",
-    "retrievedAt": "2026-10-05",
+    "commit": "ccb5507cec1546dc88135c1139c811e6c59115ba",
+    "version": "0.15.15",
+    "retrievedAt": "2026-10-09",
     "license": "MIT",
     "licenseFile": "LICENSE"
   },
   "inventory": {
-    "fileCount": 162,
+    "fileCount": 164,
     "hashAlgorithm": "sha256"
   },
   "files": [
     {
       "path": ".cursor-plugin/plugin.json",
-      "sha256": "312bb5769ab97743e7d8ab511fa045e3b50f826a474af246eb5b317527a907a9",
+      "sha256": "7bc736c60985805f70465e044e5adc7028663f72a73deea7fa3e95e52d70dc8e",
       "bytes": 722
     },
     {
       "path": ".gitignore",
       "sha256": "8ffe9de56bd30c1a95cd945262d6e3ac355ada4111551dde41f67851b9f1fc55",
       "bytes": 30
-    },
-    {
-      "path": "LICENSE",
-      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
-      "bytes": 1067
-    },
-    {
-      "path": "README.md",
-      "sha256": "3636c863c78885b08e290096707c8b5ad79fd76eb7de5836ac00f559cf2115b0",
-      "bytes": 24539
     },
     {
       "path": "agents/comment-sicko.md",
@@ -60,11 +50,6 @@
       "bytes": 1321
     },
     {
-      "path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
-      "sha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
-      "bytes": 14238
-    },
-    {
       "path": "automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
       "sha256": "58b0615d2fca895f9a20df83266e280042b0d585b5f2fd324e2094a682fd846b",
       "bytes": 5517
@@ -80,19 +65,24 @@
       "bytes": 3149
     },
     {
+      "path": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+      "sha256": "1363cc07343fe86aab42853b1bd4563288cbcbdf12f1c265b3b3b1afa25c09cb",
+      "bytes": 14238
+    },
+    {
       "path": "automations/benny/skills/setup-benny/SKILL.md",
       "sha256": "5a3cbe63360c9f6373b6cb6c79a1eaf7e0eba181bfaa1577e2e6431af3407282",
       "bytes": 13992
     },
     {
-      "path": "automations/benny/skills/triage-issue-reports/SKILL.md",
-      "sha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
-      "bytes": 10320
-    },
-    {
       "path": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
       "sha256": "e5e53013692568cf69da8e8b302fff929fe2fbc9aec1a4651fd7997e2c7a4025",
       "bytes": 1892
+    },
+    {
+      "path": "automations/benny/skills/triage-issue-reports/SKILL.md",
+      "sha256": "216a758b8711e64d19a55e6032c496527daac6364d010611040f3c04ef1a448f",
+      "bytes": 10320
     },
     {
       "path": "automations/benny/templates/configuration.example.yaml",
@@ -111,58 +101,53 @@
     },
     {
       "path": "docs/guide/01-setup.md",
-      "sha256": "e0f346fc79ce615f50bb735fc048a5f13ef674f00890c3af162e9e43acd8217a",
-      "bytes": 3263
+      "sha256": "86d0330f245d16254a2069955f993c15d96cf29cd1a73690a0164074b7ac1190",
+      "bytes": 4313
     },
     {
       "path": "docs/guide/02-poteto-mode.md",
-      "sha256": "032de2e18a1ca0cc72b7239d1ed76d390203794e9f12cbc6d69c4189ddd1968d",
-      "bytes": 4845
+      "sha256": "979f61ca3d44cb8e68affda40327d32797e93fa9cc53ced7444c15e2600897e1",
+      "bytes": 7045
     },
     {
       "path": "docs/guide/03-understand.md",
-      "sha256": "16f3fe0f7df092a5c69dac90971ef57e63a8a9ae926eed851285c7bfddc0f3fd",
-      "bytes": 3516
+      "sha256": "0090afa9b8670adf175466a2a973ff4349e95ed67d2aa8cebdfc55ff4b7382c9",
+      "bytes": 5197
     },
     {
       "path": "docs/guide/04-design.md",
-      "sha256": "21e820ff73c0b70682aa570a967ede446b4d7caf62e8f391d0dd733ccb74874c",
-      "bytes": 4866
+      "sha256": "31f2abe6e9b29feafd1a9eece8f4fe21992f86b8c19ab2e9b5c11a20f36587e7",
+      "bytes": 8759
     },
     {
       "path": "docs/guide/05-build-and-clean.md",
-      "sha256": "07182a1961e7fe430276e7d767b4dc506e7612767e82eb092baa35c8a7e083df",
-      "bytes": 4762
+      "sha256": "a93cc7771f7b35c7b54d0120b6f66e8367794ce6791237e889a30e7585c190fa",
+      "bytes": 5696
     },
     {
       "path": "docs/guide/06-verify-and-ship.md",
-      "sha256": "c93cd50c0359ce875a82b3f7d64eab102a4b0815dbbecdb8e0e5e910bd2d18e9",
-      "bytes": 6000
+      "sha256": "3ef0eed5ea084dfbbaf1b1ae9e08d84f2c8a2b536ffb3ef5226710bf105f70e6",
+      "bytes": 9683
     },
     {
       "path": "docs/guide/07-overnight.md",
-      "sha256": "5033d61e8b4b6fb0b2304b2132f26bf0b6aee685aa4ed53a76a73cf0ac1c3557",
-      "bytes": 5447
+      "sha256": "d7bd33a3d880768688dff4c1c2b5481ca9f0f194f5d97e44b65c9f96624d3ff0",
+      "bytes": 9139
     },
     {
       "path": "docs/guide/08-principles.md",
-      "sha256": "a103e293dd6d9513f425feac39547f0c2c049300f36704d80b6d49c958e5a4bb",
-      "bytes": 5427
+      "sha256": "73c3db659d356d4aa6d7674d30d0db46fab2bdd60152fca717c2d1772a042bdc",
+      "bytes": 5916
     },
     {
       "path": "docs/guide/09-make-it-yours.md",
-      "sha256": "b98588a232a38ca7acebbeecb95ac771df1981aed662dcb45c96b4b66ed20ec0",
-      "bytes": 4641
+      "sha256": "157e0c20ad3c657857c2fbbea3afd26895b71b8f68475bc56f4c382dcdd0e118",
+      "bytes": 7632
     },
     {
       "path": "docs/guide/10-recipes-and-pitfalls.md",
-      "sha256": "a4662cd98870f08c6abe117a832abe37670ee84f8ed25dcbe7e99ef4eb8e05e0",
-      "bytes": 4598
-    },
-    {
-      "path": "docs/guide/README.md",
-      "sha256": "af1408b3d46ed71f199937e250b8acb90e0e43305a0799e4acbd3461880ace11",
-      "bytes": 2200
+      "sha256": "c652474764b08da4a6364d85f5d03cf1fc1cf35e9d7c549348fb66e2d09f7b1f",
+      "bytes": 7419
     },
     {
       "path": "docs/guide/images/design.jpg",
@@ -195,9 +180,19 @@
       "bytes": 331450
     },
     {
-      "path": "skills/architect/SKILL.md",
-      "sha256": "741901140ee382ebf93263a7ed03c6ee3719e578416d81afcd195876fa16c496",
-      "bytes": 5675
+      "path": "docs/guide/README.md",
+      "sha256": "49d92cfe91e01c04bd1150e5b000ee4fd4dfda8ce789b66a9dda98f7e5456e00",
+      "bytes": 2608
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "bytes": 1067
+    },
+    {
+      "path": "README.md",
+      "sha256": "7f39feae81103e18b567e1fa5075cba86425cf4697a01be66a7422ef93c2c855",
+      "bytes": 24538
     },
     {
       "path": "skills/architect/references/design-red-flags.md",
@@ -211,13 +206,18 @@
     },
     {
       "path": "skills/architect/references/runner-prompt.md",
-      "sha256": "983bf2820cc14ed8ecab6e448e1033e5cfe6031967d0a9287b48c7fa9c33d925",
-      "bytes": 3087
+      "sha256": "21dd5314aab778c5007228027a4591d97693fbec6ab86524037772b63f40948e",
+      "bytes": 3092
+    },
+    {
+      "path": "skills/architect/SKILL.md",
+      "sha256": "922238947195f2fb825e90688bb6cfa520b81a35a7bee12223c73a6cf96ae64b",
+      "bytes": 5661
     },
     {
       "path": "skills/arena/SKILL.md",
-      "sha256": "e3a1f6c49a08b7e0b92134e53300d146f1f22ba83386d2019926e736df421851",
-      "bytes": 4973
+      "sha256": "6e17736b5228b661569c3af054f8302c55cf9bf1649447652d53705cce38bed6",
+      "bytes": 4937
     },
     {
       "path": "skills/automate-me/SKILL.md",
@@ -231,8 +231,8 @@
     },
     {
       "path": "skills/blast-radius/SKILL.md",
-      "sha256": "5f02db9101ccf26c20254718f0fcd5c2c7ac5d4292b0e0923d0944ac47237aff",
-      "bytes": 3851
+      "sha256": "2e10745b97f5862323dcda3b29ca60d56b5c3c98e37020085d26b48efbe0a436",
+      "bytes": 3856
     },
     {
       "path": "skills/bro/SKILL.md",
@@ -245,9 +245,9 @@
       "bytes": 2445
     },
     {
-      "path": "skills/create-verification-skill/SKILL.md",
-      "sha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
-      "bytes": 5879
+      "path": "skills/create-verification-skill/references/feature-map-example/create-note.md",
+      "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+      "bytes": 2926
     },
     {
       "path": "skills/create-verification-skill/references/feature-map-example/README.md",
@@ -255,24 +255,19 @@
       "bytes": 2601
     },
     {
-      "path": "skills/create-verification-skill/references/feature-map-example/create-note.md",
-      "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
-      "bytes": 2926
-    },
-    {
       "path": "skills/create-verification-skill/references/feature-map-example/search.md",
       "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
       "bytes": 3478
     },
     {
+      "path": "skills/create-verification-skill/SKILL.md",
+      "sha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
+      "bytes": 5879
+    },
+    {
       "path": "skills/figure-it-out/SKILL.md",
       "sha256": "0eb9485f0e7d84fee56b5d0f0af0faf4635e3ca87c8cba3970c01293b76ecc19",
       "bytes": 4059
-    },
-    {
-      "path": "skills/how/SKILL.md",
-      "sha256": "d31805589c7f6a63a6db6c9fadebbd79fb9660682cf1654e9b2e5e1e7cd30bc0",
-      "bytes": 3077
     },
     {
       "path": "skills/how/references/explainer-prompt.md",
@@ -285,9 +280,9 @@
       "bytes": 2684
     },
     {
-      "path": "skills/interrogate/SKILL.md",
-      "sha256": "59d498c3e9848a24b2d105eb3f05b808aa4152adf4cb1de7bbb6aff4f4cd9b68",
-      "bytes": 5054
+      "path": "skills/how/SKILL.md",
+      "sha256": "7e0d902484a90eba73dcf518bff478dc5b962b456d23c3d0a188c2ce36b236d8",
+      "bytes": 3081
     },
     {
       "path": "skills/interrogate/references/code-quality-review.md",
@@ -310,6 +305,11 @@
       "bytes": 5025
     },
     {
+      "path": "skills/interrogate/SKILL.md",
+      "sha256": "2f7e570ec23791ed2e485a09c98ed0597c46035e2050b351b84d3dc760ddd71f",
+      "bytes": 4998
+    },
+    {
       "path": "skills/maintain-verification-skill/SKILL.md",
       "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
       "bytes": 4922
@@ -325,14 +325,19 @@
       "bytes": 2560
     },
     {
-      "path": "skills/poteto-help/SKILL.md",
-      "sha256": "9fdf7bbef7fde89f0ee8c64b00e360f3ed24fc2529763c9e18b7f1a60c3587b0",
-      "bytes": 12706
+      "path": "skills/poteto-help/references/prompting.md",
+      "sha256": "463f450c44a60afd001a2f69fdf8a5dea174351f339369b12ec3c41515e564d3",
+      "bytes": 3166
     },
     {
-      "path": "skills/poteto-mode/SKILL.md",
-      "sha256": "404c0ef4a78e93451b2ab555ca532e7197b5cf87de29205b6f7109dbee5d9c4d",
-      "bytes": 20559
+      "path": "skills/poteto-help/references/recipes.md",
+      "sha256": "1872323419a3e5c7783b1933f7a180ca26c25a6e1f4ec83bd65e091ebbfb812b",
+      "bytes": 3287
+    },
+    {
+      "path": "skills/poteto-help/SKILL.md",
+      "sha256": "ea71bcb15c023a5d9cc70686e4812144687ffe03bf80d85cc480af3e0b181d1e",
+      "bytes": 13433
     },
     {
       "path": "skills/poteto-mode/playbooks/authoring-a-skill.md",
@@ -471,8 +476,8 @@
     },
     {
       "path": "skills/poteto-mode/scripts/orch/orch.test.ts",
-      "sha256": "174b86d21ff51ccd28d1a8c938cb2e0c6fa287b209d4ca6c03932fcb1b53372e",
-      "bytes": 18424
+      "sha256": "773153ac74de6eb15f58d2682f487f5f30672d7efe3ef1d24a131aa9129d279b",
+      "bytes": 18425
     },
     {
       "path": "skills/poteto-mode/scripts/orch/orch.ts",
@@ -553,6 +558,11 @@
       "path": "skills/poteto-mode/scripts/worktree-audit.sh",
       "sha256": "95b8530f3c0ccada8cabc4b0727c052fbc85c141531375aaace65c427af8aecc",
       "bytes": 3984
+    },
+    {
+      "path": "skills/poteto-mode/SKILL.md",
+      "sha256": "31cd02290360ce63564ef22b74d69fc6d90e62181d05a644cbed8f6c47cc9412",
+      "bytes": 20563
     },
     {
       "path": "skills/principle-attack-the-premise/SKILL.md",
@@ -680,11 +690,6 @@
       "bytes": 5212
     },
     {
-      "path": "skills/reflect/SKILL.md",
-      "sha256": "36efa48cc4ec2ba6f8131651aae24c6321682b098ed47a1069a7509462bf4a84",
-      "bytes": 4982
-    },
-    {
       "path": "skills/reflect/references/divergent-reviewer.md",
       "sha256": "221dfc0abf7cbcd25e1da3cd87323f5d1050fc3bf652e096d093584e183c98fb",
       "bytes": 3889
@@ -705,14 +710,14 @@
       "bytes": 4609
     },
     {
-      "path": "skills/setup-pstack/SKILL.md",
-      "sha256": "125dd0c8f588782cfb271efae8f97a0719e43e79f56b3495c095f460bcee6389",
-      "bytes": 5548
+      "path": "skills/reflect/SKILL.md",
+      "sha256": "31b8fb866ebe084e7fb7f16dc0ea46ab84ffdc838d54f948edc78556f301a497",
+      "bytes": 4992
     },
     {
-      "path": "skills/show-me-your-work/SKILL.md",
-      "sha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
-      "bytes": 6418
+      "path": "skills/setup-pstack/SKILL.md",
+      "sha256": "d61b47256a18155a81c8e5ef95e3cc6569ce8c18317c35c4dd9c8015cf68cb59",
+      "bytes": 5716
     },
     {
       "path": "skills/show-me-your-work/references/decision-log-template.tsv",
@@ -723,6 +728,11 @@
       "path": "skills/show-me-your-work/scripts/log.sh",
       "sha256": "a65a4bc5fb7cdeadbdb7b7ff1ca4682f4d9c42420942b2977cd17b46c4ac338e",
       "bytes": 1377
+    },
+    {
+      "path": "skills/show-me-your-work/SKILL.md",
+      "sha256": "bcff5f7f9fd23f92c12b251f9cd6b947e9485e1055cfacb6fdd9cae0789d7550",
+      "bytes": 6418
     },
     {
       "path": "skills/swarm/SKILL.md",
@@ -745,24 +755,19 @@
       "bytes": 9792
     },
     {
-      "path": "skills/typescript-best-practices/SKILL.md",
-      "sha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
-      "bytes": 2684
-    },
-    {
       "path": "skills/typescript-best-practices/references/patterns.md",
       "sha256": "faa1362055374452efccac1b629677c61acfb0bcc6c4e3311836b5715638ee18",
       "bytes": 9214
     },
     {
+      "path": "skills/typescript-best-practices/SKILL.md",
+      "sha256": "28f9e61710e205f6f3c5476f333483cff0e988f6a5b639e2faad536344b40c5e",
+      "bytes": 2684
+    },
+    {
       "path": "skills/unslop/SKILL.md",
       "sha256": "195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1",
       "bytes": 6015
-    },
-    {
-      "path": "skills/why/SKILL.md",
-      "sha256": "2a852ec8680920109d2b56538b027c52867896a597250ac5d18a13e0b42e5b06",
-      "bytes": 10360
     },
     {
       "path": "skills/why/references/epistemics.md",
@@ -823,6 +828,11 @@
       "path": "skills/why/references/synthesizer-prompt.md",
       "sha256": "733a3e9cf897b1aca56aaddeae01a3832e4bfed024c2f602db2d1bf807d7a73b",
       "bytes": 7984
+    },
+    {
+      "path": "skills/why/SKILL.md",
+      "sha256": "442215bf70e491d4d31bd200c197f2ec447445df38e074c40880fc4bf30a1f9e",
+      "bytes": 10362
     }
   ]
 }

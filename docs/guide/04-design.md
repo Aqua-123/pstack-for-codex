@@ -2,6 +2,8 @@
 
 Use design work when a change crosses boundaries or has several credible shapes. Skip it for a mechanical edit whose structure is already fixed.
 
+When the user experience is uncertain, request small prototypes before a plan. Compare screenshots, recordings, command transcripts, or other real outputs. After the design is stable, make each plan step end with a check.
+
 ![Several robots draft separate bridge designs while a reviewer compares them.](./images/design.jpg)
 
 ## Settle boundaries with `$architect`
@@ -35,5 +37,7 @@ $interrogate review this design for correctness, migration risk, operability, an
 ```
 
 `$interrogate` returns findings grouped by action and explains dismissals. Distinct model families are useful when observable, but installed model labels do not prove which model served a request. Reports mark unverified identity instead of claiming diversity.
+
+For an unfamiliar package or interface, a short usage tutorial can be a design artifact. It exposes awkward call sites before implementation commits the repository to the shape.
 
 Next: [Build and clean the change](./05-build-and-clean.md).
