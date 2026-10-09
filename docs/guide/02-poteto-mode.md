@@ -20,6 +20,10 @@ $poteto-mode new task. Explain why the cache survives logout. Do not edit code.
 
 The second prompt routes to a read-only investigation because the authority boundary forbids edits.
 
+A useful prompt has an outcome, a finish check, relevant evidence, constraints, and a clear scope. You do not need to prescribe the implementation. If the source report is noisy, ask Poteto Mode to restate the issue before it proposes work.
+
+Short follow-ups such as `continue` work when the active task is clear. Use `new task` when the subject changes. Use `$poteto-help` when you want a prompt drafted without starting the task.
+
 ## Understand session state
 
 Start the prompt with `$poteto-mode`, `$pstack-for-codex:poteto-mode`, or the Codex skill chip. The chip serializes as a Markdown link with either exact label and a normalized absolute local path ending in `/skills/poteto-mode/SKILL.md`. Quoted examples, casual mentions, and links to other skills do not activate the mode.

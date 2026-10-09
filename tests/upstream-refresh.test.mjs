@@ -51,19 +51,17 @@ test("decision log initializes an empty file and preserves prior rows on append"
   assert.match(current, /'\=unsafe cell\tline break\tartifact\tpassed/);
 });
 
-test("refresh ledger pins every source delta and all four additions", async () => {
+test("refresh ledger pins every source delta and both additions", async () => {
   const map = JSON.parse(await fs.readFile(path.join(root, "compatibility/pstack-map.json"), "utf8"));
   const previous = new Map(map.refresh.fromFiles.map((entry) => [entry.path, entry.sha256]));
   const lock = JSON.parse(await fs.readFile(path.join(root, "upstream.lock.json"), "utf8"));
   const current = new Map(lock.files.map((entry) => [entry.path, entry.sha256]));
   const changed = [...current].filter(([name, hash]) => previous.get(name) !== hash);
-  assert.equal(changed.length, 56);
+  assert.equal(changed.length, 27);
   assert.deepEqual(new Set(map.refreshDecisions.map((entry) => entry.path)), new Set(changed.map(([name]) => name)));
   assert.deepEqual(map.refreshDecisions.filter((entry) => entry.kind === "added").map((entry) => entry.path).sort(), [
-    "skills/benchmark-checklist/SKILL.md",
-    "skills/correct/SKILL.md",
-    "skills/poteto-help/SKILL.md",
-    "skills/principle-explain-the-number/SKILL.md",
+    "skills/poteto-help/references/prompting.md",
+    "skills/poteto-help/references/recipes.md",
   ]);
   for (const decision of map.refreshDecisions) {
     assert.equal(decision.oldSha256, previous.get(decision.path) ?? null);

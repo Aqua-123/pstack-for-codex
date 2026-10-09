@@ -26,6 +26,8 @@ Use the installed `skill-creator` when available, or ask Codex to follow the rep
 
 Use `$technical-writing` for documentation and `$unslop` for the final prose pass. Use the [authoring-a-skill playbook](../../skills/poteto-mode/playbooks/authoring-a-skill.md) when the change needs a full plan and evaluation.
 
+Use `$correct` when the same mistake has at least two examples. Prefer an architecture, type, lint, test, or tool constraint over a prose reminder. Use `$benchmark-checklist` before you preserve or publish a performance number.
+
 ## Keep provenance separate
 
 Do not edit [`upstream.lock.json`](../../upstream.lock.json) to describe a local customization. The lock records the imported source. Put derivative behavior in the compatibility map, tests, and adaptation notes. [UPSTREAM.md](../../UPSTREAM.md) covers refreshes.

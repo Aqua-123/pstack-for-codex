@@ -58,7 +58,7 @@ The other skills are useful when you want one specific operation:
 | [`$architect`](./skills/architect/SKILL.md) | Settle types, callers, and module boundaries before implementation. |
 | [`$arena`](./skills/arena/SKILL.md) | Compare isolated attempts at the same brief. |
 | [`$swarm`](./skills/swarm/SKILL.md) | Cover independent slices or races and aggregate the result. |
-| [`$interrogate`](./skills/interrogate/SKILL.md) | Run a skeptical, multi-lens review of a diff. |
+| [`$interrogate`](./skills/interrogate/SKILL.md) | Run a skeptical, multi-lens review of a diff with different verified model profiles when available. |
 | [`$tdd`](./skills/tdd/SKILL.md) | Reproduce a bug with a failing test before fixing it. |
 | [`$no-comments`](./skills/no-comments/SKILL.md) | Review comments and remove ones that do not earn their place. |
 | [`$unslop`](./skills/unslop/SKILL.md) | Remove vague or machine-shaped prose. |
@@ -67,6 +67,8 @@ The other skills are useful when you want one specific operation:
 | [`$make-bot-ui`](./skills/make-bot-ui/SKILL.md) | Build a local UI for an authenticated user-owned webhook. |
 
 Browse the [complete skill directory](./skills/) or read the [pstack guide](./docs/guide/README.md).
+
+`$poteto-help` is explicit-only. Invoke it when you need a skill route, a prompt structure, or a copyable prompt. It does not start the suggested work.
 
 ## Runtime boundaries
 
@@ -130,4 +132,4 @@ See [Codex adaptation notes](./docs/codex-adaptation.md) for the behavioral chan
 
 MIT. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
 
-The 0.3.0 refresh includes [`$poteto-help`](./skills/poteto-help/SKILL.md) for workflow guidance, [`$correct`](./skills/correct/SKILL.md) for recurring mistakes, and [`$benchmark-checklist`](./skills/benchmark-checklist/SKILL.md) with [Explain the Number](./skills/principle-explain-the-number/SKILL.md) for measured claims. Model budgets remain separate from model identity and require observable support. Autopilot verification starts at code-ready and repeats for each changed patch.
+The 0.3.1 refresh tracks upstream pstack 0.15.15. It adds Codex-native prompt guidance and recipes to [`$poteto-help`](./skills/poteto-help/SKILL.md), keeps help explicit-only, and retains observable Codex model and reasoning-effort validation. Cursor-only defaults, Custom Modes, and loops do not become Codex behavior.

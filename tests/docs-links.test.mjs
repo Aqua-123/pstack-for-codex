@@ -79,7 +79,7 @@ async function validateDocumentationLinks(packageRoot) {
 test("documentation links and images resolve from an installed copy", async (context) => {
   const temporary = await fs.mkdtemp(path.join(os.tmpdir(), "pstack-docs-installed-"));
   context.after(() => fs.rm(temporary, { recursive: true, force: true }));
-  const installed = path.join(temporary, "pstack-for-codex", "0.3.0");
+  const installed = path.join(temporary, "pstack-for-codex", "0.3.1");
   await fs.cp(root, installed, {
     recursive: true,
     filter: (source) => !source.split(path.sep).some((part) => part === ".git" || part === "node_modules"),

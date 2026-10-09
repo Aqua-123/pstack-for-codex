@@ -19,12 +19,12 @@ test("every locked upstream path has one complete compatibility entry", async ()
   const map = JSON.parse(await fs.readFile(path.join(root, "compatibility/pstack-map.json"), "utf8"));
   const result = validateCompatibility(lock, map);
   assert.deepEqual(result.errors, []);
-  assert.equal(map.entries.length, 162);
-  assert.equal(new Set(map.entries.map((entry) => entry.upstreamPath)).size, 162);
-  assert.equal(map.refreshDecisions.length, 56);
+  assert.equal(map.entries.length, 164);
+  assert.equal(new Set(map.entries.map((entry) => entry.upstreamPath)).size, 164);
+  assert.equal(map.refreshDecisions.length, 27);
   assert.deepEqual(
     Object.fromEntries(["added", "changed", "deleted-or-renamed"].map((kind) => [kind, map.refreshDecisions.filter((entry) => entry.kind === kind).length])),
-    { added: 4, changed: 52, "deleted-or-renamed": 0 },
+    { added: 2, changed: 25, "deleted-or-renamed": 0 },
   );
   for (const decision of map.refreshDecisions) {
     assert.ok(decision.disposition.length > 0);

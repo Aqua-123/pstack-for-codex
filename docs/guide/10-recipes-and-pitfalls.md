@@ -2,6 +2,8 @@
 
 Copy these prompts, then replace the nouns and finish conditions with your own.
 
+For more examples, invoke `$poteto-help` and ask for a prompt for your task. The help skill reads its prompt guidance and returns one adapted example without starting the work.
+
 ![A robot follows a recipe card while avoiding marked hazards.](./images/recipes.jpg)
 
 ## Understand a subsystem
@@ -26,6 +28,18 @@ $interrogate review this branch against its stated intent. Report actionable fin
 
 ```text
 $poteto-mode reproduce the duplicate retry row, add the narrow regression check, fix the root cause, and verify the real command.
+```
+
+## Resume a branch
+
+```text
+$poteto-mode take over this branch. Read the decision log, verify what is complete, and continue. Do not repeat finished work.
+```
+
+## Plan after design
+
+```text
+$poteto-mode prototype several options for this interface and capture screenshots. Stop for design review. After approval, make a plan of small verifiable pull requests.
 ```
 
 ## Run bounded parallel checks

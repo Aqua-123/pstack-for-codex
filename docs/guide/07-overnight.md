@@ -18,6 +18,8 @@ The worktree keeps the run separate from other checkouts. A decision log makes t
 $show-me-your-work record the decisions for this run.
 ```
 
+Pre-answer common authority questions. State whether commits are allowed and whether the run must stop before a push, pull request, merge, deployment, or external message. Name credentials and product decisions as stop conditions.
+
 ## Use supported lifecycle objects
 
 Codex may use a durable goal and a thread heartbeat only because the request asks for continued overnight work. The workflow checkpoints progress through supported task tools. It does not keep a shell process alive with a sleep loop.
@@ -35,6 +37,8 @@ In the morning, inspect:
 5. remaining processes, worktrees, and scratch outputs.
 
 Treat every child report as a claim until the parent checks the artifact.
+
+If the run cannot reach the finish condition after repeated evidence-based attempts, it must stop and record the blocker. Continued execution is not permission to hide failure or weaken the finish condition.
 
 ## Configure Benny separately
 

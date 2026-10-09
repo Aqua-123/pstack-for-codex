@@ -12,6 +12,8 @@ $poteto-mode fix the retry duplicate. Done means the regression test passes and 
 
 The parent reruns authoritative checks after integrating child work. A child summary is evidence, not completion.
 
+Match each claim to its proof. A type check supports a type claim. A focused test supports the exercised behavior. A screenshot or recording supports the visible state it shows. None of these alone proves an unrelated runtime or deployment claim.
+
 ## Create a project verification skill
 
 If the repository lacks a repeatable real-surface check, ask:
@@ -33,5 +35,7 @@ Run the repository checks, inspect `git diff --check`, and use `$interrogate` fo
 The [opening-a-PR playbook](../../skills/poteto-mode/playbooks/opening-a-pr.md) prepares a focused branch and pull request. The [babysit playbook](../../skills/poteto-mode/playbooks/babysit.md) watches authorized review and CI work. The [shipping playbook](../../skills/poteto-mode/playbooks/shipping.md) verifies a stack before an authorized landing action.
 
 These playbooks do not infer permission to commit, push, open a pull request, merge, or deploy. State the allowed repository and action in the request. The parent validates the remote and branch immediately before a write.
+
+Before a pull request is ready, compare its current head with the recorded verification result. If the patch changed after verification, rerun the affected checks. Read review dismissals as well as accepted findings.
 
 Next: [Run authorized overnight work](./07-overnight.md).

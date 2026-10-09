@@ -2,6 +2,8 @@
 
 Use the investigation skills before you settle on an edit. Each one answers a different question.
 
+For a read-only investigation, state `Do not change code.` Ask for known facts, used evidence, and ranked hypotheses. This keeps an investigation separate from an unapproved fix.
+
 ![A robot traces a system diagram and source history before touching the code.](./images/understanding.jpg)
 
 ## Trace current behavior with `$how`
@@ -37,5 +39,7 @@ $recall catch me up on the export retry work from the last seven days.
 `$recall` uses supported Codex task APIs within the active project. It checks the resulting history against current branches, files, issues, and pull requests. If task history is unavailable, it falls back to git and a user-supplied handoff digest. It never scrapes a private host store.
 
 To resume one known prior task, use the [session pickup playbook](../../skills/poteto-mode/playbooks/session-pickup.md). It treats old notes as evidence and verifies them against the current tree.
+
+When you provide a long issue report or task transcript, ask the agent to restate the underlying problem in plain language. Correct the restatement before implementation if it changes the goal.
 
 Next: [Design the change](./04-design.md).
