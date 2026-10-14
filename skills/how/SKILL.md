@@ -7,14 +7,15 @@ description: "Use for \"how does X work\", code walkthroughs before changing som
 
 Delegation and optional capabilities follow `../poteto-mode/references/codex-agent-runtime.md`.
 
-Explore the codebase to answer "how does X work?" questions. Produce clear architectural explanations at the level of a senior engineer onboarding onto a subsystem. Enough to build a working mental model, not annotated source code.
+Use the owning skill roles with observable Codex profiles when available. Otherwise inherit the parent model and reasoning effort. Read-only investigators may use authorized connector reads. A missing capability follows the runtime contract fallback; do not infer alternate-model availability.
 
-Two modes:
+## 1. Assess complexity
 
 1. **Explain** (default). Explore the codebase and produce a clear explanation
 2. **Critique.** Explain first, then spawn multiple models to independently identify architectural issues
 
-## Explain Mode
+- **Simple** (a single module, a small utility, a narrow question such as "how does function X work"): no explorers. Spawn one explainer that explores and explains in one pass, built from `references/explainer-prompt.md` without the explorer-findings section. Go to step 4.
+- **Complex** (a subsystem spanning multiple files or services, a cross-cutting feature, a full architectural overview): go to step 2.
 
 ### Step 1. Understand the Question and Assess Complexity
 

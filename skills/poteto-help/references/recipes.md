@@ -4,12 +4,14 @@ Replace the placeholders with real paths, skills, and finish checks.
 
 ## Understand
 
-- `$poteto-mode read <task>. Restate the underlying issue in plain language.`
-- `$poteto-mode investigate why <symptom> occurs. Give the evidence and best hypotheses. Do not change code.`
-- `$how explain <subsystem>. Then use $why to find why it changed.`
-- `$recall my work on <topic> from last week. Then compare it with <issue>.`
-- `$teach explain why this design was selected instead of <alternative>. State the trade-off.`
-- `$poteto-mode take over this branch. Read the decision log, verify what is complete, and continue. Do not repeat finished work.`
+- `$poteto-mode read <thread>. restate the underlying issue in your own words, in plain english.`
+- `/in-your-own-words <long or messy ask>`
+- `/sharpen <your task>`
+- `$poteto-mode investigate why <symptom>. give me what we know, what data you used, and your best hypotheses. don't change any code yet.`
+- `use $how to understand <subsystem>. then use $why to find out why it broke recently.`
+- `/recall my work on <topic> from last week, then read <issue>.`
+- `/teach me why you implemented it this way and not <other way>. what did you trade off?`
+- `$poteto-mode take over this branch. read the decision log, find what's done, and continue. don't redo finished work.`
 
 ## Build
 

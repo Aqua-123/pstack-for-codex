@@ -1,0 +1,8 @@
+interface:
+  display_name: "ketchup"
+  short_description: "Ketchup"
+  default_prompt: "Use $ketchup for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

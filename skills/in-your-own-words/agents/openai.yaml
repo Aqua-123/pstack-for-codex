@@ -1,0 +1,8 @@
+interface:
+  display_name: "in-your-own-words"
+  short_description: "In your own words"
+  default_prompt: "Use $in-your-own-words for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

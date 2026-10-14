@@ -1122,6 +1122,72 @@
         "evidence": "required",
         "stop_condition": "required"
       }
+    },
+    {
+      "id": "skill:in-your-own-words",
+      "kind": "skill",
+      "source": "skills/in-your-own-words/SKILL.md",
+      "case": "skill-positive:in-your-own-words",
+      "positive_outcome": "Explicit $in-your-own-words invocation follows the documented workflow without expanding user authority.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:ketchup",
+      "kind": "skill",
+      "source": "skills/ketchup/SKILL.md",
+      "case": "skill-positive:ketchup",
+      "positive_outcome": "Explicit $ketchup invocation follows the documented workflow without expanding user authority.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
+    },
+    {
+      "id": "skill:sharpen",
+      "kind": "skill",
+      "source": "skills/sharpen/SKILL.md",
+      "case": "skill-positive:sharpen",
+      "positive_outcome": "Explicit $sharpen invocation follows the documented workflow without expanding user authority.",
+      "boundaries": [
+        "explicit-only",
+        "authority",
+        "capability",
+        "negative-trigger"
+      ],
+      "disposition": "explicit-only",
+      "verdict": "passed-offline-contract",
+      "grades": {
+        "workflow": "required",
+        "role": "required",
+        "authority": "required",
+        "evidence": "required",
+        "stop_condition": "required"
+      }
     }
   ],
   "playbooks": [

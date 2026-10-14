@@ -15,11 +15,11 @@ test("fork and upstream identities remain separate", async () => {
     readJson("package.json"),
     readJson("upstream.lock.json"),
   ]);
-  assert.equal(manifest.version, "0.3.1");
-  assert.equal(packageJson.version, "0.3.1");
-  assert.equal(lock.source.version, "0.15.15");
-  assert.equal(lock.source.commit, "ccb5507cec1546dc88135c1139c811e6c59115ba");
-  assert.equal(lock.inventory.fileCount, 164);
+  assert.equal(manifest.version, "0.4.0");
+  assert.equal(packageJson.version, "0.4.0");
+  assert.equal(lock.source.version, "0.15.24");
+  assert.equal(lock.source.commit, "1e5c90a4b6f249917bd21fe361b3a2a7deb741b8");
+  assert.equal(lock.inventory.fileCount, 169);
 });
 
 test("inventory accounts for every upstream file, skill, and playbook", async () => {
@@ -28,8 +28,8 @@ test("inventory accounts for every upstream file, skill, and playbook", async ()
     readJson("compatibility/pstack-map.json"),
     listSkillRecords(root),
   ]);
-  assert.equal(new Set(lock.files.map((entry) => entry.path)).size, 164);
-  assert.equal(compatibility.entries.length, 164);
+  assert.equal(new Set(lock.files.map((entry) => entry.path)).size, 169);
+  assert.equal(compatibility.entries.length, 169);
   assert.deepEqual(
     new Set(compatibility.entries.map((entry) => entry.upstreamPath)),
     new Set(lock.files.map((entry) => entry.path)),
@@ -39,7 +39,7 @@ test("inventory accounts for every upstream file, skill, and playbook", async ()
     .map((entry) => entry.path.match(/^skills\/([^/]+)\/SKILL\.md$/)?.[1])
     .filter(Boolean)
     .sort();
-  assert.equal(upstreamSkills.length, 51);
+  assert.equal(upstreamSkills.length, 54);
   assert.equal(records.length, EXPECTED_SKILL_COUNT);
   assert.deepEqual(
     records.map((record) => record.directory).filter((name) => name !== "setup-benny").sort(),
@@ -54,7 +54,7 @@ test("inventory accounts for every upstream file, skill, and playbook", async ()
   assert.equal(playbooks.length, 23);
 });
 
-test("behavioral coverage maps all 51 upstream skills and all 23 playbooks", async () => {
+test("behavioral coverage maps all 54 upstream skills and all 23 playbooks", async () => {
   const [lock, coverage, representative] = await Promise.all([
     readJson("upstream.lock.json"),
     readJson("evals/cases/coverage.yaml"),

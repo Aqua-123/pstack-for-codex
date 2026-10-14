@@ -2,9 +2,7 @@ Delegation, lifecycle, isolation, history, and capability fallbacks follow `../r
 
 ### Shipping
 
-**You own what lands. Verify each PR independently, land only the verified run from the root, then keep your hands off the queue.**
-
-This is the half after `playbooks/babysit.md`.
+**You own what lands. Verify each PR independently, land only the verified run from the root, then keep your hands off the stack.**
 
 1. **Resolve the forge, then verify every PR independently.** Use a supported built-in PR tool for operations it covers. External writes remain in the parent effect phase. For other operations, GitHub CLI (`gh`) is the default. If `command -v origin` succeeds and Origin can resolve the repository, use `origin pr ...` for PR view, watch, edit, and merge operations. Otherwise stay on `gh` and record the fallback. Never require Graphite (`gt`). One subagent per PR, not batched, each an isolated Codex worktree agent, each exercising the real surface with the matching control skill (such as `control-ui` or `control-cli` from installed live-control skills) against parent versus head. Each returns `PASS`, `PASS+NOTES` or `FAIL` with its exact head and base. The parent validates and posts the verdict only within the user's publication authority. Safe means a verdict from an agent that did not write the code. CI green is not a verdict, and an approving bot review is not a verdict.
 2. **Land only the contiguous verified run rooted at the bottom.** Walk up from the lowest unmerged PR and stop at the first one without a passing verdict, where both `PASS` and `PASS+NOTES` pass. A verified PR sitting above an unverified one is not landable. Report the ceiling as a PR number and say what breaks the chain.
