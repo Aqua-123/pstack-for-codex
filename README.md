@@ -1,6 +1,6 @@
 # pstack for Codex
 
-`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 52 explicit-only skills and 23 Poteto Mode playbooks.
+`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 55 explicit-only skills and 23 Poteto Mode playbooks.
 
 Use `$poteto-mode` for a substantial engineering task. It selects a playbook, records the work as verifiable steps, and invokes narrower skills when the steps need them. The parent task keeps authority for integration, external writes, commits, pushes, and the final result.
 
@@ -21,7 +21,7 @@ codex plugin list --json
 
 Codex CLI `0.153.4` does not expose an offline runtime skill-index command. The release suite validates the skill catalog from the installed artifact; start a new task to exercise prompt-time skill discovery.
 
-All 52 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
+All 55 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
 
 ```text
 $poteto-mode add a --json flag to this command. Keep text output byte-identical. Verify both modes.
@@ -132,4 +132,4 @@ See [Codex adaptation notes](./docs/codex-adaptation.md) for the behavioral chan
 
 MIT. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
 
-The 0.3.1 refresh tracks upstream pstack 0.15.15. It adds Codex-native prompt guidance and recipes to [`$poteto-help`](./skills/poteto-help/SKILL.md), keeps help explicit-only, and retains observable Codex model and reasoning-effort validation. Cursor-only defaults, Custom Modes, and loops do not become Codex behavior.
+The 0.4.0 refresh tracks upstream pstack 0.15.24. It adds `$in-your-own-words`, `$ketchup`, and `$sharpen`, improves plan fence checks, and updates PR watching and forge-neutral stack handling. Codex authority, explicit-only discovery, profile inheritance, and supported history access remain enforced.

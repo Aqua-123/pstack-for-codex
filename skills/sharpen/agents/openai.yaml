@@ -1,0 +1,8 @@
+interface:
+  display_name: "sharpen"
+  short_description: "Sharpen"
+  default_prompt: "Use $sharpen for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

@@ -29,7 +29,7 @@ Update mode changes the rest of the flow:
 
 List recent tasks through supported Codex task APIs and scope them to the active project. Never infer or search a private history directory. If task APIs are unavailable, ask the user for a history digest or skip mining and state the limitation.
 
-Survey recent conversations within that scope for recurring patterns. For a large set, assign read-only subagents disjoint task IDs after proving their isolation. Each returns a short structured list of patterns with task identifiers as evidence. If agents are unavailable, inspect sequentially in the parent.
+Survey recent agent conversations within that scope for recurring patterns. Run multiple parallel subagents across slices of history (e.g. last 2-4 weeks, split into 3 slices so each has enough material). Inherit the parent model and reasoning effort unless the user or a validated profile requests another available pair. Each slice mining subagent reads transcripts from the workspace-scoped path the parent provides, looks for the signals below, and returns a short structured list of patterns it saw with evidence pointers. Default signals worth hunting:
 
 - Response preferences (length, tone, format, "dumb it down" corrections)
 - Delegation habits (subagents, models, specialized workflows, parallelism)
