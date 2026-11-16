@@ -143,4 +143,6 @@ See [Codex adaptation notes](./docs/codex-adaptation.md) for the behavioral chan
 
 MIT. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
 
+The 0.5.0 refresh tracks upstream pstack 0.15.42. It adds `$statechart`, `$create-formal-verification-skill`, `$maintain-formal-verification-skill`, and `$ketchup-video`. Orchestrate becomes an agentic playbook and the orch scripts are removed. `$how`, `$why`, and `$interrogate` each collapse to one file, and `$interrogate` keeps only findings a rerun proves. Codex authority, explicit-only discovery, profile inheritance, and supported history access remain enforced.
+
 The 0.4.0 refresh tracks upstream pstack 0.15.24. It adds `$in-your-own-words`, `$ketchup`, and `$sharpen`, improves plan fence checks, and updates PR watching and forge-neutral stack handling. Codex authority, explicit-only discovery, profile inheritance, and supported history access remain enforced.

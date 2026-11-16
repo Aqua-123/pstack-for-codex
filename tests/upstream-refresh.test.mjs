@@ -51,23 +51,30 @@ test("decision log initializes an empty file and preserves prior rows on append"
   assert.match(current, /'\=unsafe cell\tline break\tartifact\tpassed/);
 });
 
-test("refresh ledger pins every source delta and all five additions", async () => {
+test("refresh ledger pins every source delta, addition, and deletion", async () => {
   const map = JSON.parse(await fs.readFile(path.join(root, "compatibility/pstack-map.json"), "utf8"));
   const previous = new Map(map.refresh.fromFiles.map((entry) => [entry.path, entry.sha256]));
   const lock = JSON.parse(await fs.readFile(path.join(root, "upstream.lock.json"), "utf8"));
   const current = new Map(lock.files.map((entry) => [entry.path, entry.sha256]));
   const changed = [...current].filter(([name, hash]) => previous.get(name) !== hash);
-  assert.equal(changed.length, 87);
-  assert.deepEqual(new Set(map.refreshDecisions.map((entry) => entry.path)), new Set(changed.map(([name]) => name)));
-  assert.deepEqual(map.refreshDecisions.filter((entry) => entry.kind === "added").map((entry) => entry.path).sort(), [
-    "plugin.json",
-    "skills/in-your-own-words/SKILL.md",
-    "skills/ketchup/SKILL.md",
-    "skills/poteto-mode/scripts/check-plan.test.ts",
-    "skills/sharpen/SKILL.md",
+  const deleted = [...previous.keys()].filter((name) => !current.has(name));
+  assert.equal(changed.length, 482);
+  assert.equal(deleted.length, 21);
+  assert.deepEqual(
+    new Set(map.refreshDecisions.map((entry) => entry.path)),
+    new Set([...changed.map(([name]) => name), ...deleted]),
+  );
+  const added = map.refreshDecisions.filter((entry) => entry.kind === "added").map((entry) => entry.path);
+  assert.deepEqual(added.filter((name) => !name.startsWith("skills/statechart/")).sort(), [
+    "docs/harness/claude-code.md",
+    "skills/create-formal-verification-skill/SKILL.md",
+    "skills/ketchup-video/SKILL.md",
+    "skills/maintain-formal-verification-skill/SKILL.md",
   ]);
+  assert.equal(added.filter((name) => name.startsWith("skills/statechart/")).length, 408);
+  assert.ok(deleted.every((name) => !map.entries.some((entry) => entry.upstreamPath === name)));
   for (const decision of map.refreshDecisions) {
     assert.equal(decision.oldSha256, previous.get(decision.path) ?? null);
-    assert.equal(decision.newSha256, current.get(decision.path));
+    assert.equal(decision.newSha256, current.get(decision.path) ?? null);
   }
 });
