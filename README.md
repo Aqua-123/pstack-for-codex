@@ -93,14 +93,14 @@ The two stable automation names are `pstack-benny-triage` and `pstack-benny-repr
 
 ## Develop and verify
 
-The metadata and resource validator requires Node.js. The legacy orchestrator and watch-PR scripts require [Bun](https://bun.sh/).
+The metadata and resource validator requires Node.js. The watch-PR scripts require [Bun](https://bun.sh/).
 
 ```bash
 node scripts/validate-plugin.mjs --json
 node --test tests/*.test.mjs
 cd skills/poteto-mode/scripts
 bun install --frozen-lockfile
-bun test orch watch-pr
+bun test --timeout 30000 check-plan.test.ts watch-pr
 bun run typecheck
 ```
 

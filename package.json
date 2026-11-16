@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run verify:release",
     "test:offline": "node --test $(find tests -maxdepth 1 -name '*.test.mjs' ! -name 'installed-plugin-smoke.test.mjs' | sort)",
-    "test:bun": "bun test --cwd skills/poteto-mode/scripts --timeout 30000 check-plan.test.ts orch watch-pr",
+    "test:bun": "bun test --cwd skills/poteto-mode/scripts --timeout 30000 check-plan.test.ts watch-pr",
     "typecheck": "bun run --cwd skills/poteto-mode/scripts typecheck",
     "compatibility:check": "node scripts/generate-compatibility-report.mjs --check",
     "verify": "npm run verify:offline",

@@ -51,7 +51,6 @@ test("missing Bun fails before dependency state is created", async () => {
 test("tool launchers report the same missing Bun preflight", () => {
   const fixture = mkdtempSync(join(tmpdir(), "pstack-bun-launchers-"));
   for (const launcher of [
-    join(scripts, "orch", "orch"),
     join(scripts, "watch-pr", "watch-pr"),
   ]) {
     const result = spawnSync(launcher, ["--help"], {

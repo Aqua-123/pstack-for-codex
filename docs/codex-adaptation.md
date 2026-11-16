@@ -4,7 +4,7 @@ This document explains how the upstream pstack workflows map to Codex. It descri
 
 ## Skill registration
 
-The plugin manifest is [`.codex-plugin/plugin.json`](../.codex-plugin/plugin.json). The local marketplace manifest is [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json). Codex discovers 52 skills under `skills/`. Each skill has `agents/openai.yaml` metadata and sets `allow_implicit_invocation: false`.
+The plugin manifest is [`.codex-plugin/plugin.json`](../.codex-plugin/plugin.json). The local marketplace manifest is [`.agents/plugins/marketplace.json`](../.agents/plugins/marketplace.json). Codex discovers 59 skills under `skills/`. Each skill has `agents/openai.yaml` metadata and sets `allow_implicit_invocation: false`.
 
 Installed identities use the plugin namespace. Prompts use the explicit `$skill-name` form. Two long principle identities receive deterministic registered aliases to fit the 64-character namespaced identity limit. No skill is dropped.
 
@@ -53,7 +53,7 @@ Connectors, browser or app control, issue trackers, chat systems, review APIs, m
 
 ## Bun scripts
 
-Plugin discovery and the Node.js tests do not require Bun. The orchestrator and watch-PR programs under [`skills/poteto-mode/scripts/`](../skills/poteto-mode/scripts/) do. Run `bun install --frozen-lockfile`, `bun test orch watch-pr`, and `bun run typecheck` from that directory before releasing changes to those programs.
+Plugin discovery and the Node.js tests do not require Bun. The watch-PR programs under [`skills/poteto-mode/scripts/`](../skills/poteto-mode/scripts/) do. Run `bun install --frozen-lockfile`, `bun test --timeout 30000 check-plan.test.ts watch-pr`, and `bun run typecheck` from that directory before releasing changes to those programs.
 
 When Bun is unavailable, validation reports the missing capability. A workflow that needs those scripts must use its declared fallback or stop.
 
