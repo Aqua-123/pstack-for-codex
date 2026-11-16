@@ -1,0 +1,8 @@
+interface:
+  display_name: "statechart"
+  short_description: "Statechart"
+  default_prompt: "Use $statechart for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

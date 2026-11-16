@@ -28,7 +28,7 @@ test("manifest validation rejects unsupported fields and unsafe paths", async (c
 
   const errors = await validateManifest(temporary, {
     name: "pstack-for-codex",
-    version: "0.4.0",
+    version: "0.5.0",
     description: "test",
     skills: "../skills",
     agents: "./agents/",

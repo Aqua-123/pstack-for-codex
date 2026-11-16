@@ -52,6 +52,14 @@ $setup-pstack uninstall the project profiles.
 
 Upgrade and uninstall touch only receipted files whose current hashes still match. A changed or relocated file produces `review-required` and remains untouched.
 
+## Add verification skills
+
+After setup, check whether the project has a repeatable way to prove app behavior, such as a `verify-*` project skill or an existing harness. If it has neither, invoke [`$create-verification-skill`](../../skills/create-verification-skill/SKILL.md). An agent that can check its own work keeps going until the check passes. An agent that can't hands every result back to you.
+
+Tests check the cases someone thought to write. For code with concurrency, retries, a state machine, or a parser, where a bug is costly and tests rarely reach the case that breaks, also consider [`$create-formal-verification-skill`](../../skills/create-formal-verification-skill/SKILL.md). It checks one key property, such as "a job never runs twice at once", in every case within a stated scope. [Verify and ship](./06-verify-and-ship.md#prove-a-property-with-a-formal-verification-skill) covers both generators.
+
+Both generators write a project-local skill under `.agents/skills/`. Review it before any commit or pull request.
+
 Next: [Route work through `$poteto-mode`](./02-poteto-mode.md).
 
 For a requested reasoning budget, setup offers unlimited (`max`), large (`xhigh`), medium (`high`), and small (`medium`). It validates each model and effort separately. A written profile does not prove which model served a later agent.

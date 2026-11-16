@@ -5,12 +5,12 @@ Replace the placeholders with real paths, skills, and finish checks.
 ## Understand
 
 - `$poteto-mode read <thread>. restate the underlying issue in your own words, in plain english.`
-- `/in-your-own-words <long or messy ask>`
-- `/sharpen <your task>`
+- `$in-your-own-words <long or messy ask>`
+- `$sharpen <the prompt you're about to send>`
 - `$poteto-mode investigate why <symptom>. give me what we know, what data you used, and your best hypotheses. don't change any code yet.`
 - `use $how to understand <subsystem>. then use $why to find out why it broke recently.`
-- `/recall my work on <topic> from last week, then read <issue>.`
-- `/teach me why you implemented it this way and not <other way>. what did you trade off?`
+- `$recall my work on <topic> from last week, then read <issue>.`
+- `$teach me why you implemented it this way and not <other way>. what did you trade off?`
 - `$poteto-mode take over this branch. read the decision log, find what's done, and continue. don't redo finished work.`
 
 ## Build
@@ -32,7 +32,8 @@ Replace the placeholders with real paths, skills, and finish checks.
 
 ## Review and ship
 
-- `$interrogate review the complete branch. Do not change code. Report real bugs or regressions, and explain dismissals.`
+- `$interrogate review the complete branch. Do not change code. Report real bugs or regressions.` Read the Dropped list too.
+- `$create-formal-verification-skill prove <property> holds in <module>, even when <steps> interleave or retry.` After merges or refactors in that code, run `$maintain-formal-verification-skill`.
 - `$swarm check each package under <directory> with its check script. Use one read-only worker for each package and return one report.`
 - `$poteto-mode prepare the pull request with small ordered commits and evidence in the description.`
 - `$poteto-mode babysit pull request <number> until it is merge-ready. Do not merge it.`
@@ -42,7 +43,8 @@ Replace the placeholders with real paths, skills, and finish checks.
 
 - `$poteto-mode keep working in a separate worktree from <base>. Done means <checks>. Keep a decision log. Commits are allowed, but do not push or open a pull request. Stop for credentials or a product decision.`
 - `$show-me-your-work summarize the unattended run. Start with the Attention section.`
+- `$ketchup` catches you up on this chat since your last message and lists every call that waits on you.
 - `$poteto-mode full autopilot on this queue. Each item is independent.`
-- `$poteto-mode process these changes as a stack, but do not land it.`
+- `$poteto-mode autopilot these changes, but do not merge. I will land them.`
 - `$reflect capture the reusable lesson. Show proposed skill edits for approval.`
 - `$bro` restates the last reply in plain language.

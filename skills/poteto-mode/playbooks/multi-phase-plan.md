@@ -5,7 +5,7 @@
 1. When the change is one or two files with an obvious approach, skip the plan. Say so and stop.
 2. Settle open questions by prototype before you write. For a question about layout, timing, behavior, or whether an API works, run `playbooks/prototype.md`. Keep the branch, the SHA, and the screenshots for Appendix A. Ask the operator only about a product or preference call that no run can settle. Give options (the **never-block-on-the-human** principle skill).
 3. Explore with the installed `pstack-poteto-agent` profile or a generic agent seeded with the portable Poteto prompt. Follow the runtime contract's isolation and fallback rules. Each returns file pointers, conventions, test commands, and entry points. No inlined dumps.
-4. Copy the skeleton below into the plan file and fill every placeholder. Use the repository's documented plan directory or an operator-named path. Never infer a host-private store. Keep every heading and sub-block in order. One section per PR with its own evidence. Name the execution playbook in **How to read this**.
+4. Copy the skeleton below into the plan file and fill every placeholder. Use the repository's documented plan directory or an operator-named path. Never infer a host-private store. Keep every heading and sub-block in order. One section per PR with its own evidence. Name the execution playbook in **How to read this**. Pick `playbooks/autopilot-full.md` when the run may merge. Pick `playbooks/autopilot-stack.md` when the operator lands the PRs. A standing program takes `playbooks/orchestrate.md`.
 5. Apply `$technical-writing` in full, then `$unslop`. The body is one Diátaxis mode, how-to. Appendices hold explanation and reference. Two rules apply verbatim. "i dont want any abstract metaphors" and "write like hemingway". Each heading states the task or the finding. No long dashes. No mid-sentence colons.
 6. Run `node skills/poteto-mode/scripts/check-plan.mjs <plan.md>` and fix every line it prints (the **encode-lessons-in-structure** principle skill). It enforces the skeleton's shape, the verification rule in every verification block, and the punctuation rules.
 7. Hand back. Post the plan path and the script's output, then stop. Execution starts on the operator's explicit go, under the execution playbook the plan names.
@@ -61,13 +61,13 @@ Tests alone are not sufficient verification. A PR is verified only when its unit
 - [ ] Run the repo's lint and typecheck once before the PR-facing push. Push with hooks on.
 - [ ] Run `$deslop` before each commit and `$no-comments` before review.
 - [ ] Triage every Bugbot and security-reviewer comment per `../references/bugbot-triage.md`.
-- [ ] Rebase onto current trunk before the code-ready report and babysit. Keep that merge base in fix rounds. Rebase again only at merge prep, on a `git merge-tree` conflict with trunk, or on a CI failure that comes from a change on trunk.
+- [ ] Rebase onto current trunk before the code-ready report and babysit. Keep that merge base in fix rounds. Rebase again only at merge prep, on a `git merge-tree` conflict with trunk, on a CI failure that comes from a change on trunk, or when a known concurrent change to the same files lands.
 
 ### Verdict and merge, for every PR
 
-- [ ] At the code-ready head SHA and each later patch-changing push, run the swarm per `skills/swarm/SKILL.md`. One gates lane. The ten live lanes from the PR's **Verify, live** block. The perf lane from its **Verify, perf** block. At least two audit lanes with distinct focuses read the diff and receipts and distrust the PR body.
-- [ ] Clean only when every lane is `PASS`. Audit merge-ready receipts. Send every proven defect to the owner, including defects filed as notes. Require red proof across matching sites or a repro receipt. A new head gets a fresh swarm and verdict except lanes retained under the shipping patch-id rule.
-- [ ] <The merge or append rule from the execution playbook, with the patch-id rule from `playbooks/shipping.md`.>
+- [ ] At the code-ready head SHA and each later patch-changing push, run the swarm per `skills/swarm/SKILL.md`. One gates lane. The ten live lanes from the PR's **Verify, live** block. The perf lane from its **Verify, perf** block. At least two audit lanes with distinct focuses read the diff and receipts and distrust the PR body. A wording-only change gets no new run.
+- [ ] Judge every finding by the execution playbook's blocking rule. The verdict is clean when none blocks. Audit merge-ready receipts. A failure that trunk already shows in a lane's trunk comparison is recorded against trunk and does not block the PR. A new head gets a fresh swarm and verdict except lanes retained under the shipping patch-id rule.
+- [ ] <The merge or handoff rule from the execution playbook, with the patch-id rule from `playbooks/shipping.md`.>
 
 ### Boot recipe, for every live lane
 
@@ -131,7 +131,7 @@ Each live lane runs in its own isolated environment at the PR head through a det
 - [ ] Root's clean verdict at the exact head SHA.
 - [ ] Bugbot triage done.
 - [ ] Rebased onto current trunk after the verdict, patch-id unchanged.
-- [ ] <The owner squash-merges its own PR, or the root appends the PR to the verified linear stack and the operator lands it through the selected forge or optional Graphite.>
+- [ ] <The owner squash-merges its own PR, or the parent hands the verified PR to the operator, who lands it bottom-up through the selected forge or optional Graphite.>
 
 ## Close the program
 
@@ -152,7 +152,7 @@ Each live lane runs in its own isolated environment at the PR head through a det
 
 ## Appendix D. Links and reading list
 
-<Docs to read before editing. Which PRs get `skills/how/SKILL.md` and `skills/interrogate/SKILL.md`. The trail per `skills/show-me-your-work/SKILL.md`.>
+<Docs to read before editing. Which PRs get `skills/interrogate/SKILL.md`. The trail per `skills/show-me-your-work/SKILL.md`.>
 ````
 
 **Reply:** the plan path, the PR ids with their dependencies and the review-gated set, what the prototypes proved and what stays unproven, and the check script's output.

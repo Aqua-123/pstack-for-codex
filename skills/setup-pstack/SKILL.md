@@ -55,3 +55,11 @@ Add `--profile <json-file>` for requested pairs and `--models <json-file>` only 
 On success, report the scope, written paths, receipt path, and each role's configuration status. Say that new profiles apply to newly spawned agents. When a panel inherits or loses distinct profiles, report reduced model diversity instead of claiming which model served it.
 
 On `review-required` or any collision, stop. Show the exact paths and do not suggest force deletion.
+
+## Offer verification skills (optional)
+
+After setup finishes, check whether the project already has a way to drive the real app for proof, such as a `verify-*` project skill or an existing harness. If not, offer once: "want a project-local verification skill, so agents can drive the app the way a user does and prove changes work? I can generate one with `$create-verification-skill`."
+
+Then check whether the project already has a formal verification skill, a project skill that runs a model checker, a proof, or another verifier against the code. If not, offer once: "want a formal verification skill, so agents can prove a key property of your code holds in every case in scope, not only the cases tests reach? I can generate one with `$create-formal-verification-skill`."
+
+Run a generator only on an explicit yes. On no, move on without pushing. Profile setup does not authorize either generator.

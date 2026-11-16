@@ -1,19 +1,20 @@
 {
   "name": "pstack-for-codex",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Verification entry point for the Codex-native pstack derivative",
   "type": "module",
   "scripts": {
     "test": "npm run verify:release",
     "test:offline": "node --test $(find tests -maxdepth 1 -name '*.test.mjs' ! -name 'installed-plugin-smoke.test.mjs' | sort)",
-    "test:bun": "bun test --cwd skills/poteto-mode/scripts --timeout 30000 check-plan.test.ts orch watch-pr",
+    "test:bun": "bun test --cwd skills/poteto-mode/scripts --timeout 30000 check-plan.test.ts watch-pr",
     "typecheck": "bun run --cwd skills/poteto-mode/scripts typecheck",
     "compatibility:check": "node scripts/generate-compatibility-report.mjs --check",
     "verify": "npm run verify:offline",
-    "verify:offline": "npm run test:offline && npm run test:bun && npm run typecheck && npm run compatibility:check",
+    "verify:offline": "npm run test:offline && npm run test:bun && npm run test:statechart && npm run typecheck && npm run compatibility:check",
     "verify:release": "npm run verify:offline && npm run test:installed",
-    "test:installed": "PSTACK_RUN_INSTALLED_SMOKE=1 node --test tests/installed-plugin-smoke.test.mjs"
+    "test:installed": "PSTACK_RUN_INSTALLED_SMOKE=1 node --test tests/installed-plugin-smoke.test.mjs",
+    "test:statechart": "cd skills/statechart/scripts && npm ci --no-audit --no-fund && node --disable-warning=ExperimentalWarning --test $(ls test/*.test.ts | grep -v render.test.ts)"
   },
   "engines": {
     "node": ">=20"

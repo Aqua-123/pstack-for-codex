@@ -43,6 +43,8 @@ Before applying any Accepted edit, present the synthesizer's full Accepted/Rejec
 
 Backlog items are proposed actions. File them only when the active request authorizes tracker writes and the parent validates the exact destination and payload. Only the Accepted list waits for approval.
 
+Never edit a skill inside the installed plugin cache. Before approval, show each edit's destination, `.agents/skills/<skill>/` in the project or `~/.agents/skills/<skill>/` for the user. After approval, copy the skill folder there and edit the copy. Never open a PR or push.
+
 Follow each approved row's Routing exactly:
 
 - Trivial existing-skill edit (a one-line bullet, a tightened sentence, a stale fact corrected): parent does directly.
