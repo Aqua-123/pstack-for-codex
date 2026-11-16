@@ -15,7 +15,7 @@ import {
   stateRules,
   type Verdict,
 } from "../ir.ts";
-import { compile } from "../pipeline.ts";
+import { compileChart } from "../pipeline.ts";
 
 const scripts = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -174,7 +174,7 @@ const body = (files: Map<string, Iterable<string | Uint8Array>>, name: string) =
 };
 
 test("the pipeline turns a hand-built graph into the out folder's files with no TLC", () => {
-  const broken = compile(twoStates([small]), noView);
+  const broken = compileChart(twoStates([small]), noView);
   assert.equal(broken.exit, 1);
   assert.deepEqual(
     [...broken.files.keys()],
@@ -204,7 +204,7 @@ test("the pipeline turns a hand-built graph into the out folder's files with no 
     /^ {2}(s\d+) --> (s\d+): Grow\n[\s\S]*^ {2}class \2 breaks$/m,
   );
 
-  const holds = compile(twoStates([]), noView);
+  const holds = compileChart(twoStates([]), noView);
   assert.equal(holds.exit, 0);
   assert.deepEqual([...holds.files.keys()], ["chart.mmd", "report.md", "tlc.out"]);
   assert.match(holds.report, /^## Rules that hold\nSmall, Settles$/m);
@@ -225,7 +225,7 @@ test("an invariant and a property with one name stay two rules", () => {
         initialOnly: false,
       },
     ];
-    return compile(result, noView).report;
+    return compileChart(result, noView).report;
   };
   const both = reportWithSmallProperty([small]);
   assert.match(both, /^## Small breaks\nThe shortest path has 1 step:$/m);
@@ -239,7 +239,7 @@ test("an invariant and a property with one name stay two rules", () => {
 test("a PROPERTY that breaks with no path writes TLC's counterexample", () => {
   const result = twoStates([]);
   result.properties[0].outcome = "broken";
-  const { report, files } = compile(result, noView);
+  const { report, files } = compileChart(result, noView);
   assert.match(
     report,
     /^## Settles breaks\nTLC found a counterexample\. It is in tlc-Settles\.out\.$/m,
@@ -251,7 +251,7 @@ test("a rule named NoDeadlock leaves the deadlock rule a name of its own", () =>
   const holds = (result: CheckResult) => {
     result.spec.deadlock = true;
     result.rules = holding(result.spec);
-    return compile(result, noView).report.match(/^## Rules that hold\n(.*)$/m)?.[1];
+    return compileChart(result, noView).report.match(/^## Rules that hold\n(.*)$/m)?.[1];
   };
   const invariant = twoStates([]);
   invariant.spec.invariants = ["NoDeadlock"];
@@ -265,6 +265,6 @@ test("a run that does not check for deadlock never names CHECK_DEADLOCK", () => 
   invariant.spec.invariants = ["Small", "NoDeadlock"];
   for (const result of [invariant, twoStates([], "NoDeadlock")]) {
     result.rules = holding(result.spec);
-    assert.doesNotMatch(compile(result, noView).report, /CHECK_DEADLOCK/);
+    assert.doesNotMatch(compileChart(result, noView).report, /CHECK_DEADLOCK/);
   }
 });

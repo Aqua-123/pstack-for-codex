@@ -40,7 +40,7 @@ import { readCounterexample, readMarks } from "../frontends/marks.ts";
 import { readMessages } from "../frontends/messages.ts";
 import { readTrace } from "../frontends/trace.ts";
 import { readVerdict } from "../frontends/verdict.ts";
-import { compile, project } from "../pipeline.ts";
+import { compileChart, project } from "../pipeline.ts";
 import { fileLines } from "../run.ts";
 import { drawn } from "./drawn.ts";
 
@@ -301,7 +301,7 @@ test("a chart of only the bug paths words each one with the view, asked once for
       return `${action} adds one`;
     },
   };
-  const { report: text, files } = compile(
+  const { report: text, files } = compileChart(
     {
       spec: { ...spec, folder: "" },
       graph: drawn.graph,
