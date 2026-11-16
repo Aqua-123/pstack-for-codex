@@ -20,7 +20,17 @@ $poteto-mode new task. Explain why the cache survives logout. Do not edit code.
 
 The second prompt routes to a read-only investigation because the authority boundary forbids edits.
 
-A useful prompt has an outcome, a finish check, relevant evidence, constraints, and a clear scope. You do not need to prescribe the implementation. If the source report is noisy, ask Poteto Mode to restate the issue before it proposes work.
+A useful prompt has an outcome, a finish check, relevant evidence, constraints, and a clear scope. You do not need to prescribe the implementation. If the source report is noisy, ask Poteto Mode to restate the issue before it proposes work. For the restatement alone, with no playbook, invoke [`$in-your-own-words`](../../skills/in-your-own-words/SKILL.md). It restates what the agent thinks your goals are and what problem you are trying to solve.
+
+When you are unsure whether a prompt is aimed right, invoke [`$sharpen`](../../skills/sharpen/SKILL.md) on it before you send it:
+
+```text
+$sharpen write a migration guide for the v2 config format.
+```
+
+The agent says what a top professional would do that you did not ask for, the rawest material they would start from, the methods and tools they would use, and what other than you or the agent would show the result is right. Then it rewrites your prompt to ask for exactly that, deeper but not bigger. The rewrite asks the agent to prototype any choice an experiment can settle, and it leaves product and preference choices to you. `$sharpen` does not do the task. Read the rewrite, then send it, for example with `$poteto-mode`.
+
+Do not list skills in order in your prompt, such as "use `$architect`, then `$arena`, then `$interrogate`". The playbook already sequences them. Name a skill only to override a specific choice.
 
 Short follow-ups such as `continue` work when the active task is clear. Use `new task` when the subject changes. Use `$poteto-help` when you want a prompt drafted without starting the task.
 
