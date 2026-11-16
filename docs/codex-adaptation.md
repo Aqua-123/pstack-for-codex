@@ -78,6 +78,7 @@ Setup can reconcile `pstack-benny-triage` and `pstack-benny-reproduce` only afte
 | Connectors and control tools | Availability and permissions vary by installation. | Optional lanes degrade. Correctness-critical lanes stop. |
 | Task history | Supported APIs may omit history or tool detail. | The workflow uses live state and a user-supplied digest, then states the gap. |
 | Bun | Bun is not guaranteed on every host. | Bun-dependent scripts cannot run until Bun is installed. |
+| Statechart toolchain | `$statechart` needs Node 22.18+, Bun, or Deno, plus Java and TLC; the first install and the Pele renderer need network. | The skill stops and reports the checks as not run until the parent provides the tools. |
 | Benny polling | Polling has interval latency and overlap rereads. | State reconciliation and destination idempotency are required. |
 | Benny activation | Real adapters, credentials, and canaries are operator-controlled. | The pack ships dormant and both automations stay paused. |
 

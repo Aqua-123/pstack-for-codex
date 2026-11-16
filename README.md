@@ -104,6 +104,12 @@ bun test --timeout 30000 check-plan.test.ts watch-pr
 bun run typecheck
 ```
 
+The `$statechart` scripts run on Node.js 22.18+ and have their own offline tests. Tests that need TLC skip themselves unless `TLA2TOOLS` points to `tla2tools.jar`:
+
+```bash
+npm run test:statechart
+```
+
 The validator reports Bun as an optional capability. Skills that depend on the Bun scripts must stop or declare their fallback when Bun is unavailable.
 
 ## Update or remove
