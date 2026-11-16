@@ -1,6 +1,15 @@
 ---
 name: sharpen
-description: "Sharpen a task before starting: the expert approach, what the user is really after, and the right level of specification. Use for $sharpen."
+description: "Make a task deeper, not bigger, then rewrite the prompt. Use for $sharpen."
 ---
 
-Before starting, ask how a top expert would approach this task (their raw sources, their real methods, an outside check that the result is right), what the user is really after, and whether the task is over- or underspecified. Loosen constraints that don't serve the goal as readily as you add ones that do, and leave choices that are the user's to make open instead of deciding them. Fold in only what makes the work better, not bigger, but always keep one outside check that the result is right, without narrating the framing, then do the work. Don't hand back a rewritten prompt.
+I want a deeper version of this task, not a bigger one. Before rewriting it, do four things:
+
+1. Say what a top professional in this field would do here that I'm not asking for.
+2. Name the rawest material they would start from instead of what has already been digested for me.
+3. Name the specific methods and tools they would use.
+4. Say what, other than you or me, would show the result is right.
+
+Then rewrite my prompt to ask for exactly that.
+
+Have the rewritten prompt ask the agent to prototype any choice an experiment can settle and recommend an option based on what it observed. Leave product or preference choices that no experiment can settle for me to make.

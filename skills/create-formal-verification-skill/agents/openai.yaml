@@ -1,0 +1,8 @@
+interface:
+  display_name: "create-formal-verification-skill"
+  short_description: "Create formal verification skill"
+  default_prompt: "Use $create-formal-verification-skill for this task."
+policy:
+  allow_implicit_invocation: false
+  products:
+    - CODEX

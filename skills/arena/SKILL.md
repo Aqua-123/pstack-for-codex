@@ -26,8 +26,8 @@ The N candidates will receive the same prompt, so the prompt is the contract. Ge
 
 1. State the artifact each candidate is producing.
 2. Derive the rubric. State what success looks like for *this* task, then turn it into 3-6 concrete gradeable criteria. Concrete: `Adds a --dry-run flag that skips writes`. Vague: `code is correct`. The rubric is the picker's tool in Phase D; candidates only see the task.
-3. Pick the runners. Use `arena runners` from the installed pstack model profiles when present. Otherwise default to one each on the configured judgment profile, the configured instruction-following profile, the configured fast profile, an entitled alternate-family judgment profile. Spawn more when the arena covers multiple design directions. Same model N times when the work is generation-bound rather than judgment-sensitive.
-4. Assign output paths. Each candidate writes to its own location (a git worktree where possible, otherwise `/tmp1-<slug>/candidate-<n>/`). N candidates writing to the same path is shared mutable state and fails the **separate-before-serializing-shared-state** principle skill test.
+3. Pick the runners. Use `arena runners` from the installed pstack model profiles when present. Otherwise default to one each on the configured judgment profile, the configured instruction-following profile, the configured fast profile, an entitled alternate-family judgment profile. If a requested profile or pair is unavailable, run that seat on another validated profile of the same family or drop the seat, and say so. If dropped seats leave fewer than two runners, add runners until there are two, or one when the configured list has one entry. Run each added runner on a remaining runner's profile, or on the inherited parent pair when none remain, and say so. Spawn more when the arena covers multiple design directions. Same model N times when the work is generation-bound rather than judgment-sensitive.
+4. Assign output paths. Each candidate writes to its own location (a git worktree where possible, otherwise `/tmp/arena-<slug>/candidate-<n>/`). N candidates writing to the same path is shared mutable state and fails the **separate-before-serializing-shared-state** principle skill test.
 
 ## Phase B: Fan out
 
@@ -39,17 +39,17 @@ If a candidate fails to produce output, proceed with N-1 and note the dropout in
 
 ## Phase C: Cross-judge
 
-After all Phase B candidates complete, choose one model from the `arena cross-judge pool` in the installed pstack model profiles when present. Otherwise use the configured judgment profile, the configured instruction-following profile, the configured fast profile, an entitled alternate-family judgment profile. Prefer a different model family from the parent's. Spawn one independent read-only judge through that validated profile. It sees the rubric and the candidates by path label, scores each criterion, and recommends a base with rationale. It runs in parallel with the parent's reading in Phase D, not with the candidates themselves. Spawning while candidates are still writing means the judge sees partial or empty outputs and reports them as dropouts.
+After all Phase B candidates complete, choose one model from the `arena cross-judge pool` in the installed pstack model profiles when present. Otherwise use the configured judgment profile, the configured instruction-following profile, the configured fast profile, an entitled alternate-family judgment profile. The judge never comes from the parent's vendor. Try only pool entries from another vendor, in pool order. An inherited-parent entry is the parent model, so it never judges. If no entry from another vendor runs, try the default profiles from another vendor the same way. If none of those runs, skip the judge, pick the base alone in Phase D, and say so. A configured model is a request, not proof: when no supported surface reports the parent's served model, try the pool in order and say that the vendor check did not run. Spawn one independent read-only judge through that validated profile. It sees the rubric and the candidates by path label, scores each criterion, and recommends a base with rationale. It runs in parallel with the parent's reading in Phase D, not with the candidates themselves. Spawning while candidates are still writing means the judge sees partial or empty outputs and reports them as dropouts.
 
 ## Phase D: Pick a base
 
 Read every candidate end to end before picking. Skimming N candidates surfaces only the candidate whose surface looks most familiar.
 
-Score each candidate against the rubric criterion by criterion, not on holistic feel. Compare against the cross-judge. Agreement on the base confirms the pick. Disagreement means one of you is biased or the rubric was ambiguous. Read both rationales before deciding.
+Score each candidate against the rubric criterion by criterion, not on holistic feel. Compare against the cross-judge when Phase C ran one. Agreement on the base confirms the pick. Disagreement means one of you is biased or the rubric was ambiguous. Read both rationales before deciding.
 
 Pick the base on which candidate a future maintainer can extend most easily without breaking invariants. Prefer the cleaner boundary or smaller surface area when two feel tied, per the Laziness Protocol.
 
-Record the pick and the reason in a short synthesis note alongside the base artifact, including the cross-judge's verdict.
+Record the pick and the reason in a short synthesis note alongside the base artifact, including the cross-judge's verdict or that Phase C skipped the judge.
 
 ## Phase E: Graft
 
@@ -63,4 +63,4 @@ Verify the synthesized artifact like any other output, per the **prove-it-works*
 
 ## Outputs
 
-One synthesized artifact, with a short synthesis note alongside naming the base and why, the cross-judge's verdict, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.
+One synthesized artifact, with a short synthesis note alongside naming the base and why, the cross-judge's verdict or that Phase C skipped the judge, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.
