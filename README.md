@@ -1,6 +1,6 @@
 # pstack for Codex
 
-`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 55 explicit-only skills and 23 Poteto Mode playbooks.
+`pstack-for-codex` is a Codex-native derivative of [pstack](https://github.com/cursor/plugins/tree/main/pstack). It packages deliberate engineering workflows as 59 explicit-only skills and 23 Poteto Mode playbooks.
 
 Use `$poteto-mode` for a substantial engineering task. It selects a playbook, records the work as verifiable steps, and invokes narrower skills when the steps need them. The parent task keeps authority for integration, external writes, commits, pushes, and the final result.
 
@@ -21,7 +21,7 @@ codex plugin list --json
 
 Codex CLI `0.153.4` does not expose an offline runtime skill-index command. The release suite validates the skill catalog from the installed artifact; start a new task to exercise prompt-time skill discovery.
 
-All 55 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
+All 59 skills require explicit invocation. Codex stores their full identities under the `pstack-for-codex` namespace. In a prompt, invoke a skill with its registered `$name`:
 
 ```text
 $poteto-mode add a --json flag to this command. Keep text output byte-identical. Verify both modes.
@@ -53,15 +53,20 @@ The other skills are useful when you want one specific operation:
 | Skill | Use it for |
 |---|---|
 | [`$how`](./skills/how/SKILL.md) | Trace how a subsystem works. |
-| [`$why`](./skills/why/SKILL.md) | Reconstruct why code reached its current shape from available evidence. |
+| [`$why`](./skills/why/SKILL.md) | Answer why code reached its current shape from the record: the commits and PR discussion behind it, with inferences marked. |
 | [`$recall`](./skills/recall/SKILL.md) | Rebuild recent project context through supported task history and live state. |
 | [`$architect`](./skills/architect/SKILL.md) | Settle types, callers, and module boundaries before implementation. |
 | [`$arena`](./skills/arena/SKILL.md) | Compare isolated attempts at the same brief. |
 | [`$swarm`](./skills/swarm/SKILL.md) | Cover independent slices or races and aggregate the result. |
-| [`$interrogate`](./skills/interrogate/SKILL.md) | Run a skeptical, multi-lens review of a diff with different verified model profiles when available. |
+| [`$interrogate`](./skills/interrogate/SKILL.md) | Send adversaries to break a diff and keep only findings a rerun proves, using different verified model profiles when available. |
+| [`$statechart`](./skills/statechart/SKILL.md) | Check a TLA+ model and draw it as a Mermaid statechart with the shortest path to each broken rule. |
+| [`$create-formal-verification-skill`](./skills/create-formal-verification-skill/SKILL.md) | Prove one property that tests cannot reach and generate a project-local skill that rechecks it. |
+| [`$maintain-formal-verification-skill`](./skills/maintain-formal-verification-skill/SKILL.md) | Update and rerun a formal verification skill after the covered code changes. |
 | [`$tdd`](./skills/tdd/SKILL.md) | Reproduce a bug with a failing test before fixing it. |
 | [`$no-comments`](./skills/no-comments/SKILL.md) | Review comments and remove ones that do not earn their place. |
 | [`$unslop`](./skills/unslop/SKILL.md) | Remove vague or machine-shaped prose. |
+| [`$ketchup`](./skills/ketchup/SKILL.md) | Catch up on what changed, with every waiting decision listed. |
+| [`$ketchup-video`](./skills/ketchup-video/SKILL.md) | Deliver the `$ketchup` catch-up as a short subtitled video when a video tool is available. |
 | [`$show-me-your-work`](./skills/show-me-your-work/SKILL.md) | Keep a reviewable `decisions.tsv` trail. |
 | [`$setup-benny`](./skills/setup-benny/SKILL.md) | Inspect or configure the dormant Benny polling pack. |
 | [`$make-bot-ui`](./skills/make-bot-ui/SKILL.md) | Build a local UI for an authenticated user-owned webhook. |
