@@ -83,7 +83,7 @@ test("behavioral coverage maps all 58 upstream skills and all 23 playbooks", asy
   }
   assert.deepEqual(
     new Set(representative.cases.map((entry) => entry.category)),
-    new Set(["direct", "indirect", "incomplete-input", "negative-trigger", "unsupported-action", "setup", "hook", "connector-boundary"]),
+    new Set(["direct", "indirect", "incomplete-input", "negative-trigger", "unsupported-action", "setup", "hook", "connector-boundary", "pr-readiness"]),
   );
   for (const entry of representative.cases) {
     assert.deepEqual(Object.keys(entry.expected).sort(), ["authority", "evidence", "role", "stop_condition", "workflow"]);

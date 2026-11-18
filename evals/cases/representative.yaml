@@ -105,10 +105,81 @@
         "workflow": "Babysit drive with Copilot as an external review gate",
         "role": "PR owner",
         "authority": "do not merge",
-        "evidence": "green checks, current head SHA, completed Copilot review on that SHA, watcher result after review triage",
+        "evidence": "The green PR version and the quota result for its review request.",
         "stop_condition": "quota failure is not a completed review; report the blocker and do not call the PR merge-ready"
+      }
+    },
+    {
+      "id": "babysit-copilot-reuse",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. CI is green. The previous babysitter recorded the same base branch, base SHA, and head SHA for a submitted Copilot review.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "the earlier review ID tied to the current PR version and fresh GitHub gates",
+        "stop_condition": "Assess the existing review and reuse it without another POST. Report merge-ready only when all findings and GitHub gates are clear."
+      }
+    },
+    {
+      "id": "babysit-copilot-already-pending",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. CI passed, but GitHub returned 409 when asked to request Copilot. An automatic review is already running.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "GitHub's pending request and a submitted review tied to the current PR version",
+        "stop_condition": "Follow the pending request without another POST. Verify its coverage before clearing the gate."
+      }
+    },
+    {
+      "id": "babysit-copilot-base-drift",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. Copilot reviewed the green head against release. The PR now targets main, and the head SHA is unchanged.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "both versions of the base ref and SHA, the unchanged head SHA, and review evidence for the new version",
+        "stop_condition": "Invalidate the old review. Check required CI on the new version before requesting a new review."
+      }
+    },
+    {
+      "id": "babysit-copilot-rate-limit",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. CI is green. The review POST returned 429 with a Retry-After header.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "the retry time, refreshed PR version, and pending and submitted reviews",
+        "stop_condition": "Wait at least as long as Retry-After. Recheck for a review before retrying within the deadline."
+      }
+    },
+    {
+      "id": "babysit-copilot-ambiguous-request",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode continue babysitting PR 17. The last review request returned 503 and the earlier run stopped before it could tell whether GitHub accepted it.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "the saved request checkpoint, current version, and pending and submitted review evidence",
+        "stop_condition": "Reconcile before retrying. Keep the original deadline. With acceptance still ambiguous at the deadline, report a blocker without another POST."
+      }
+    },
+    {
+      "id": "babysit-copilot-stalled",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. GitHub accepted Copilot review 15 minutes ago. The watcher says READY, but Copilot still has no submitted review.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "the original request time and ID, the PR version, and the latest review status",
+        "stop_condition": "Stop polling at the deadline and report the external review blocker. Do not report merge-ready."
       }
     }
   ]
 }
-

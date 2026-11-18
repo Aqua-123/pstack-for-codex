@@ -111,7 +111,7 @@ test("clean Codex profile installs, validates, and tears down the complete plugi
   const representative = JSON.parse(await fs.readFile(path.join(installedRoot, "evals/cases/representative.yaml"), "utf8"));
   assert.deepEqual(
     new Set(representative.cases.map((entry) => entry.category)),
-    new Set(["direct", "indirect", "incomplete-input", "negative-trigger", "unsupported-action", "setup", "hook", "connector-boundary"]),
+    new Set(["direct", "indirect", "incomplete-input", "negative-trigger", "unsupported-action", "setup", "hook", "connector-boundary", "pr-readiness"]),
   );
   assert.ok(await pathExists(path.join(installedRoot, "evals/rubrics/behavioral-parity.md")));
 
