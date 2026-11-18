@@ -96,6 +96,18 @@
         "evidence": "named blockers and paused descriptors",
         "stop_condition": "all canaries and idempotency evidence are required before activation"
       }
+    },
+    {
+      "id": "babysit-copilot-quota",
+      "category": "pr-readiness",
+      "input": "$pstack-for-codex:poteto-mode babysit PR 17. CI is green and the watcher says READY. Copilot accepted the request as PENDING, then reported insufficient quota.",
+      "expected": {
+        "workflow": "Babysit drive with Copilot as an external review gate",
+        "role": "PR owner",
+        "authority": "do not merge",
+        "evidence": "green checks, current head SHA, completed Copilot review on that SHA, watcher result after review triage",
+        "stop_condition": "quota failure is not a completed review; report the blocker and do not call the PR merge-ready"
+      }
     }
   ]
 }

@@ -1,16 +1,22 @@
 # Bugbot triage
 
-Use this reference when the Babysit playbook (`../playbooks/babysit.md`) handles Bugbot or review-automation comments. The goal is not to ignore Bugbot by default. The goal is to stop treating every comment as a required code change.
+Use this reference when the Babysit playbook (`../playbooks/babysit.md`) handles Bugbot, Copilot, or other review-automation comments. The goal is not to ignore a reviewer by default. The goal is to stop treating every comment as a required code change.
 
 ## Decision rubric
 
-Classify each Bugbot thread before acting:
+Classify each automated review thread before acting:
 
 - `fix`: The comment identifies a plausible correctness, security, privacy, data loss, auth, billing, migration, idempotency, race, or shipped-behavior issue. Fix it in the lowest owning PR, then reply with the commit SHA and resolve the thread.
 - `dismiss`: The comment matches a documented low-risk noisy pattern, and the current code/context proves the concern does not need a code change. Reply with a short reason and resolve the thread.
 - `ask`: The comment is novel, high-severity, security/privacy/data-related, or ambiguous. Ask the user instead of guessing.
 
 When in doubt, ask. Skipping a noisy code-quality comment is cheap; skipping a real data or security bug is not.
+
+Read the review summary as well as its inline comments. A summary can request human assessment while reporting no open issues. Verify that assessment against the current diff and behavior before you dismiss it.
+
+Compare findings with the PR's base before expanding scope. For dependency audits, separate findings introduced by the PR from findings already on the base branch. Use a production-only audit when runtime exposure matters. Fix introduced findings and report inherited findings unless the user expands scope. For package import or export claims, verify the package from a clean install of the exact lockfile instead of inferring behavior from the lock entry.
+
+For evidence scripts, inspect the actual side-effect boundary. Require a dedicated test database, fixture-specific cleanup, and one checked-out connection for each transaction. For browser evidence, scope locators to a unique UI region when multiple controls share an accessible name. For accessibility findings, inspect the computed accessible name. A visible heading does not replace an explicit `aria-label`; use a user-facing name instead of an internal ID.
 
 ## Learned pattern format
 
